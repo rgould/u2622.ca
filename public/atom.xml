@@ -4,7 +4,7 @@
   <title><![CDATA[☢ u2622.ca]]></title>
   <link href="http://u2622.com/atom.xml" rel="self"/>
   <link href="http://u2622.com/"/>
-  <updated>2011-11-03T00:06:23-04:00</updated>
+  <updated>2011-11-03T00:24:15-04:00</updated>
   <id>http://u2622.com/</id>
   <author>
     <name><![CDATA[u2622]]></name>
@@ -14,11 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Goðan Daginn]]></title>
+    <title type="html"><![CDATA[Goðan Daginn!]]></title>
     <link href="http://u2622.com/blog/2011/11/02/godan-daginn/"/>
     <updated>2011-11-02T23:58:00-04:00</updated>
     <id>http://u2622.com/blog/2011/11/02/godan-daginn</id>
     <content type="html"><![CDATA[<p>Goðan Daginn, Heimur!</p>
+
+<p>I just set up this new octopress instance in roughly half an hour! Hooray!</p>
 ]]></content>
   </entry>
   
