@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2011-11-02T22:26:37-04:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[☢ u2622.ca]]></title>
+  <link href="http://u2622.com/atom.xml" rel="self"/>
+  <link href="http://u2622.com/"/>
+  <updated>2011-11-03T00:06:23-04:00</updated>
+  <id>http://u2622.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[u2622]]></name>
+    <email><![CDATA[u2622@u2622.ca]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Goðan Daginn]]></title>
+    <link href="http://u2622.com/blog/2011/11/02/godan-daginn/"/>
+    <updated>2011-11-02T23:58:00-04:00</updated>
+    <id>http://u2622.com/blog/2011/11/02/godan-daginn</id>
+    <content type="html"><![CDATA[<p>Goðan Daginn, Heimur!</p>
+]]></content>
+  </entry>
   
 </feed>

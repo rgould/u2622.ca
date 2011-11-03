@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yoursite.com/</loc>
-        <lastmod>2011-11-02T22:14:46-04:00</lastmod>
+        <loc>http://u2622.com/blog/2011/11/02/godan-daginn/</loc>
+        <lastmod>2011-11-03T00:05:19-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
-        <lastmod>2011-11-02T22:14:46-04:00</lastmod>
+        <loc>http://u2622.com/</loc>
+        <lastmod>2011-11-03T00:05:19-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://u2622.com/blog/archives/</loc>
+        <lastmod>2011-11-03T00:05:19-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://u2622.com/about/</loc>
+        <lastmod>2011-11-03T00:04:50-04:00</lastmod>
     </url>
 </urlset>
