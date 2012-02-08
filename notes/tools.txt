@@ -1,0 +1,31 @@
+Vim
+ - Solarized theme
+ - rails plugin
+
+Zsh
+ - oh-my-zsh
+ - git auto completion
+
+Ack
+
+Iterm2
+ - Solarized theme
+
+Chrome
+ - quixapp.com
+ - screen capture
+
+Firefox
+ - web developer
+
+Campfire
+
+Github
+ - Issues
+
+Rescue Time
+
+Ruby
+ - rvm
+ - pry
+
