@@ -9,7 +9,7 @@
   <meta name="author" content="u2622">
 
   
-  <meta name="description" content="While upgrading to Machinist 2, I had a heck of a time getting blueprints with associations to actually save. The problem turned out to be that the &hellip;">
+  <meta name="description" content="While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save. The problem turned out to be that the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,7 +86,7 @@
   </header>
 
 
-  <div class="entry-content"><p>While upgrading to Machinist 2, I had a heck of a time getting blueprints with associations to actually save.</p>
+  <div class="entry-content"><p>While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save.</p>
 
 <p>The problem turned out to be that the code was using <code>validates_presence_of :hometown_id</code>, where <code>hometown</code> is the name of the association, and the solution is to use <code>validates_presence_of :hometown</code>, or the newer version: <code>validates :hometown, presence: true</code>.</p>
 
