@@ -6,7 +6,7 @@ comments: true
 categories:
 ---
 
-While upgrading to Machinist 2, I had a heck of a time getting blueprints with associations to actually save.
+While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save.
 
 The problem turned out to be that the code was using `validates_presence_of :hometown_id`, where `hometown` is the name of the association, and the solution is to use `validates_presence_of :hometown`, or the newer version: `validates :hometown, presence: true`.
 
