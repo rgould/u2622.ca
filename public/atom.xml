@@ -4,7 +4,7 @@
   <title><![CDATA[☢ u2622.ca]]></title>
   <link href="http://u2622.com/atom.xml" rel="self"/>
   <link href="http://u2622.com/"/>
-  <updated>2011-11-03T00:24:15-04:00</updated>
+  <updated>2012-02-11T12:25:29-05:00</updated>
   <id>http://u2622.com/</id>
   <author>
     <name><![CDATA[u2622]]></name>
@@ -12,6 +12,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Machinist and Association Validations]]></title>
+    <link href="http://u2622.com/blog/2012/02/11/machinist-and-association-validations/"/>
+    <updated>2012-02-11T11:32:00-05:00</updated>
+    <id>http://u2622.com/blog/2012/02/11/machinist-and-association-validations</id>
+    <content type="html"><![CDATA[<p>While upgrading to Machinist 2, I had a heck of a time getting blueprints with associations to actually save.</p>
+
+<p>The problem turned out to be that the code was using <code>validates_presence_of :hometown_id</code>, where <code>hometown</code> is the name of the association, and the solution is to use <code>validates_presence_of :hometown</code>, or the newer version: <code>validates :hometown, presence: true</code>.</p>
+
+<p>If you have a given class:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">validates_presence_of</span> <span class="ss">:hometown_id</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and blueprints:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">hometown</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then calling <code>Viking.make</code> will properly return an unsaved Viking object (with a Hometown object <code>viking.hometown</code>), but <code>valid?</code> will return false.</p>
+
+<p>Calling <code>Viking.make!</code> will throw an exception: <code>ActiveRecord::RecordInvalid: Validation failed: Hometown can't be blank</code></p>
+
+<p>If you really want to keep using <code>validates_presence_of :hometown_id</code>, you can modify the blueprint like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">hometown</span> <span class="p">{</span> <span class="no">Hometown</span><span class="o">.</span><span class="n">make!</span> <span class="p">}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then Viking.make! will succeed. Viking.make will also work, and will return an unsaved Viking object, but it will actually create and save the associated Hometown object, which negates part of the point of calling <code>.make</code> instead of <code>.make!</code> (<code>make</code> creates objects but does not save them to the database, giving quite a performance boost for test suites).</p>
+
+<p>The proper solution is to adjust the validation in your model:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">validates</span> <span class="ss">:hometown</span><span class="p">,</span> <span class="n">presence</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'>  <span class="n">validates_associated</span> <span class="ss">:hometown</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The key is that we&#8217;ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
+
+<p>We&#8217;ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
+
+<p>See API docs about validations here:</p>
+
+<ul>
+<li><a href="http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates">validates</a></li>
+<li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_associated">validates_associated</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Goðan Daginn!]]></title>
