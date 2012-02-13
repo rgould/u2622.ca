@@ -1,2 +1,3 @@
 * Analytics data polluting models (keep notable events separate)
 * Extra conditions on joins using squeel/arel
+* Rails vim tutor
