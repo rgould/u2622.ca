@@ -1,3 +1,5 @@
 * Analytics data polluting models (keep notable events separate)
 * Extra conditions on joins using squeel/arel
 * Rails vim tutor
+* Bret Victor talk: integrating into rails - migrations and controllers
+  - bonus: converting inputs to tests.
