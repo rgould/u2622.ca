@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://u2622.com
+url: http://u2622.ca
 title: ☢ u2622.ca
 subtitle: Radioactivität
 author: u2622
@@ -96,7 +96,7 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: u2622
-disqus_show_comment_count: false
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:

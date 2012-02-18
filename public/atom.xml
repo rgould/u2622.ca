@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[☢ u2622.ca]]></title>
-  <link href="http://u2622.com/atom.xml" rel="self"/>
-  <link href="http://u2622.com/"/>
-  <updated>2012-02-18T12:04:38-05:00</updated>
-  <id>http://u2622.com/</id>
+  <link href="http://u2622.ca/atom.xml" rel="self"/>
+  <link href="http://u2622.ca/"/>
+  <updated>2012-02-18T13:04:07-05:00</updated>
+  <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[u2622]]></name>
     <email><![CDATA[u2622@u2622.ca]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Machinist and Association Validations]]></title>
-    <link href="http://u2622.com/blog/2012/02/11/machinist-and-association-validations/"/>
+    <link href="http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/"/>
     <updated>2012-02-11T11:32:00-05:00</updated>
-    <id>http://u2622.com/blog/2012/02/11/machinist-and-association-validations</id>
+    <id>http://u2622.ca/blog/2012/02/11/machinist-and-association-validations</id>
     <content type="html"><![CDATA[<p>While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save.</p>
 
 <p>The problem turned out to be that the code was using <code>validates_presence_of :hometown_id</code>, where <code>hometown</code> is the name of the association, and the solution is to use <code>validates_presence_of :hometown</code>, or the newer version: <code>validates :hometown, presence: true</code>.</p>
@@ -102,9 +102,9 @@
   
   <entry>
     <title type="html"><![CDATA[Goðan Daginn!]]></title>
-    <link href="http://u2622.com/blog/2011/11/02/godan-daginn/"/>
+    <link href="http://u2622.ca/blog/2011/11/02/godan-daginn/"/>
     <updated>2011-11-02T23:58:00-04:00</updated>
-    <id>http://u2622.com/blog/2011/11/02/godan-daginn</id>
+    <id>http://u2622.ca/blog/2011/11/02/godan-daginn</id>
     <content type="html"><![CDATA[<p>Goðan Daginn, Heimur!</p>
 
 <p>I just set up this new octopress instance in roughly half an hour! Hooray!</p>
