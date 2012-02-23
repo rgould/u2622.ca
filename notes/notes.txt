@@ -1,5 +1,7 @@
 * Analytics data polluting models (keep notable events separate)
 * Extra conditions on joins using squeel/arel
 * Rails vim tutor
+* On IDEs vs non-IDEs and memorising APIs/using crutches
 * Bret Victor talk: integrating into rails - migrations and controllers
   - bonus: converting inputs to tests.
+* Analysing shell history to come up with mnemonics
