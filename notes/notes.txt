@@ -5,3 +5,20 @@
 * Bret Victor talk: integrating into rails - migrations and controllers
   - bonus: converting inputs to tests.
 * Analysing shell history to come up with mnemonics
+  - aliases are useful. favourites: '..', 'l', 'gst'
+  - set them with alias foo=bar
+  - save them to ~/.aliasrc
+  - have your .bashrc / .zshrc load .aliasrc
+  - zsh doesn't keep count of commands used. (bash does !) commands in history are unique (usually)
+     - compare `history | wc -l` with `history | awk '$1="";print' | uniq | wc -l` - minor difference
+  - not so useful, but we can look at the first column or two and see which ones are the most common
+  - aside: aliases are not expanded before being written to the history file
+  - print first two columns:
+    history | awk '{print $2, $3}' | sed -e 's/^[ \t]*//' | sort | uniq -c | sort -n
+    - awk prints first two columns
+    - sed strips out leading whitespace
+    - uniq -c gives a count of occurances, but they need to be sorted first
+    - sort -n sorts output by number of occurrances
+    history | awk '{print $2}' | sed -e 's/^[ \t]*//' | sort | uniq -c | sort -n
+    - look at output and think of new aliases
+  - don't create too many at once. suggest three or four, and then start using them immediately.
