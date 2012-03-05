@@ -9,7 +9,8 @@
   <meta name="author" content="u2622">
 
   
-  <meta name="description" content="While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save. The problem turned out to be that the &hellip;">
+  <meta name="description" content="Contents: Introduction to aliases @ 0:00
+Analysing shell history to create relevant aliases @ 4:43 Download: mov 24MB, 8:26 (Recommended) Watch ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -62,6 +63,120 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/04/shell-aliases/">Screencast: Using Shell History to Create Aliases</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-03-04T19:15:00-05:00" pubdate>Mar 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/04/shell-aliases/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Contents:</p>
+
+<ol>
+<li>Introduction to aliases @ 0:00</li>
+<li>Analysing shell history to create relevant aliases @ 4:43</li>
+</ol>
+
+
+<p>Download: <a href="http://rgould.ca/downloads/aliases.mov">mov</a> 24MB, 8:26 (Recommended)</p>
+
+<p>Watch (recommended in full screen and in HD):</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/e4bQ4FstNvs" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Notes:</p>
+
+<p>Make an alias:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s2">&quot;ls -al&quot;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">glog</span><span class="o">=</span><span class="s2">&quot;git log&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add those to your <code>~/.aliasrc</code>.</p>
+
+<p>Modify <code>~/.zshrc</code> or <code>~/.bashrc</code> (works for both):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[[</span> -r ~/.aliasrc <span class="o">]]</span>; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> ~/.aliasrc
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>View shell history: <code>history</code></p>
+
+<p>View count of common commands:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">history</span> | awk <span class="s1">&#39;{ print $2 }&#39;</span> | sort | uniq -c | sort -n
+</span><span class='line'><span class="nb">history</span> | awk <span class="s1">&#39;{ print $2,$3 }&#39;</span> | sort | uniq -c | sort -n
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Use that output to create better aliases!</p>
+
+<p>Here&#8217;s some of my favourite aliases:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
+</span><span class='line'><span class="nb">alias</span> ...<span class="o">=</span><span class="s1">&#39;cd ../..&#39;</span>
+</span><span class='line'><span class="nb">alias</span> ....<span class="o">=</span><span class="s1">&#39;cd ../../../&#39;</span>
+</span><span class='line'><span class="nb">alias</span> .....<span class="o">=</span><span class="s1">&#39;cd ../../../../&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">be</span><span class="o">=</span><span class="s1">&#39;bundle exec&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">g</span><span class="o">=</span>git
+</span><span class='line'><span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s1">&#39;git add&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit -v&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gca</span><span class="o">=</span><span class="s1">&#39;git commit -v -a&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gch</span><span class="o">=</span><span class="s1">&#39;git checkout&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git pull&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gst</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -al&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -220,6 +335,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/shell-aliases/">Screencast: Using Shell History to Create Aliases</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/02/11/machinist-and-association-validations/">Machinist and Association Validations</a>

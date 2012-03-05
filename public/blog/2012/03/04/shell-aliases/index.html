@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Machinist and Association Validations - ☢ u2622.ca</title>
+  <title>Screencast: Using Shell History to Create Aliases - ☢ u2622.ca</title>
   <meta name="author" content="u2622">
 
   
-  <meta name="description" content="While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save. The problem turned out to be that the &hellip;">
+  <meta name="description" content="Contents: Introduction to aliases @ 0:00
+Analysing shell history to create relevant aliases @ 4:43 Download: mov 24MB, 8:26 (Recommended) Watch ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://u2622.ca/blog/2012/02/11/machinist-and-association-validations">
+  <link rel="canonical" href="http://u2622.ca/blog/2012/03/04/shell-aliases">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,7 +66,7 @@
   
   <header>
     
-      <h1 class="entry-title">Machinist and Association Validations</h1>
+      <h1 class="entry-title">Screencast: Using Shell History to Create Aliases</h1>
     
     
       <p class="meta">
@@ -76,7 +77,7 @@
 
   
 
-<time datetime="2012-02-11T11:32:00-05:00" pubdate>Feb 11<span>th</span>, 2012</time>
+<time datetime="2012-03-04T19:15:00-05:00" pubdate>Mar 4<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -85,58 +86,59 @@
   </header>
 
 
-<div class="entry-content"><p>While upgrading to Machinist 2, I had a hell of a time getting blueprints with associations to actually save.</p>
+<div class="entry-content"><p>Contents:</p>
 
-<p>The problem turned out to be that the code was using <code>validates_presence_of :hometown_id</code>, where <code>hometown</code> is the name of the association, and the solution is to use <code>validates_presence_of :hometown</code>, or the newer version: <code>validates :hometown, presence: true</code>.</p>
+<ol>
+<li>Introduction to aliases @ 0:00</li>
+<li>Analysing shell history to create relevant aliases @ 4:43</li>
+</ol>
 
-<p>If you have a given class:</p>
+
+<p>Download: <a href="http://rgould.ca/downloads/aliases.mov">mov</a> 24MB, 8:26 (Recommended)</p>
+
+<p>Watch (recommended in full screen and in HD):</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/e4bQ4FstNvs" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Notes:</p>
+
+<p>Make an alias:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s2">&quot;ls -al&quot;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">glog</span><span class="o">=</span><span class="s2">&quot;git log&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add those to your <code>~/.aliasrc</code>.</p>
+
+<p>Modify <code>~/.zshrc</code> or <code>~/.bashrc</code> (works for both):</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">validates_presence_of</span> <span class="ss">:hometown_id</span>
-</span><span class='line'><span class="k">end</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[[</span> -r ~/.aliasrc <span class="o">]]</span>; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> ~/.aliasrc
+</span><span class='line'><span class="k">fi</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>and blueprints:</p>
+<p>View shell history: <code>history</code></p>
+
+<p>View count of common commands:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">hometown</span>
-</span><span class='line'><span class="k">end</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">history</span> | awk <span class="s1">&#39;{ print $2 }&#39;</span> | sort | uniq -c | sort -n
+</span><span class='line'><span class="nb">history</span> | awk <span class="s1">&#39;{ print $2,$3 }&#39;</span> | sort | uniq -c | sort -n
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Then calling <code>Viking.make</code> will properly return an unsaved Viking object (with a Hometown object <code>viking.hometown</code>), but <code>valid?</code> will return false.</p>
+<p>Use that output to create better aliases!</p>
 
-<p>Calling <code>Viking.make!</code> will throw an exception: <code>ActiveRecord::RecordInvalid: Validation failed: Hometown can't be blank</code></p>
-
-<p>If you really want to keep using <code>validates_presence_of :hometown_id</code>, you can modify the blueprint like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">hometown</span> <span class="p">{</span> <span class="no">Hometown</span><span class="o">.</span><span class="n">make!</span> <span class="p">}</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then Viking.make! will succeed. Viking.make will also work, and will return an unsaved Viking object, but it will actually create and save the associated Hometown object, which negates part of the point of calling <code>.make</code> instead of <code>.make!</code> (<code>make</code> creates objects but does not save them to the database, giving quite a performance boost for test suites).</p>
-
-<p>The proper solution is to adjust the validation in your model:</p>
+<p>Here&#8217;s some of my favourite aliases:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -144,25 +146,27 @@
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">validates</span> <span class="ss">:hometown</span><span class="p">,</span> <span class="n">presence</span><span class="p">:</span> <span class="kp">true</span>
-</span><span class='line'>  <span class="n">validates_associated</span> <span class="ss">:hometown</span>
-</span><span class='line'><span class="k">end</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
+</span><span class='line'><span class="nb">alias</span> ...<span class="o">=</span><span class="s1">&#39;cd ../..&#39;</span>
+</span><span class='line'><span class="nb">alias</span> ....<span class="o">=</span><span class="s1">&#39;cd ../../../&#39;</span>
+</span><span class='line'><span class="nb">alias</span> .....<span class="o">=</span><span class="s1">&#39;cd ../../../../&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">be</span><span class="o">=</span><span class="s1">&#39;bundle exec&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">g</span><span class="o">=</span>git
+</span><span class='line'><span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s1">&#39;git add&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit -v&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gca</span><span class="o">=</span><span class="s1">&#39;git commit -v -a&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gch</span><span class="o">=</span><span class="s1">&#39;git checkout&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git pull&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gst</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -al&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
-
-
-<p>The key is that we&#8217;ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
-
-<p>We&#8217;ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
-
-<p>See API docs about validations here:</p>
-
-<ul>
-<li><a href="http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates">validates</a></li>
-<li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_associated">validates_associated</a></li>
-</ul>
 
 </div>
 
@@ -181,7 +185,7 @@
 
   
 
-<time datetime="2012-02-11T11:32:00-05:00" pubdate>Feb 11<span>th</span>, 2012</time>
+<time datetime="2012-03-04T19:15:00-05:00" pubdate>Mar 4<span>th</span>, 2012</time>
       
 
 
@@ -189,7 +193,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/" data-via="rgould" data-counturl="http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2012/03/04/shell-aliases/" data-via="rgould" data-counturl="http://u2622.ca/blog/2012/03/04/shell-aliases/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -202,10 +206,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/11/02/godan-daginn/" title="Previous Post: Goðan Daginn!">&laquo; Goðan Daginn!</a>
+        <a class="basic-alignment left" href="/blog/2012/02/11/machinist-and-association-validations/" title="Previous Post: Machinist and Association Validations">&laquo; Machinist and Association Validations</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/04/shell-aliases/" title="next Post: Screencast: Using Shell History to Create Aliases">Screencast: Using Shell History to Create Aliases &raquo;</a>
       
     </p>
   </footer>
@@ -309,8 +311,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/';
-        var disqus_url = 'http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/';
+        var disqus_identifier = 'http://u2622.ca/blog/2012/03/04/shell-aliases/';
+        var disqus_url = 'http://u2622.ca/blog/2012/03/04/shell-aliases/';
         var disqus_script = 'embed.js';
       
     (function () {
