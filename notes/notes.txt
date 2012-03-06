@@ -22,3 +22,4 @@
     history | awk '{print $2}' | sed -e 's/^[ \t]*//' | sort | uniq -c | sort -n
     - look at output and think of new aliases
   - don't create too many at once. suggest three or four, and then start using them immediately.
+ * passionate programmer - learning to fish, learning business, find a mentor, be a mentor
