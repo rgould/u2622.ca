@@ -1,25 +1,25 @@
+* Things all programmers should know:
+  - command line
+  - grep
+  - perl style regular expressions
+  - how to administer DB
+  - how to administer web server
+  - public/private key pairs
+  - basic git internals
+  - vim for server-side maintenance
+  - how to manually craft HTTP request headers
+  - how to watch network traffic
+  - 
+* On IDEs vs non-IDEs and memorising APIs/using crutches
+* default_url_options for ApplicationController and url branding
+* Rails routes constraints - regex vs class
 * Analytics data polluting models (keep notable events separate)
+* rspec book: section 6.2: Responding to Change
 * Extra conditions on joins using squeel/arel
 * Rails vim tutor
-* On IDEs vs non-IDEs and memorising APIs/using crutches
 * Bret Victor talk: integrating into rails - migrations and controllers
   - bonus: converting inputs to tests.
-* Analysing shell history to come up with mnemonics
-  - aliases are useful. favourites: '..', 'l', 'gst'
-  - set them with alias foo=bar
-  - save them to ~/.aliasrc
-  - have your .bashrc / .zshrc load .aliasrc
-  - zsh doesn't keep count of commands used. (bash does !) commands in history are unique (usually)
-     - compare `history | wc -l` with `history | awk '$1="";print' | uniq | wc -l` - minor difference
-  - not so useful, but we can look at the first column or two and see which ones are the most common
-  - aside: aliases are not expanded before being written to the history file
-  - print first two columns:
-    history | awk '{print $2, $3}' | sed -e 's/^[ \t]*//' | sort | uniq -c | sort -n
-    - awk prints first two columns
-    - sed strips out leading whitespace
-    - uniq -c gives a count of occurances, but they need to be sorted first
-    - sort -n sorts output by number of occurrances
-    history | awk '{print $2}' | sed -e 's/^[ \t]*//' | sort | uniq -c | sort -n
-    - look at output and think of new aliases
-  - don't create too many at once. suggest three or four, and then start using them immediately.
- * passionate programmer - learning to fish, learning business, find a mentor, be a mentor
+* passionate programmer - learning to fish, learning business, find a mentor, be a mentor
+
+* GitHub for Writers (Git + Markdown > Word)
+* German game: World frozen. Can only move/interact by learning German
