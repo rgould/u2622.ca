@@ -22,3 +22,7 @@ like "nice to see you again," but it literally means "thanks for last (time)."
 
 1. *木漏れ日* (komorebi) - Japanese word, specifically referring to sunlight
 filtering through leaves.
+
+1. *dépanneur* - In Québec French, it means a corner store, particularly one
+that sells alcohol. The word comes from dépanner, meaning 'to help out, fix,
+repair.'
