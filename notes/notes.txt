@@ -1,6 +1,9 @@
 * Things all programmers should know:
   - command line
-  - grep
+    - grep
+    - tail
+    - ps
+    - filtering (sort, cut, awk, sed)
   - perl style regular expressions
   - how to administer DB
   - how to administer web server
@@ -20,6 +23,10 @@
 * Bret Victor talk: integrating into rails - migrations and controllers
   - bonus: converting inputs to tests.
 * passionate programmer - learning to fish, learning business, find a mentor, be a mentor
+* breakdown of most commonly used commands
+
+* how CouchSurfing has changed my life
+
 
 * GitHub for Writers (Git + Markdown > Word)
 * German game: World frozen. Can only move/interact by learning German
