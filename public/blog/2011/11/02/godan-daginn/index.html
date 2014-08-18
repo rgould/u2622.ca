@@ -22,10 +22,11 @@
   <link rel="canonical" href="http://u2622.ca/blog/2011/11/02/godan-daginn">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="☢ u2622.ca" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -50,7 +51,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">☢ u2622.ca</a></h1>
   
-    <h2>Radioactivität</h2>
+    <h2>Meteor tips, help and sometimes random things</h2>
   
 </hgroup>
 
@@ -59,12 +60,7 @@
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:u2622.ca" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
+  
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
@@ -87,11 +83,10 @@
 
 
 
-  
-
-<time datetime="2011-11-02T23:58:00-07:00" pubdate>Nov 2<span>nd</span>, 2011</time>
+<time class='entry-date' datetime='2011-11-02T23:58:00-07:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2011</span></span> <span class='time'>11:58 pm</span></time>
         
-         | <a href="#disqus_thread">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://u2622.ca">Comments</a>
         
       </p>
     
@@ -116,9 +111,7 @@
 
 
 
-  
-
-<time datetime="2011-11-02T23:58:00-07:00" pubdate>Nov 2<span>nd</span>, 2011</time>
+<time class='entry-date' datetime='2011-11-02T23:58:00-07:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2011</span></span> <span class='time'>11:58 pm</span></time>
       
 
 
@@ -126,13 +119,9 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2011/11/02/godan-daginn/" data-via="u2622" data-counturl="http://u2622.ca/blog/2011/11/02/godan-daginn/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2011/11/02/godan-daginn/" data-via="u2622" data-counturl="http://u2622.ca/blog/2011/11/02/godan-daginn/" >Tweet</a>
   
   
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   
 </div>
 
@@ -140,7 +129,7 @@
     <p class="meta">
       
       
-        <a class="basic-alignment right" href="/blog/2012/02/11/machinist-and-association-validations/" title="next Post: Machinist and Association Validations">Machinist and Association Validations &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/02/11/machinist-and-association-validations/" title="Next Post: Machinist and Association Validations">Machinist and Association Validations &raquo;</a>
       
     </p>
   </footer>
@@ -159,6 +148,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/17/implementing-web-hooks-with-meteor/">Implementing Web Hooks With Meteor</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/04/20/icelandic-language-music-roundup/">Icelandic Language Music Roundup</a>
@@ -180,15 +173,15 @@
 </section>
 
 <section>
-  <h1>Github Repos</h1>
+  <h1>GitHub Repos</h1>
   <ul id="gh_repos">
     <li class="loading">Status updating...</li>
   </ul>
   
-  <a href="https://github.com/rgould">@rgould</a> on Github
+  <a href="https://github.com/rgould">@rgould</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -209,23 +202,6 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("u2622", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/u2622" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @u2622</a>
-  
-</section>
-
-
 
 
 
@@ -236,7 +212,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - u2622 -
+  Copyright &copy; 2014 - u2622 -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -254,31 +230,14 @@
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
 
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
 
 
 
@@ -287,7 +246,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: meteor | ☢ u2622.ca]]></title>
+  <link href="http://u2622.ca/blog/categories/meteor/atom.xml" rel="self"/>
+  <link href="http://u2622.ca/"/>
+  <updated>2014-08-17T19:46:59-07:00</updated>
+  <id>http://u2622.ca/</id>
+  <author>
+    <name><![CDATA[u2622]]></name>
+    <email><![CDATA[u2622@u2622.ca]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Implementing web hooks with Meteor]]></title>
+    <link href="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/"/>
+    <updated>2014-08-17T19:21:00-07:00</updated>
+    <id>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
+
+<p>Declare a server-side route in your Routes.map declaration:</p>
+
+<pre><code class="javascript">    Router.map(function() {
+      ... // Your other routes go here
+
+      this.route('hook', {
+        path: '/hook',
+        where: 'server',
+        action: function() {
+
+          // Watch the Meteor log to see this output
+          console.log("Hook called.");
+          console.log("Headers: ", this.request.headers);
+          console.log("Data: ", this.request.body);
+
+          this.response.writeHead(200, {'Content-Type': 'text/html'});
+          this.response.write("You wrote: " + this.request.body.message);
+          this.response.write("\n");
+
+          // `this.response.end` *must* be called, or else the connection is left open.
+          this.response.end('Success!\n');
+        }
+      });
+
+    });
+</code></pre>
+
+<p>To test it out, issue this curl command from the command line:</p>
+
+<pre><code class="bash">    curl -H "Content-Type: application/json" -d '{"message":"foo"}' http://localhost:3000/hook
+</code></pre>
+
+<p>Not clear enough? Send me an email at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#114;&#x67;&#111;&#117;&#x6c;&#x64;&#64;&#x75;&#x32;&#54;&#x32;&#50;&#x2e;&#99;&#x61;">&#114;&#103;&#111;&#117;&#108;&#100;&#x40;&#x75;&#x32;&#x36;&#50;&#50;&#x2e;&#x63;&#x61;</a> for some more help!</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[☢ u2622.ca]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2013-04-20T15:29:47-07:00</updated>
+  <updated>2014-08-17T19:46:59-07:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[u2622]]></name>
@@ -14,6 +14,75 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Implementing Web Hooks With Meteor]]></title>
+    <link href="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/"/>
+    <updated>2014-08-17T19:21:00-07:00</updated>
+    <id>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
+
+<p>Declare a server-side route in your Routes.map declaration:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Router</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span> <span class="c1">// Your other routes go here</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;hook&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/hook&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">where</span><span class="o">:</span> <span class="s1">&#39;server&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">action</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// Watch the Meteor log to see this output</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hook called.&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Headers: &quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Data: &quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;You wrote: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// `this.response.end` *must* be called, or else the connection is left open.</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Success!\n&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To test it out, issue this curl command from the command line:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl -H <span class="s2">&quot;Content-Type: application/json&quot;</span> -d <span class="s1">&#39;{&quot;message&quot;:&quot;foo&quot;}&#39;</span> http://localhost:3000/hook
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#114;&#103;&#x6f;&#117;&#x6c;&#x64;&#x40;&#x75;&#x32;&#x36;&#x32;&#x32;&#46;&#99;&#x61;">&#114;&#103;&#x6f;&#117;&#108;&#x64;&#64;&#117;&#50;&#54;&#50;&#x32;&#x2e;&#x63;&#97;</a> for some more help!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Icelandic Language Music Roundup]]></title>
     <link href="http://u2622.ca/blog/2013/04/20/icelandic-language-music-roundup/"/>
     <updated>2013-04-20T15:10:00-07:00</updated>
@@ -21,37 +90,37 @@
     <content type="html"><![CDATA[<p>While focusing heavily on learning Icelandic, I dug deeply looking for Icelandic-language music. There are surprisingly high amounts of Icelandic bands that sing exclusively in English. Here are my favourite songs with Icelandic lyrics:</p>
 
 <p><strong>Mammút</strong> - They play energetic rock music, bordering on post-punk sometimes. The first Icelandic language band I liked, and my favourite still.
- Here&#8217;s Svefnsýkt: <iframe width="420" height="315" src="http://www.youtube.com/embed/aeGZriDklEo" frameborder="0" allowfullscreen></iframe>
+ Here&rsquo;s Svefnsýkt: <iframe width="420" height="315" src="http://www.youtube.com/embed/aeGZriDklEo" frameborder="0" allowfullscreen></iframe>
  Bónus: <a href="https://www.youtube.com/watch?v=8EV-pE4xaHI">Rauðilækur</a></p>
 
-<p><strong>Q4U</strong> - Postpunk from the 80s, mostly in Icelandic. They&#8217;re still around.
- Here&#8217;s Sigurinn: <iframe width="420" height="315" src="http://www.youtube.com/embed/iiWcZKhWlQA" frameborder="0" allowfullscreen></iframe>
+<p><strong>Q4U</strong> - Postpunk from the 80s, mostly in Icelandic. They&rsquo;re still around.
+ Here&rsquo;s Sigurinn: <iframe width="420" height="315" src="http://www.youtube.com/embed/iiWcZKhWlQA" frameborder="0" allowfullscreen></iframe>
  Bónus: <a href="https://www.youtube.com/watch?v=6qM2yrG1wpY">Snjóhvít</a></p>
 
 <p><strong>Samaris</strong> - Atmospheric minimal electro/triphop with clarinet. Very haunting.
- Here&#8217;s Góða Tungl: <iframe width="560" height="315" src="http://www.youtube.com/embed/_pKuzdMFE8k" frameborder="0" allowfullscreen></iframe>
+ Here&rsquo;s Góða Tungl: <iframe width="560" height="315" src="http://www.youtube.com/embed/_pKuzdMFE8k" frameborder="0" allowfullscreen></iframe>
  Bónus: <a href="http://www.youtube.com/watch?v=J9hKHJkGMwE">Stofnar Falla</a></p>
 
 <p><strong>Nóra</strong>: Indie rock, ranging from upbeat and energetic to atmospheric and introspective. The more I listen, the more I like it. They sing entirely in Icelandic.
- Here&#8217;s Himinbrim: <iframe width="420" height="315" src="http://www.youtube.com/embed/w66kIAWBFs8" frameborder="0" allowfullscreen></iframe>
+ Here&rsquo;s Himinbrim: <iframe width="420" height="315" src="http://www.youtube.com/embed/w66kIAWBFs8" frameborder="0" allowfullscreen></iframe>
  Bónus: <a href="https://www.youtube.com/watch?v=it2MTpGisJQ">Sjónskekkja</a></p>
 
 <p><strong>Lockerbie</strong> - Post-rock, but with a bit more pop/rock than usually characterised by Icelandic post-rock.
- Here&#8217;s Snjóljón: <iframe width="420" height="315" src="http://www.youtube.com/embed/cUWzNsPHcEQ" frameborder="0" allowfullscreen></iframe></p>
+ Here&rsquo;s Snjóljón: <iframe width="420" height="315" src="http://www.youtube.com/embed/cUWzNsPHcEQ" frameborder="0" allowfullscreen></iframe></p>
 
 <p><strong>Úlfur Úlfur</strong> - Hiphop with awesome backing percussion. They sing entirely in Icelandic.
- Here&#8217;s Út: <iframe width="560" height="315" src="http://www.youtube.com/embed/jCgbt73gD74" frameborder="0" allowfullscreen></iframe>
+ Here&rsquo;s Út: <iframe width="560" height="315" src="http://www.youtube.com/embed/jCgbt73gD74" frameborder="0" allowfullscreen></iframe>
  Bónus: <a href="http://www.youtube.com/watch?v=R0LWMJatU4s">Ég er farinn</a></p>
 
 <p><strong>Pascal Pinon</strong> - D.I.Y., lo-fi, indie pop electronic. Many songs in Icelandic.
- Here&#8217;s Ekki Vanmeta: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71960187"></iframe>
+ Here&rsquo;s Ekki Vanmeta: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71960187"></iframe>
  Bónus: <a href="https://soundcloud.com/iceland-music-export/pascal-pinon-sandur">Sandur</a></p>
 
 <p><strong>Sólstafir</strong> - Post-black metal, with elements of country and rock. They are amazing live. Their album Svartir Sandar is entirely in Icelandic and highly recommended.
- Here&#8217;s Fjara: <iframe width="420" height="315" src="http://www.youtube.com/embed/A6j7mUxGz20" frameborder="0" allowfullscreen></iframe>
+ Here&rsquo;s Fjara: <iframe width="420" height="315" src="http://www.youtube.com/embed/A6j7mUxGz20" frameborder="0" allowfullscreen></iframe>
  Bónus: <a href="http://www.youtube.com/watch?v=SkA6JX8iuHo">Svartir Sandar</a></p>
 
-<p>There&#8217;s lots of music that I&#8217;ve discovered that I didn&#8217;t cover here, but I only wanted to showcase the music I liked the most. Feel free to leave other suggestions in the comments.</p>
+<p>There&rsquo;s lots of music that I&rsquo;ve discovered that I didn&rsquo;t cover here, but I only wanted to showcase the music I liked the most. Feel free to leave other suggestions in the comments.</p>
 ]]></content>
   </entry>
   
@@ -112,7 +181,7 @@
 
 <p>Use that output to create better aliases!</p>
 
-<p>Here&#8217;s some of my favourite aliases:</p>
+<p>Here&rsquo;s some of my favourite aliases:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -218,9 +287,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The key is that we&#8217;ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
+<p>The key is that we&rsquo;ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
 
-<p>We&#8217;ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
+<p>We&rsquo;ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
 
 <p>See API docs about validations here:</p>
 
