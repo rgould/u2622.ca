@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://u2622.ca/sitemap.xml 
