@@ -42,4 +42,8 @@ To test it out, issue this curl command from the command line:
     curl -H "Content-Type: application/json" -d '{"message":"foo"}' http://localhost:3000/hook
 ```
 
+The documentation for `this.response` and `this.request` are available on the node.js website: http://nodejs.org/api/http.html
+
+I've created a sample Meteor application demonstrating this, which you can view at https://github.com/rgould/meteor-posthooks
+
 Not clear enough? Send me an email at rgould@u2622.ca for some more help!
