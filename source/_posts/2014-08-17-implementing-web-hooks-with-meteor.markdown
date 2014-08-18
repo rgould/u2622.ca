@@ -42,4 +42,4 @@ To test it out, issue this curl command from the command line:
     curl -H "Content-Type: application/json" -d '{"message":"foo"}' http://localhost:3000/hook
 ```
 
-Not clear enough? Send me an email for some more help!
+Not clear enough? Send me an email at rgould@u2622.ca for some more help!
