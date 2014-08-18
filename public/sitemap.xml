@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/</loc>
+    <lastmod>2014-08-24T20:22:26-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/</loc>
     <lastmod>2014-08-17T19:21:00-07:00</lastmod>
     <priority>0.8</priority>
@@ -35,28 +41,28 @@
   
   <url>
     <loc>http://u2622.ca/blog/archives/</loc>
-    <lastmod>2014-08-17T20:08:51-07:00</lastmod>
+    <lastmod>2014-08-17T23:12:36-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://u2622.ca/</loc>
-    <lastmod>2014-08-17T20:08:51-07:00</lastmod>
+    <lastmod>2014-08-17T23:12:36-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://u2622.ca/words/</loc>
-    <lastmod>2014-08-17T20:08:51-07:00</lastmod>
+    <lastmod>2014-08-17T23:12:36-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://u2622.ca/about/</loc>
-    <lastmod>2014-08-17T20:08:51-07:00</lastmod>
+    <lastmod>2014-08-17T23:12:36-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

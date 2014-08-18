@@ -9,8 +9,7 @@
   <meta name="author" content="u2622">
 
   
-  <meta name="description" content="It&rsquo;s possible to add web hooks to your Meteor application by using iron-router. Declare a server-side route in your Routes.map declaration: 1
-2 &hellip;">
+  <meta name="description" content="You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +70,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Disadvantages of Using Meteor (Over Rails)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-08-24T20:22:26-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:22 pm</span></time>
+        
+           | <a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
+What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
+
+<p><strong>Immature Environment</strong>: The biggest problem right now is that Meteor is new. Pretty much brand new, in the scope of web development. It&rsquo;s not even version 1.0 yet, though it&rsquo;s getting close. This means that it doesn&rsquo;t have as many users, as many tutorials, as many books, as many screencasts. It can be hard if you run into a problem that no one else has run into yet, so you&rsquo;ll need to be willing to dig into it a bit yourself. I&rsquo;ve been there, and fortunately Meteor&rsquo;s codebase is fairly cleanly written (especially compared to Rails and AngularJS, two other frameworks whose code I&rsquo;ve read).</p>
+
+<p><strong>Not Widely Supported</strong>: Another consequence of being so new is that there aren&rsquo;t as many hosting services available for Meteor apps yet. It is possible to deploy Meteor on Heroku, and in my experience it works well, though it feels very raw.</p>
+
+<p><strong>Nothing but JavaScript</strong>: You must run JavaScript (or Coffeescript) on the server side. This isn&rsquo;t a big deal for me, but JS is definitely far from the first language I would choose to work with. The upside is that you can run the same code on the server and the browser, without worrying about having to cross-compile from another language.</p>
+
+<p><strong>Only MongoDB</strong>: As of now, the only supported database is MongoDB. They have plans to expand this in the future.</p>
+
+<p><strong>Rapidly Changing</strong>: The Meteor API is rapidly changing, so each new minor version may bring breaking changes. This is expected to lessen as it reaches 1.0.</p>
+
+<p><strong>Testing Frameworks</strong>: Testing frameworks haven&rsquo;t been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community&rsquo;s.</p>
+
+<p>What are some other disadvantages you can think of? Email me or leave a comment!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -160,7 +206,7 @@
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x72;&#103;&#111;&#x75;&#108;&#100;&#64;&#117;&#50;&#54;&#x32;&#50;&#x2e;&#99;&#x61;">&#x72;&#103;&#x6f;&#117;&#108;&#x64;&#x40;&#117;&#50;&#54;&#x32;&#50;&#x2e;&#x63;&#x61;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x72;&#x67;&#x6f;&#117;&#108;&#100;&#64;&#117;&#x32;&#x36;&#x32;&#x32;&#x2e;&#x63;&#x61;">&#114;&#x67;&#x6f;&#x75;&#x6c;&#x64;&#x40;&#x75;&#x32;&#x36;&#50;&#x32;&#x2e;&#99;&#97;</a> for some more help!</p>
 </div>
   
   
@@ -503,6 +549,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Disadvantages of Using Meteor (Over Rails)</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/08/17/implementing-web-hooks-with-meteor/">Implementing Web Hooks With Meteor</a>
       </li>
     
@@ -516,10 +566,6 @@
     
       <li class="post">
         <a href="/blog/2012/02/11/machinist-and-association-validations/">Machinist and Association Validations</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/11/02/godan-daginn/">Goðan Daginn!</a>
       </li>
     
   </ul>
