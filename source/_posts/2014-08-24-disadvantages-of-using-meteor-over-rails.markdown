@@ -21,6 +21,8 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?
 
 **Testing Frameworks**: Testing frameworks haven't been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community's.
 
+While there are many disadvantages, I feel like the advantages heavily outweigh them (usually). But the list of advantages is for another post entirely!
+
 What are some other disadvantages you can think of? Email me or leave a comment!
 
 <!-- Begin MailChimp Signup Form -->
