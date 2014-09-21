@@ -4,7 +4,7 @@
   <title><![CDATA[☢ u2622.ca]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2014-08-24T14:14:52-07:00</updated>
+  <updated>2014-09-21T15:41:31-07:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[u2622]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[5 Steps to Understanding Meteor Better by Improving Your JavaScript]]></title>
+    <link href="http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/"/>
+    <updated>2014-09-20T13:31:10-07:00</updated>
+    <id>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript</id>
+    <content type="html"><![CDATA[<p>I don&rsquo;t believe you need to be a javascript expert before diving into Meteor, but I highly recommend doing so anyway. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don&rsquo;t stick with Meteor, or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
+
+<p>I recommend starting by watching a series of Douglas Crockford&rsquo;s lectures on JavaScript, and then following it with Reginald Braithwaite&rsquo;s Javascript Allongé.</p>
+
+<ol>
+<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">The Javascript Programming Language</a></em>. Watch it even if you already have built some applications with JS already. It goes into the fundamentals in depth, and will help cement the basics in your mind, which is essential when learning advanced topics.</li>
+<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
+<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=DwYPG6vreJg">Advanced JavaScript</a></em>. It covers some advanced topics sometimes unique to JavaScript, and common advanced patterns. If you&rsquo;ve ever tried reading a JavaScript library and couldn&rsquo;t even begin to comphrehend it, this lecture will help clear things up.</li>
+<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=hQVTIJBZook">JavaScript: The Good Parts</a></em>. It will help you pick out the best parts of the language to use, and the parts that you need to actively avoid.</li>
+<li>Read Reginald Braithwaite&rsquo;s <em><a href="https://leanpub.com/javascript-allonge">Javascript Allongé</a></em>. Reginald (aka ragnwald) covers advanced functional topics, and this will permanently change how you write your JavaScript, enabling you to write resuable code faster and with much higher confidence.</li>
+</ol>
+
+
+<p>I recommend reading them in that order. <em>Allongé</em> is more advanced, and builds off of topics covered by Crockford. Each will help your Javascript game to the next level, with Crockford&rsquo;s lessons establishing solid fundamentals, and <em>Allongé</em> teaching (in a very effective manner) the more advanced usages of functional programming with JS.</p>
+
+<p>Note that I read both of the above (and worked through the exercises in <em>Allongé</em>) before I even touched Meteor, and for the most part, the only Meteor help I&rsquo;ve needed has been the official Meteor docs. Having such a solid foundation of knowledge let me pick up Meteor with lightning speed, and all of those skills will stay with me when it comes time to learn another framework.</p>
+
+<p>If you have trouble following Crockford&rsquo;s lectures, then I recommend reading his print edition of JavaScript: The Good Parts instead. While you&rsquo;re reading it, really work through the examples to make sure you&rsquo;re understanding it as you go along.</p>
+
+<p>Have you ever felt that your JavaScript skills were inadequate? Have you ever look inside one of the libraries you use (jQuery perhaps?) and felt as though you didn&rsquo;t understand JavaScript at all? I want to hear about it. <a href="mailto:rgould@u2622.ca">Email me</a> with your story (write as much or as little as you&rsquo;d like).</p>
+
+<!-- Begin MailChimp Signup Form -->
+
+
+<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
+
+
+
+<div id="mc_embed_signup">
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+
+
+
+<!--End mc_embed_signup-->
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Disadvantages of Using Meteor (Over Rails)]]></title>
@@ -131,7 +182,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x72;&#x67;&#111;&#117;&#108;&#x64;&#64;&#117;&#x32;&#x36;&#50;&#50;&#46;&#x63;&#x61;">&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#x40;&#117;&#50;&#x36;&#50;&#50;&#46;&#99;&#97;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x72;&#x67;&#x6f;&#117;&#x6c;&#x64;&#64;&#x75;&#x32;&#54;&#x32;&#x32;&#x2e;&#99;&#x61;">&#x72;&#103;&#x6f;&#117;&#108;&#100;&#x40;&#x75;&#50;&#x36;&#50;&#50;&#x2e;&#99;&#97;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
