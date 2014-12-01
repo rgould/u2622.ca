@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meteor | ☢ u2622.ca]]></title>
   <link href="http://u2622.ca/blog/categories/meteor/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2014-09-21T16:04:33-07:00</updated>
+  <updated>2014-12-01T15:11:31-08:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[u2622]]></name>
@@ -24,7 +24,7 @@
 
 <ol>
 <li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">The JavaScript Programming Language</a></em>. Watch it even if you already have built some applications with JS already. It goes into the fundamentals in-depth, and will help cement the basics in your mind, which is essential when learning advanced topics.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
+<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=Y2Y0U-2qJMs">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
 <li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=DwYPG6vreJg">Advanced JavaScript</a></em>. It covers some advanced topics sometimes unique to JavaScript, and common advanced patterns. If you&rsquo;ve ever tried reading a JavaScript library and couldn&rsquo;t even begin to comphrehend it, this lecture will help clear things up.</li>
 <li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=hQVTIJBZook">JavaScript: The Good Parts</a></em>. It will help you pick out the best parts of the language to use, and the parts that you need to actively avoid.</li>
 <li>Read Reginald Braithwaite&rsquo;s <em><a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a></em>. Reginald (aka ragnwald) covers advanced functional topics, and this will permanently change how you write your JavaScript, enabling you to write resuable code faster and with much higher confidence.</li>
@@ -156,7 +156,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x72;&#103;&#111;&#117;&#x6c;&#x64;&#x40;&#x75;&#x32;&#x36;&#50;&#x32;&#x2e;&#x63;&#x61;">&#114;&#x67;&#111;&#x75;&#108;&#x64;&#x40;&#x75;&#50;&#x36;&#50;&#50;&#x2e;&#99;&#x61;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x72;&#103;&#x6f;&#117;&#108;&#100;&#64;&#117;&#50;&#54;&#x32;&#50;&#x2e;&#99;&#97;">&#114;&#x67;&#x6f;&#x75;&#108;&#x64;&#64;&#x75;&#50;&#x36;&#50;&#50;&#46;&#x63;&#97;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
