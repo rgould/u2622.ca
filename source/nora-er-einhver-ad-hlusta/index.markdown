@@ -7,7 +7,8 @@ footer: true
 ---
 
 Nóra is Auður Viðarsdóttir, Egill Viðarsson, Frank Arthur Blöndahl Cassata,
-Hrafn Fritzson, and Óskar Kjartansson. Lyrics are copyright Nóra.
+Hrafn Fritzson, and Óskar Kjartansson. Lyrics are copyright Nóra. You can
+purchase this album on [Nóra's page on bandcamp](https://nora.bandcamp.com/album/er-einhver-a-hlusta).
 
 Translation by Richard Gould, with assistance from Óskar Bragi Stefánsson and
 Lárus Þór Jóhannsson. Corrections welcome :)
