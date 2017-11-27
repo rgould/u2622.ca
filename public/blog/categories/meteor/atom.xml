@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meteor | ☢ u2622.ca]]></title>
   <link href="http://u2622.ca/blog/categories/meteor/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2016-03-22T21:59:22-07:00</updated>
+  <updated>2017-11-27T09:42:58+01:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[u2622]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[5 Steps to Understanding Meteor better by Improving your JavaScript]]></title>
     <link href="http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/"/>
-    <updated>2014-09-20T13:31:10-07:00</updated>
+    <updated>2014-09-20T22:31:10+02:00</updated>
     <id>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript</id>
     <content type="html"><![CDATA[<p>I don&rsquo;t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don&rsquo;t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
 
@@ -66,9 +66,9 @@
   
   <entry>
     <title type="html"><![CDATA[Disadvantages of using Meteor (over Rails)]]></title>
-    <link href="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/"/>
-    <updated>2014-08-24T20:22:26-07:00</updated>
-    <id>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails</id>
+    <link href="http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails/"/>
+    <updated>2014-08-25T05:22:26+02:00</updated>
+    <id>http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails</id>
     <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
 What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
@@ -116,7 +116,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
   <entry>
     <title type="html"><![CDATA[Implementing web hooks with Meteor]]></title>
     <link href="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/"/>
-    <updated>2014-08-17T19:21:00-07:00</updated>
+    <updated>2014-08-17T19:21:00+02:00</updated>
     <id>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor</id>
     <content type="html"><![CDATA[<p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
 
@@ -156,7 +156,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x72;&#103;&#111;&#117;&#108;&#x64;&#64;&#117;&#50;&#x36;&#50;&#x32;&#x2e;&#x63;&#x61;">&#114;&#x67;&#111;&#x75;&#x6c;&#x64;&#64;&#117;&#50;&#x36;&#50;&#50;&#x2e;&#99;&#97;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#114;&#x67;&#x6f;&#x75;&#x6c;&#x64;&#x40;&#x75;&#50;&#x36;&#x32;&#50;&#46;&#x63;&#97;">&#114;&#103;&#111;&#x75;&#x6c;&#100;&#64;&#x75;&#50;&#54;&#50;&#x32;&#46;&#x63;&#97;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
