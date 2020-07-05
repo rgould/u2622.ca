@@ -7,7 +7,7 @@ group :development do
   gem 'jekyll-sitemap'
   gem 'octopress-date-format', '~> 2.0'
   gem 'octopress-hooks', '~> 2.2'
-  gem 'rake', '~> 10.0'
+  gem 'rake', '~> 12.3'
   gem 'rb-fsevent', '~> 0.9'
   gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.2.9'
