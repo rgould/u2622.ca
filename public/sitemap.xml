@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://u2622.ca/blog/2020/07/05/improving-your-speaking-and-listening-skills/</loc>
+<lastmod>2020-07-05T18:39:56+02:00</lastmod>
+</url>
+<url>
 <loc>http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/</loc>
 <lastmod>2017-11-26T18:37:38+01:00</lastmod>
 </url>
@@ -52,5 +56,8 @@
 </url>
 <url>
 <loc>http://u2622.ca/blog/categories/javascript/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/blog/categories/language-learning/</loc>
 </url>
 </urlset>
