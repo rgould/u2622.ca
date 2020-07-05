@@ -50,7 +50,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">☢ u2622.ca</a></h1>
   
-    <h2>Thoughts on Software Development</h2>
+    <h2>Thoughts on software development, with an odd jaunt into language learning</h2>
   
 </hgroup>
 
@@ -192,6 +192,11 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 <aside class="sidebar">
   
     <section>
+  <h1>About Me</h1>
+  <img src="images/lynn_valley_thumb.jpg"/>
+  <p>Welcome! I'm Richard, a software developer and wannabe hyper-polyglot. <a href="/about">Learn more about me here.</a> Want to get in touch? Feel free to email me at rgould@u2622.ca</p>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -217,39 +222,6 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
     
   </ul>
 </section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/rgould">@rgould</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'rgould',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
 
   
 </aside>

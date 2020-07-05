@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Implementing Web Hooks With Meteor - ☢ u2622.ca</title>
+  <title>☢ u2622.ca</title>
   <meta name="author" content="Richard Gould">
 
   
-  <meta name="description" content="It&rsquo;s possible to add web hooks to your Meteor application by using iron-router. Declare a server-side route in your Routes.map declaration: 1
-2 &hellip;">
+  <meta name="description" content="You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/">
+  <link rel="canonical" href="http://u2622.ca/posts/2/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="☢ u2622.ca" type="application/atom+xml">
@@ -70,12 +69,87 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">Implementing Web Hooks With Meteor</h1>
+      <h1 class="entry-title"><a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Disadvantages of Using Meteor (Over Rails)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-08-24T20:22:26-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:22 pm</span></time>
+        
+           | <a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
+What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
+
+<p><strong>Immature Environment</strong>: The biggest problem right now is that Meteor is new. Pretty much brand new, in the scope of web development. It&rsquo;s not even version 1.0 yet, though it&rsquo;s getting close. This means that it doesn&rsquo;t have as many users, as many tutorials, as many books, as many screencasts. It can be hard if you run into a problem that no one else has run into yet, so you&rsquo;ll need to be willing to dig into it a bit yourself. I&rsquo;ve been there, and fortunately Meteor&rsquo;s codebase is fairly cleanly written (especially compared to Rails and AngularJS, two other frameworks whose code I&rsquo;ve read).</p>
+
+<p><strong>Not Widely Supported</strong>: Another consequence of being so new is that there aren&rsquo;t as many hosting services available for Meteor apps yet. It is possible to deploy Meteor on Heroku, and in my experience it works well, though it feels very raw.</p>
+
+<p><strong>Nothing but JavaScript</strong>: You must run JavaScript (or Coffeescript) on the server side. This isn&rsquo;t a big deal for me, but JS is definitely far from the first language I would choose to work with. The upside is that you can run the same code on the server and the browser, without worrying about having to cross-compile from another language.</p>
+
+<p><strong>Only MongoDB</strong>: As of now, the only supported database is MongoDB. They have plans to expand this in the future.</p>
+
+<p><strong>Rapidly Changing</strong>: The Meteor API is rapidly changing, so each new minor version may bring breaking changes. This is expected to lessen as it reaches 1.0.</p>
+
+<p><strong>Testing Frameworks</strong>: Testing frameworks haven&rsquo;t been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community&rsquo;s.</p>
+
+<p>While there are many disadvantages, I feel like the advantages heavily outweigh them (usually). But the list of advantages is for another post entirely!</p>
+
+<p>What are some other disadvantages you can think of? Email me or leave a comment!</p>
+
+<!-- Begin MailChimp Signup Form -->
+
+
+<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
+
+
+
+<div id="mc_embed_signup">
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+
+
+
+<!--End mc_embed_signup-->
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/17/implementing-web-hooks-with-meteor/">Implementing Web Hooks With Meteor</a></h1>
     
     
       <p class="meta">
@@ -86,15 +160,15 @@
 
 <time class='entry-date' datetime='2014-08-17T19:21:00+02:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:21 pm</span></time>
         
-           | <a href="#disqus_thread"
-             data-disqus-identifier="http://u2622.ca">Comments</a>
+           | <a href="/blog/2014/08/17/implementing-web-hooks-with-meteor/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/">Comments</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
+  <div class="entry-content"><p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
 
 <p>Declare a server-side route in your Routes.map declaration:</p>
 
@@ -183,60 +257,87 @@
 <!--End mc_embed_signup-->
 
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
+  
   
 
-<span class="byline author vcard">Posted by <span class="fn">Richard Gould</span></span>
 
-      
-
-
-
-
-<time class='entry-date' datetime='2014-08-17T19:21:00+02:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:21 pm</span></time>
-      
-
-<span class="categories">
+    </article>
   
-    <a class='category' href='/blog/categories/meteor/'>meteor</a>
   
-</span>
-
-
-    </p>
+    <article>
+      
+  <header>
     
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/" data-via="u2622" data-counturl="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/" >Tweet</a>
-  
-  
-  
-</div>
-
+      <h1 class="entry-title"><a href="/blog/2013/04/20/icelandic-language-music-roundup/">Icelandic Language Music Roundup</a></h1>
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/04/20/icelandic-language-music-roundup/" title="Previous Post: Icelandic Language Music Roundup">&laquo; Icelandic Language Music Roundup</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/" title="Next Post: Disadvantages of using Meteor (over Rails)">Disadvantages of using Meteor (over Rails) &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
+    
+      <p class="meta">
+        
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+<time class='entry-date' datetime='2013-04-20T15:10:00+02:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>3:10 pm</span></time>
+        
+           | <a href="/blog/2013/04/20/icelandic-language-music-roundup/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2013/04/20/icelandic-language-music-roundup/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While focusing heavily on learning Icelandic, I dug deeply looking for Icelandic-language music. There are surprisingly high amounts of Icelandic bands that sing exclusively in English. Here are my favourite songs with Icelandic lyrics:</p>
+
+<p><strong>Mammút</strong> - They play energetic rock music, bordering on post-punk sometimes. The first Icelandic language band I liked, and my favourite still.
+ Here&rsquo;s Svefnsýkt: <iframe width="420" height="315" src="http://www.youtube.com/embed/aeGZriDklEo" frameborder="0" allowfullscreen></iframe>
+ Bónus: <a href="https://www.youtube.com/watch?v=8EV-pE4xaHI">Rauðilækur</a></p>
+
+<p><strong>Q4U</strong> - Postpunk from the 80s, mostly in Icelandic. They&rsquo;re still around.
+ Here&rsquo;s Sigurinn: <iframe width="420" height="315" src="http://www.youtube.com/embed/iiWcZKhWlQA" frameborder="0" allowfullscreen></iframe>
+ Bónus: <a href="https://www.youtube.com/watch?v=6qM2yrG1wpY">Snjóhvít</a></p>
+
+<p><strong>Samaris</strong> - Atmospheric minimal electro/triphop with clarinet. Very haunting.
+ Here&rsquo;s Góða Tungl: <iframe width="560" height="315" src="http://www.youtube.com/embed/_pKuzdMFE8k" frameborder="0" allowfullscreen></iframe>
+ Bónus: <a href="http://www.youtube.com/watch?v=J9hKHJkGMwE">Stofnar Falla</a></p>
+
+<p><strong>Nóra</strong>: Indie rock, ranging from upbeat and energetic to atmospheric and introspective. The more I listen, the more I like it. They sing entirely in Icelandic.
+ Here&rsquo;s Himinbrim: <iframe width="420" height="315" src="http://www.youtube.com/embed/w66kIAWBFs8" frameborder="0" allowfullscreen></iframe>
+ Bónus: <a href="https://www.youtube.com/watch?v=it2MTpGisJQ">Sjónskekkja</a></p>
+
+<p><strong>Lockerbie</strong> - Post-rock, but with a bit more pop/rock than usually characterised by Icelandic post-rock.
+ Here&rsquo;s Snjóljón: <iframe width="420" height="315" src="http://www.youtube.com/embed/cUWzNsPHcEQ" frameborder="0" allowfullscreen></iframe></p>
+
+<p><strong>Úlfur Úlfur</strong> - Hiphop with awesome backing percussion. They sing entirely in Icelandic.
+ Here&rsquo;s Út: <iframe width="560" height="315" src="http://www.youtube.com/embed/jCgbt73gD74" frameborder="0" allowfullscreen></iframe>
+ Bónus: <a href="http://www.youtube.com/watch?v=R0LWMJatU4s">Ég er farinn</a></p>
+
+<p><strong>Pascal Pinon</strong> - D.I.Y., lo-fi, indie pop electronic. Many songs in Icelandic.
+ Here&rsquo;s Ekki Vanmeta: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71960187"></iframe>
+ Bónus: <a href="https://soundcloud.com/iceland-music-export/pascal-pinon-sandur">Sandur</a></p>
+
+<p><strong>Sólstafir</strong> - Post-black metal, with elements of country and rock. They are amazing live. Their album Svartir Sandar is entirely in Icelandic and highly recommended.
+ Here&rsquo;s Fjara: <iframe width="420" height="315" src="http://www.youtube.com/embed/A6j7mUxGz20" frameborder="0" allowfullscreen></iframe>
+ Bónus: <a href="http://www.youtube.com/watch?v=SkA6JX8iuHo">Svartir Sandar</a></p>
+
+<p>There&rsquo;s lots of music that I&rsquo;ve discovered that I didn&rsquo;t cover here, but I only wanted to showcase the music I liked the most. Feel free to leave other suggestions in the comments.</p>
 </div>
-  </section>
+  
+  
 
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/3">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/index.html">Newer &rarr;</a>
+    
+  </div>
 </div>
-
 <aside class="sidebar">
   
     <section>
@@ -274,7 +375,6 @@
   
 </aside>
 
-
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -289,10 +389,7 @@
       var disqus_shortname = 'u2622';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/';
-        var disqus_url = 'http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
