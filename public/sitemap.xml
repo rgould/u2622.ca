@@ -1,90 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  
-  <url>
-    <loc>http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/</loc>
-    <lastmod>2017-11-26T18:37:38+01:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/</loc>
-    <lastmod>2014-09-20T22:31:10+02:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails/</loc>
-    <lastmod>2014-08-25T05:22:26+02:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/</loc>
-    <lastmod>2014-08-17T19:21:00+02:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2013/04/20/icelandic-language-music-roundup/</loc>
-    <lastmod>2013-04-20T15:10:00+02:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2012/03/04/shell-aliases/</loc>
-    <lastmod>2012-03-04T19:15:00+01:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/</loc>
-    <lastmod>2012-02-11T11:32:00+01:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/blog/2011/11/02/godan-daginn/</loc>
-    <lastmod>2011-11-02T23:58:00+01:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  
-  <url>
-    <loc>http://u2622.ca/blog/archives/</loc>
-    <lastmod>2017-11-27T09:42:58+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/</loc>
-    <lastmod>2017-11-27T09:42:58+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/words/</loc>
-    <lastmod>2017-11-27T09:42:58+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/about/</loc>
-    <lastmod>2017-11-27T09:42:58+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://u2622.ca/nora-er-einhver-ad-hlusta/</loc>
-    <lastmod>2017-11-27T09:42:58+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  
+<url>
+<loc>http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/</loc>
+<lastmod>2017-11-26T18:37:38+01:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/</loc>
+<lastmod>2014-09-20T13:31:10-07:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/</loc>
+<lastmod>2014-08-24T20:22:26-07:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/</loc>
+<lastmod>2014-08-17T19:21:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2013/04/20/icelandic-language-music-roundup/</loc>
+<lastmod>2013-04-20T15:10:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2012/03/04/shell-aliases/</loc>
+<lastmod>2012-03-04T19:15:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/</loc>
+<lastmod>2012-02-11T11:32:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/blog/2011/11/02/godan-daginn/</loc>
+<lastmod>2011-11-02T23:58:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://u2622.ca/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/blog/archives/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/words/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/about/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/nora-er-einhver-ad-hlusta/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/blog/categories/meteor/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/blog/categories/javascript/</loc>
+</url>
 </urlset>

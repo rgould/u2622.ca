@@ -4,11 +4,11 @@
   <title><![CDATA[Category: meteor | ☢ u2622.ca]]></title>
   <link href="http://u2622.ca/blog/categories/meteor/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2017-11-27T09:42:58+01:00</updated>
+  <updated>2020-07-05T17:26:35+02:00</updated>
   <id>http://u2622.ca/</id>
   <author>
-    <name><![CDATA[u2622]]></name>
-    <email><![CDATA[u2622@u2622.ca]]></email>
+    <name><![CDATA[Richard Gould]]></name>
+    <email><![CDATA[rgould@u2622.ca]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[5 Steps to Understanding Meteor better by Improving your JavaScript]]></title>
     <link href="http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/"/>
-    <updated>2014-09-20T22:31:10+02:00</updated>
+    <updated>2014-09-20T13:31:10-07:00</updated>
     <id>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript</id>
     <content type="html"><![CDATA[<p>I don&rsquo;t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don&rsquo;t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
 
@@ -48,7 +48,7 @@
 
 <div id="mc_embed_signup">
 <form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
@@ -66,9 +66,9 @@
   
   <entry>
     <title type="html"><![CDATA[Disadvantages of using Meteor (over Rails)]]></title>
-    <link href="http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails/"/>
-    <updated>2014-08-25T05:22:26+02:00</updated>
-    <id>http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails</id>
+    <link href="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/"/>
+    <updated>2014-08-24T20:22:26-07:00</updated>
+    <id>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails</id>
     <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
 What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
@@ -97,7 +97,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <div id="mc_embed_signup">
 <form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
@@ -156,7 +156,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#114;&#x67;&#x6f;&#x75;&#x6c;&#x64;&#x40;&#x75;&#50;&#x36;&#x32;&#50;&#46;&#x63;&#97;">&#114;&#103;&#111;&#x75;&#x6c;&#100;&#64;&#x75;&#50;&#54;&#50;&#x32;&#46;&#x63;&#97;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x72;&#x67;&#x6f;&#x75;&#108;&#100;&#64;&#117;&#x32;&#54;&#50;&#x32;&#x2e;&#x63;&#x61;">&#114;&#103;&#x6f;&#x75;&#108;&#100;&#x40;&#117;&#50;&#x36;&#x32;&#x32;&#x2e;&#99;&#x61;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
@@ -167,7 +167,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <div id="mc_embed_signup">
 <form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>

@@ -4,11 +4,11 @@
   <title><![CDATA[☢ u2622.ca]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2017-11-27T09:42:58+01:00</updated>
+  <updated>2020-07-05T17:26:35+02:00</updated>
   <id>http://u2622.ca/</id>
   <author>
-    <name><![CDATA[u2622]]></name>
-    <email><![CDATA[u2622@u2622.ca]]></email>
+    <name><![CDATA[Richard Gould]]></name>
+    <email><![CDATA[rgould@u2622.ca]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -35,12 +35,12 @@ under constant review, extending and changing as I grow as a developer.</p>
   This means that you should write maintainable code, ask for help when you
   get stuck, and help out your colleagues when they need it.</p></li>
 <li><p><strong>Review pull requests</strong> thoroughly and in a timely manner - as part of teamwork and
-  leaving work unfinished, review your colleagues&#8217; work quickly. If they write
+  leaving work unfinished, review your colleagues' work quickly. If they write
   a PR and it sits for a week, that is means it takes one week longer for that
   feature to make it into production.</p></li>
 <li><p><strong>Fix bugs first</strong> - Bugs should be fixed before anything else. They are easier
   to fix when fresh, and existing bugs represent potential bad experience for
-  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers&#8217; broken window theory</a>.</p></li>
+  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers' broken window theory</a>.</p></li>
 <li><p><strong>Be aware of errors</strong> - Whenever an error or problem occurs, we must be
   notified of it. Otherwise, only users will experience it, and not all users
   report errors. Also if a bug is fixed before a user first notices, the bug
@@ -85,14 +85,14 @@ with people who haven&rsquo;t given such things any consideration, just like the
 are companies out there that still don&rsquo;t use source code control.</p>
 
 <p>What sort of guidelines do you use in your development process? Email me at
-<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#114;&#x67;&#111;&#x75;&#x6c;&#x64;&#64;&#x75;&#50;&#x36;&#x32;&#x32;&#46;&#99;&#x61;">&#x72;&#103;&#x6f;&#x75;&#x6c;&#x64;&#64;&#117;&#50;&#54;&#x32;&#50;&#x2e;&#x63;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
+<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x72;&#x67;&#x6f;&#x75;&#x6c;&#100;&#x40;&#x75;&#50;&#54;&#x32;&#x32;&#x2e;&#99;&#97;">&#x72;&#103;&#111;&#117;&#x6c;&#100;&#x40;&#x75;&#50;&#54;&#50;&#x32;&#x2e;&#x63;&#x61;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[5 Steps to Understanding Meteor Better by Improving Your JavaScript]]></title>
     <link href="http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/"/>
-    <updated>2014-09-20T22:31:10+02:00</updated>
+    <updated>2014-09-20T13:31:10-07:00</updated>
     <id>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript</id>
     <content type="html"><![CDATA[<p>I don&rsquo;t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don&rsquo;t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
 
@@ -124,7 +124,7 @@ are companies out there that still don&rsquo;t use source code control.</p>
 
 <div id="mc_embed_signup">
 <form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
@@ -142,9 +142,9 @@ are companies out there that still don&rsquo;t use source code control.</p>
   
   <entry>
     <title type="html"><![CDATA[Disadvantages of Using Meteor (Over Rails)]]></title>
-    <link href="http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails/"/>
-    <updated>2014-08-25T05:22:26+02:00</updated>
-    <id>http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails</id>
+    <link href="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/"/>
+    <updated>2014-08-24T20:22:26-07:00</updated>
+    <id>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails</id>
     <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
 What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
@@ -173,7 +173,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <div id="mc_embed_signup">
 <form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
@@ -258,7 +258,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#114;&#103;&#x6f;&#x75;&#108;&#100;&#x40;&#117;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#x61;">&#x72;&#x67;&#x6f;&#x75;&#x6c;&#x64;&#64;&#117;&#50;&#54;&#50;&#x32;&#46;&#99;&#x61;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x72;&#103;&#x6f;&#117;&#x6c;&#100;&#64;&#x75;&#50;&#54;&#50;&#50;&#x2e;&#x63;&#x61;">&#114;&#103;&#111;&#117;&#108;&#x64;&#64;&#117;&#x32;&#54;&#50;&#50;&#x2e;&#99;&#97;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
@@ -269,7 +269,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <div id="mc_embed_signup">
 <form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <label for="mce-EMAIL">Don&#8217;t miss out on my next post!</label>
+  <label for="mce-EMAIL">Don't miss out on my next post!</label>
   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
