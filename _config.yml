@@ -4,7 +4,7 @@
 
 url: http://u2622.ca
 title: ☢ u2622.ca
-subtitle: Meteor tips, help and sometimes random things
+subtitle: Thoughts on Software Development
 author: u2622
 description:
 
@@ -18,7 +18,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: u2622@u2622.ca
+email: rgould@u2622.ca
 
 # ----------------------- #
 #    Jekyll & Plugins     #
