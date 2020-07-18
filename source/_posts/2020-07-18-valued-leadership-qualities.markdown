@@ -6,7 +6,7 @@ comments: true
 categories: leadership
 ---
 
-Here are the qualities and charactertistics that I find important in leaders, and consquently, the values I would strive to show myself as a leader. I consider this a work in progress, and will expand/edit it as I grow. These are in no particular order.
+Here are the qualities and characteristics that I find important in leaders, and consquently, the values I would strive to show myself as a leader. I consider this a work in progress, and will expand/edit it as I grow. These are in no particular order.
 
 **Patience**: Impatience adds stress and anxiety to team members, who otherwise do their best work when relaxed and comfortable. Team members should feel confident in admitting mistakes (after all, everyone makes them), and should not be punished for them.
 
