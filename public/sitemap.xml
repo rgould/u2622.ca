@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://u2622.ca/blog/2020/07/18/valued-leadership-qualities/</loc>
+<lastmod>2020-07-18T19:07:13+02:00</lastmod>
+</url>
+<url>
 <loc>http://u2622.ca/blog/2020/07/05/improving-your-speaking-and-listening-skills/</loc>
 <lastmod>2020-07-05T18:39:56+02:00</lastmod>
 </url>
@@ -59,5 +63,8 @@
 </url>
 <url>
 <loc>http://u2622.ca/blog/categories/language-learning/</loc>
+</url>
+<url>
+<loc>http://u2622.ca/blog/categories/leadership/</loc>
 </url>
 </urlset>

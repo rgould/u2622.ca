@@ -4,7 +4,7 @@
   <title><![CDATA[☢ u2622.ca]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2020-07-05T22:54:01+02:00</updated>
+  <updated>2020-07-18T21:11:21+02:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[Richard Gould]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Valued Leadership Qualities]]></title>
+    <link href="http://u2622.ca/blog/2020/07/18/valued-leadership-qualities/"/>
+    <updated>2020-07-18T19:07:13+02:00</updated>
+    <id>http://u2622.ca/blog/2020/07/18/valued-leadership-qualities</id>
+    <content type="html"><![CDATA[<p>Here are the qualities and charactertistics that I find important in leaders, and consquently, the values I would strive to show myself as a leader. I consider this a work in progress, and will expand/edit it as I grow. These are in no particular order.</p>
+
+<p><strong>Patience</strong>: Impatience adds stress and anxiety to team members, who otherwise do their best work when relaxed and comfortable. Team members should feel confident in admitting mistakes (after all, everyone makes them), and should not be punished for them.</p>
+
+<p><strong>Listening</strong>: One of the most important skills, in my opinion. A team member should feel comfortable bringing any problem to a leader. If one does not listen, that level of comfort is difficult to establish. A leader should not interrupt others when they speak, and should seek to understand what the team member is trying to communicate, rather than waiting for their turn to speak.</p>
+
+<p><strong>Appreciation</strong>: A leader should show appreciation to all around them, but especially their team members. A lack of appreciation makes others feel unimportant, decreasing their morale and motivation.</p>
+
+<p><strong>Encouragement</strong>: One should encourage, not disparage. Reward the good behaviour that they observe by showing appreciation. Encouragement helps team members go further, and increases motivation.</p>
+
+<p><strong>Vision</strong>: She should know where the team wants to go, and be able to help the team get there (even if they themselves don&rsquo;t know how). This includes both short term and long term goals.</p>
+
+<p><strong>Focus</strong>: A leader should help the team focus their efforts, steering them in the right direction so that they can strive towards their vision.</p>
+
+<p><strong>Mentorship</strong>: They should help those around him grow, challenging them to expand and strengthen their skills, both professionally and personally.</p>
+
+<p><strong>Interest</strong>: Take a genuine interest in team members, building rapport with them and supporting them. There should also be a genuine interest in the problem domain, and a leader should seek to grow their expertise with it.</p>
+
+<p><strong>Problem Solving</strong>: A leader should be able to help solve the team&rsquo;s problems, whether those problems are within the team (ie. conflicts) or without (ie. technological or organizational blockers). Solving these problems lets the team focus on achieving their vision, without being distracted by other issues. A leader can help identify these problems, and also propose solutions and drive their resolution. These problems can be anything: technical, organizational, environmental, and personal.</p>
+
+<p><strong>Collaboration</strong>: Getting the team working together is more effective than issuing orders to team members. People feel powerless when commanded to do something. Collaboration gives the power to the team, regardless of seniority or title. A leader should do what they can to encourage such an atmosphere. When a problem arises, the focus to solve it is on the problem itself, not to lay blame on those involved.</p>
+
+<p><strong>Tolerance</strong>: A leader should foster an environment of tolerance, allowing team members to be themselves in an environment free of prejudice and oppression. This means immediately tackling issues such as (but not limited to) sexism, homophobia, racism, bullying, or antagonism.</p>
+
+<p><strong>Feedback</strong>: A leader is able to give feedback in a constructive and useful way, helping team members grow, rather than criticizing them and making them feel resentful.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Improving Your Speaking and Listening Skills]]></title>
@@ -112,7 +145,7 @@ with people who haven&rsquo;t given such things any consideration, just like the
 are companies out there that still don&rsquo;t use source code control.</p>
 
 <p>What sort of guidelines do you use in your development process? Email me at
-<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#114;&#103;&#111;&#117;&#x6c;&#100;&#64;&#117;&#50;&#54;&#50;&#50;&#x2e;&#99;&#97;">&#114;&#103;&#x6f;&#117;&#108;&#x64;&#x40;&#117;&#x32;&#x36;&#50;&#x32;&#46;&#99;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
+<a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x72;&#x67;&#x6f;&#117;&#108;&#x64;&#64;&#117;&#x32;&#x36;&#50;&#50;&#x2e;&#99;&#x61;">&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#64;&#x75;&#50;&#54;&#x32;&#50;&#x2e;&#x63;&#x61;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
 ]]></content>
   </entry>
   
@@ -285,7 +318,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x72;&#x67;&#x6f;&#117;&#108;&#x64;&#x40;&#117;&#50;&#x36;&#50;&#50;&#46;&#x63;&#97;">&#114;&#103;&#x6f;&#x75;&#108;&#100;&#x40;&#x75;&#50;&#54;&#x32;&#x32;&#46;&#x63;&#x61;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#114;&#103;&#x6f;&#x75;&#x6c;&#100;&#64;&#117;&#x32;&#54;&#50;&#x32;&#46;&#x63;&#x61;">&#114;&#x67;&#111;&#117;&#108;&#100;&#64;&#x75;&#x32;&#x36;&#x32;&#50;&#46;&#99;&#x61;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
