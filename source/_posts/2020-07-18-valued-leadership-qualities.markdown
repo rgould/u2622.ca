@@ -12,6 +12,8 @@ Here are the qualities and characteristics that I find important in leaders, and
 
 **Listening**: One of the most important skills, in my opinion. A team member should feel comfortable bringing any problem to a leader. If one does not listen, that level of comfort is difficult to establish. A leader should not interrupt others when they speak, and should seek to understand what the team member is trying to communicate, rather than waiting for their turn to speak.
 
+**Humility**: I believe everyone can learn something from anyone else, regardless of their age, experience, or background. Keep an open mind, and be open to new surprises. Leaders are not better than/superior to others.
+
 **Appreciation**: A leader should show appreciation to all around them, but especially their team members. A lack of appreciation makes others feel unimportant, decreasing their morale and motivation.
 
 **Encouragement**: One should encourage, not disparage. Reward the good behaviour that they observe by showing appreciation. Encouragement helps team members go further, and increases motivation.
