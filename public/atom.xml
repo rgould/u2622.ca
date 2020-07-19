@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[☢ u2622.ca]]></title>
+  <title><![CDATA[u2622.ca]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2020-07-18T22:18:08+02:00</updated>
+  <updated>2020-07-19T11:13:08+02:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[Richard Gould]]></name>
@@ -23,6 +23,8 @@
 <p><strong>Patience</strong>: Impatience adds stress and anxiety to team members, who otherwise do their best work when relaxed and comfortable. Team members should feel confident in admitting mistakes (after all, everyone makes them), and should not be punished for them.</p>
 
 <p><strong>Listening</strong>: One of the most important skills, in my opinion. A team member should feel comfortable bringing any problem to a leader. If one does not listen, that level of comfort is difficult to establish. A leader should not interrupt others when they speak, and should seek to understand what the team member is trying to communicate, rather than waiting for their turn to speak.</p>
+
+<p><strong>Humility</strong>: I believe everyone can learn something from anyone else, regardless of their age, experience, or background. Keep an open mind, and be open to new surprises. Leaders are not better than/superior to others.</p>
 
 <p><strong>Appreciation</strong>: A leader should show appreciation to all around them, but especially their team members. A lack of appreciation makes others feel unimportant, decreasing their morale and motivation.</p>
 
@@ -145,7 +147,7 @@ with people who haven&rsquo;t given such things any consideration, just like the
 are companies out there that still don&rsquo;t use source code control.</p>
 
 <p>What sort of guidelines do you use in your development process? Email me at
-<a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#114;&#x67;&#x6f;&#117;&#x6c;&#100;&#x40;&#x75;&#x32;&#54;&#x32;&#50;&#x2e;&#99;&#x61;">&#x72;&#103;&#x6f;&#x75;&#x6c;&#x64;&#64;&#117;&#50;&#x36;&#50;&#x32;&#46;&#x63;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
+<a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#x40;&#x75;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#97;">&#x72;&#103;&#111;&#117;&#x6c;&#100;&#x40;&#x75;&#50;&#54;&#50;&#50;&#x2e;&#99;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
 ]]></content>
   </entry>
   
@@ -318,7 +320,7 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
 
-<p>Not clear enough? Send me an email at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#114;&#x67;&#111;&#x75;&#x6c;&#x64;&#64;&#x75;&#x32;&#54;&#50;&#x32;&#46;&#x63;&#97;">&#114;&#x67;&#x6f;&#117;&#x6c;&#100;&#64;&#x75;&#50;&#54;&#50;&#50;&#x2e;&#99;&#97;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#114;&#x67;&#111;&#x75;&#x6c;&#100;&#64;&#117;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#97;">&#114;&#x67;&#111;&#x75;&#108;&#100;&#x40;&#117;&#50;&#x36;&#50;&#50;&#46;&#x63;&#97;</a> for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
 
