@@ -3,10 +3,12 @@ ruby "2.7.2"
 
 group :development do
   gem 'foreman'
-  gem 'jekyll', '~> 2.0'
+  gem 'jekyll'
+  gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
-  gem 'octopress-date-format', '~> 2.0'
-  gem 'octopress-hooks', '~> 2.2'
+  gem 'octopress-date-format'
+  gem 'octopress-hooks'
+  gem 'pygments.rb'
   gem 'rake', '~> 12.3'
   gem 'rb-fsevent', '~> 0.9'
   gem 'rdiscount', '~> 2.0'

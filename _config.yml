@@ -28,10 +28,12 @@ root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
-plugins: plugins
+plugins_dir: plugins
+plugins:
+ - "jekyll-paginate"
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions:
     - autolink
