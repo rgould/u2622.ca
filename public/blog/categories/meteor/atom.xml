@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meteor | u2622.ca]]></title>
   <link href="http://u2622.ca/blog/categories/meteor/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2020-07-19T11:13:08+02:00</updated>
+  <updated>2021-03-13T17:59:27+01:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[Richard Gould]]></name>
@@ -16,100 +16,95 @@
   <entry>
     <title type="html"><![CDATA[5 Steps to Understanding Meteor better by Improving your JavaScript]]></title>
     <link href="http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/"/>
-    <updated>2014-09-20T13:31:10-07:00</updated>
+    <updated>2014-09-20T22:31:10+02:00</updated>
     <id>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript</id>
-    <content type="html"><![CDATA[<p>I don&rsquo;t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don&rsquo;t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
+    <content type="html"><![CDATA[<p>I don’t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don’t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
 
-<p>I recommend starting by watching a series of Douglas Crockford&rsquo;s lectures on JavaScript, and then following it with Reginald Braithwaite&rsquo;s Javascript Allongé.</p>
+<p>I recommend starting by watching a series of Douglas Crockford’s lectures on JavaScript, and then following it with Reginald Braithwaite’s Javascript Allongé.</p>
 
 <ol>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">The JavaScript Programming Language</a></em>. Watch it even if you already have built some applications with JS already. It goes into the fundamentals in-depth, and will help cement the basics in your mind, which is essential when learning advanced topics.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=Y2Y0U-2qJMs">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=DwYPG6vreJg">Advanced JavaScript</a></em>. It covers some advanced topics sometimes unique to JavaScript, and common advanced patterns. If you&rsquo;ve ever tried reading a JavaScript library and couldn&rsquo;t even begin to comphrehend it, this lecture will help clear things up.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=hQVTIJBZook">JavaScript: The Good Parts</a></em>. It will help you pick out the best parts of the language to use, and the parts that you need to actively avoid.</li>
-<li>Read Reginald Braithwaite&rsquo;s <em><a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a></em>. Reginald (aka ragnwald) covers advanced functional topics, and this will permanently change how you write your JavaScript, enabling you to write resuable code faster and with much higher confidence.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">The JavaScript Programming Language</a></em>. Watch it even if you already have built some applications with JS already. It goes into the fundamentals in-depth, and will help cement the basics in your mind, which is essential when learning advanced topics.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=Y2Y0U-2qJMs">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=DwYPG6vreJg">Advanced JavaScript</a></em>. It covers some advanced topics sometimes unique to JavaScript, and common advanced patterns. If you’ve ever tried reading a JavaScript library and couldn’t even begin to comphrehend it, this lecture will help clear things up.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=hQVTIJBZook">JavaScript: The Good Parts</a></em>. It will help you pick out the best parts of the language to use, and the parts that you need to actively avoid.</li>
+  <li>Read Reginald Braithwaite’s <em><a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a></em>. Reginald (aka ragnwald) covers advanced functional topics, and this will permanently change how you write your JavaScript, enabling you to write resuable code faster and with much higher confidence.</li>
 </ol>
 
+<p>I recommend doing the above in that order. <em>Allongé</em> is more advanced and builds off of topics covered by Crockford. Each step will help bring your JavaScript game to the next level, with Crockford’s lessons establishing solid fundamentals, and <em>Allongé</em> teaching (in a very effective manner) the more advanced usages of functional programming with JS.</p>
 
-<p>I recommend doing the above in that order. <em>Allongé</em> is more advanced and builds off of topics covered by Crockford. Each step will help bring your JavaScript game to the next level, with Crockford&rsquo;s lessons establishing solid fundamentals, and <em>Allongé</em> teaching (in a very effective manner) the more advanced usages of functional programming with JS.</p>
+<p>Note that I did all of the above (and worked through the exercises in <em>Allongé</em>) before I even touched Meteor, and for the most part, the only Meteor help I’ve needed has been the official Meteor docs. Having such a solid foundation of knowledge let me pick up Meteor with lightning speed, and all of those skills will stay with me when it comes time to learn another framework.</p>
 
-<p>Note that I did all of the above (and worked through the exercises in <em>Allongé</em>) before I even touched Meteor, and for the most part, the only Meteor help I&rsquo;ve needed has been the official Meteor docs. Having such a solid foundation of knowledge let me pick up Meteor with lightning speed, and all of those skills will stay with me when it comes time to learn another framework.</p>
+<p>If you have trouble following Crockford’s lectures, then I recommend reading his print edition of JavaScript: The Good Parts instead. While you’re reading it, really work through the examples to make sure you’re understanding it as you go along.</p>
 
-<p>If you have trouble following Crockford&rsquo;s lectures, then I recommend reading his print edition of JavaScript: The Good Parts instead. While you&rsquo;re reading it, really work through the examples to make sure you&rsquo;re understanding it as you go along.</p>
-
-<p>Have you ever felt that your JavaScript skills were inadequate? Have you ever looked inside one of the libraries you use (jQuery perhaps?) and felt as though you didn&rsquo;t understand JavaScript at all? I want to hear about it. <a href="mailto:rgould@u2622.ca">Email me</a> with your story (write as much or as little as you&rsquo;d like).</p>
+<p>Have you ever felt that your JavaScript skills were inadequate? Have you ever looked inside one of the libraries you use (jQuery perhaps?) and felt as though you didn’t understand JavaScript at all? I want to hear about it. <a href="mailto:rgould@u2622.ca">Email me</a> with your story (write as much or as little as you’d like).</p>
 
 <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" />
 
-
-<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
-
-
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 
 <div id="mc_embed_signup">
-<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
   <label for="mce-EMAIL">Don't miss out on my next post!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
 </form>
 </div>
 
-
-
-
 <!--End mc_embed_signup-->
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Disadvantages of using Meteor (over Rails)]]></title>
-    <link href="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/"/>
-    <updated>2014-08-24T20:22:26-07:00</updated>
-    <id>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails</id>
-    <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
+    <link href="http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails/"/>
+    <updated>2014-08-25T05:22:26+02:00</updated>
+    <id>http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails</id>
+    <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn’t come without drawbacks. Here are some of the ones that I’ve encountered:
 What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
-<p><strong>Immature Environment</strong>: The biggest problem right now is that Meteor is new. Pretty much brand new, in the scope of web development. It&rsquo;s not even version 1.0 yet, though it&rsquo;s getting close. This means that it doesn&rsquo;t have as many users, as many tutorials, as many books, as many screencasts. It can be hard if you run into a problem that no one else has run into yet, so you&rsquo;ll need to be willing to dig into it a bit yourself. I&rsquo;ve been there, and fortunately Meteor&rsquo;s codebase is fairly cleanly written (especially compared to Rails and AngularJS, two other frameworks whose code I&rsquo;ve read).</p>
+<p><strong>Immature Environment</strong>: The biggest problem right now is that Meteor is new. Pretty much brand new, in the scope of web development. It’s not even version 1.0 yet, though it’s getting close. This means that it doesn’t have as many users, as many tutorials, as many books, as many screencasts. It can be hard if you run into a problem that no one else has run into yet, so you’ll need to be willing to dig into it a bit yourself. I’ve been there, and fortunately Meteor’s codebase is fairly cleanly written (especially compared to Rails and AngularJS, two other frameworks whose code I’ve read).</p>
 
-<p><strong>Not Widely Supported</strong>: Another consequence of being so new is that there aren&rsquo;t as many hosting services available for Meteor apps yet. It is possible to deploy Meteor on Heroku, and in my experience it works well, though it feels very raw.</p>
+<p><strong>Not Widely Supported</strong>: Another consequence of being so new is that there aren’t as many hosting services available for Meteor apps yet. It is possible to deploy Meteor on Heroku, and in my experience it works well, though it feels very raw.</p>
 
-<p><strong>Nothing but JavaScript</strong>: You must run JavaScript (or Coffeescript) on the server side. This isn&rsquo;t a big deal for me, but JS is definitely far from the first language I would choose to work with. The upside is that you can run the same code on the server and the browser, without worrying about having to cross-compile from another language.</p>
+<p><strong>Nothing but JavaScript</strong>: You must run JavaScript (or Coffeescript) on the server side. This isn’t a big deal for me, but JS is definitely far from the first language I would choose to work with. The upside is that you can run the same code on the server and the browser, without worrying about having to cross-compile from another language.</p>
 
 <p><strong>Only MongoDB</strong>: As of now, the only supported database is MongoDB. They have plans to expand this in the future.</p>
 
 <p><strong>Rapidly Changing</strong>: The Meteor API is rapidly changing, so each new minor version may bring breaking changes. This is expected to lessen as it reaches 1.0.</p>
 
-<p><strong>Testing Frameworks</strong>: Testing frameworks haven&rsquo;t been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community&rsquo;s.</p>
+<p><strong>Testing Frameworks</strong>: Testing frameworks haven’t been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community’s.</p>
 
 <p>While there are many disadvantages, I feel like the advantages heavily outweigh them (usually). But the list of advantages is for another post entirely!</p>
 
 <p>What are some other disadvantages you can think of? Email me or leave a comment!</p>
 
 <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" />
 
-
-<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
-
-
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 
 <div id="mc_embed_signup">
-<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
   <label for="mce-EMAIL">Don't miss out on my next post!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
 </form>
 </div>
 
-
-
-
 <!--End mc_embed_signup-->
-
 ]]></content>
   </entry>
   
@@ -118,11 +113,11 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
     <link href="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/"/>
     <updated>2014-08-17T19:21:00+02:00</updated>
     <id>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor</id>
-    <content type="html"><![CDATA[<p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
+    <content type="html"><![CDATA[<p>It’s possible to add web hooks to your Meteor application by using iron-router.</p>
 
 <p>Declare a server-side route in your Routes.map declaration:</p>
 
-<pre><code class="javascript">    Router.map(function() {
+<pre><code class="language-javascript">    Router.map(function() {
       ... // Your other routes go here
 
       this.route('hook', {
@@ -149,37 +144,35 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>To test it out, issue this curl command from the command line:</p>
 
-<pre><code class="bash">    curl -H "Content-Type: application/json" -d '{"message":"foo"}' http://localhost:3000/hook
+<pre><code class="language-bash">    curl -H "Content-Type: application/json" -d '{"message":"foo"}' http://localhost:3000/hook
 </code></pre>
 
-<p>The documentation for <code>this.response</code> and <code>this.request</code> are available on the node.js website: <a href="http://nodejs.org/api/http.html">http://nodejs.org/api/http.html</a></p>
+<p>The documentation for <code>this.response</code> and <code>this.request</code> are available on the node.js website: http://nodejs.org/api/http.html</p>
 
-<p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
+<p>I’ve created a sample Meteor application demonstrating this, which you can view at https://github.com/rgould/meteor-posthooks</p>
 
-<p>Not clear enough? Send me an email at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#114;&#103;&#111;&#x75;&#108;&#x64;&#x40;&#117;&#50;&#x36;&#50;&#50;&#x2e;&#x63;&#x61;">&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#x40;&#117;&#50;&#54;&#x32;&#x32;&#x2e;&#x63;&#x61;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at rgould@u2622.ca for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" />
 
-
-<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
-
-
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 
 <div id="mc_embed_signup">
-<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
   <label for="mce-EMAIL">Don't miss out on my next post!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
 </form>
 </div>
 
-
-
-
 <!--End mc_embed_signup-->
-
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Richard Gould">
 
   
-  <meta name="description" content="Here are the qualities and characteristics that I find important in leaders, and consquently, the values I would strive to show myself as a leader. I &hellip;">
+  <meta name="description" content="Part 1 | Part 2 “Man, your code reviews are brutal!” says John to your teammates. He’s talking about you. “Why do you hate me so much?” writes Steve &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +82,294 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+        
+           | <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Part 1</a> | Part 2</p>
+
+<p>“Man, your code reviews are brutal!” says John to your teammates. He’s talking about you.</p>
+
+<p>“Why do you hate me so much?” writes Steve in an email to you.</p>
+
+<p>Sound familiar? You might just be Seth, one of the people most familiar with the project and gatekeeper of the code base. You’re not out to write “brutal” reviews, or make your colleagues hate you. You just want to ensure that only the highest quality code makes it into production, as bug free as possible.</p>
+
+<p>So why do your coworkers think you hate them? When you write things like:</p>
+
+<blockquote>
+  <p>can’t you just do it this other way?</p>
+</blockquote>
+
+<blockquote>
+  <p>kill this</p>
+</blockquote>
+
+<blockquote>
+  <p>you can’t do that</p>
+</blockquote>
+
+<p>They really hear:</p>
+
+<blockquote>
+  <p>“only an idiot would do it this way”</p>
+</blockquote>
+
+<blockquote>
+  <p>“why would you commit this?”</p>
+</blockquote>
+
+<blockquote>
+  <p>“aren’t you smart enough to realise that that won’t work?”</p>
+</blockquote>
+
+<p>But that’s not really how you intended to come off, or you likely wouldn’t be reading this.</p>
+
+<p>To try to understand more of John and Steves’ perspectives, read <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Part 1</a> of this article.</p>
+
+<p>So why should you even care? Can’t John and Steve just grow a thick skin? Why can’t they just stop whining?</p>
+
+<p>Because they’re human, and we all have extremely varying experiences, all of which drive how we interpret the behaviour of others. Some people will assign a benevolent tone, while others will just as easily assign a malevolent one.</p>
+
+<p>When John and Steve interpret your comments negatively, their performance will decline. They will feel like shit, their productivity will drop, and they will resent working with you. They will not be able to thrive in such an environment, and your overall team performance will suffer.</p>
+
+<p>Fortunately, you can fix it. And when you do, your teammates will think more highly of you, enjoy working with you more, and be friendlier to you. Their morale will increase, and their productivity with it.</p>
+
+<p>It all starts with having the right tone. Without proper use of tone, it’s very easy to to lose the meaning behind the message.</p>
+
+<p>When tone isn’t explicit, it’s easy to interpret it negatively. It’s also highly individual: John may read a comment as a friendly suggestion, while Steve reads it as an attack on his intelligence.</p>
+
+<p>Writing comments without paying attention to tone is a default mode for most people. You must consciously insert tone when writing in order to prevent John and Steve from attributing a negative tone.</p>
+
+<p>Fortunately, it’s a lot easier to fix than you would think. With some practice it will become more natural, and eventually you will be inserting explicit tone automatically.</p>
+
+<p><img src="/images/hntbaj2-1.jpg" /></p>
+
+<p>The following techniques aren’t just applicable to just code reviews, but to all text-based communication you’ll use in daily life: emails, texting, chat, etc. Follow these suggestions and John and Steve will no longer think of you as a brutal gatekeeper:</p>
+
+<h2 id="1-you-must-focus-on-making-your-tone-friendlier">1. You must focus on making your tone friendlier.</h2>
+
+<p>You can use the passive voice to remove a subject from the sentence, placing emphasis on the outcome of the action. This focuses on the problem, and not the person. Instead of “You must use four spaces for indentation”, use “Four spaces must be used for indentation.” Notice how the “you” has been completely removed from the sentence.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: Kill this.</li>
+  <li>Good: Er, was this accidentally committed?</li>
+</ul>
+
+<p>You can also use the collective “we” in place of “you”. For example, instead of “You must always re-throw exceptions here”, use “We must always re-throw exceptions here.” This de-emphasizes the original submitter as the target of the comment, and re-emphasizes that this is a team effort.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: Can’t you just do it this other way?</li>
+  <li>Good: Unfortunately we need to it this particular way, or else the whizbob will become unstable and raise exceptions.</li>
+</ul>
+
+<p>Use the passive voice, the collective “we”, and focus on the problem, not the person.</p>
+
+<h2 id="2-ask-questions">2. Ask questions.</h2>
+
+<p>Asking questions is also a great way to bring up an issue. They become responsible for the answer, and this gives them a chance to explain themselves. For example: Instead of “this will fail”, try “What happens if the gidget is set to 42?” It could be that they have a legitimate reason for submitting the code as it is.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: You can’t do that.</li>
+  <li>Good: Are you sure that this is going to work? What happens if chunky_bacon is set to null?</li>
+</ul>
+
+<h2 id="3-build-good-rapport-with-your-teammates-and-they-will-integrate-that-into-your-tone">3. Build good rapport with your teammates and they will integrate that into your tone.</h2>
+
+<p>Additionally, build rapport with the submitter. Eat lunch with them, play games with them (in person or online), get to know them. If this is something that is difficult for you, begin with a casual “got any plans for the weekend?” Show some interest in their response. If they answer with “I did some karate”, ask them about it. “Oh cool! How long have you been doing karate for? What do you enjoy about it?” Keep the questions focused on them, and don’t bring the conversation back to you. Bad example: “Oh cool! I’ve always wanted to do karate.” This brings the conversation back to you, and gives them the opportunity to lose interest.</p>
+
+<h2 id="additional-strategies-you-can-use">Additional strategies you can use:</h2>
+
+<p><strong>Avoid imperative forms.</strong> Make suggestions, not commands. Instead of “do it this way”, try “it might work better if we did it this way.” If you issue commands you will come across as demanding.</p>
+
+<p><strong>Prefer an informal tone over a formal tone.</strong> Instead of “This could be null here.”, try “this could be null here”, noting the lack of punctuation. Punctuation is still important, but the use of initial capitals and final periods can be safely discarded.</p>
+
+<p><strong>Don’t end your statements with a period.</strong> Studies have shown that ending your sentences with a period makes them come across as less sincere.</p>
+
+<p><strong>Use liberal use of emoticons and emoji.</strong> They explicitly demonstrate tone :) If you’re worried that the receiver will be annoyed by them, pay attention to how they themselves write, and tailor your level of emoticons to match theirs.</p>
+
+<p><strong>Don’t be terse.</strong> Terseness comes across as impatient and frustrated. Instead of “don’t do this”, prefer “if we do it this way, these bad things could happen”, or even better: “can you foresee any bad things happening if we do it this way?”</p>
+
+<p><strong>Admit that you may not understand everything.</strong> Instead of “don’t do this”, try “I don’t understand this. Would you be able to elaborate?”</p>
+
+<p><strong>Have clear guidelines and coding styles so that they don’t turn into an issue during reviews.</strong> Have an automated tool to check those styles before code is even committed.</p>
+
+<p><strong>Make it explicit when a comment is a suggestion</strong>: “it might work better if this implementation had rockets”.</p>
+
+<p><strong>Make it explicit when a comment is a mandatory change</strong>: “unfortunately we must transmit the the signal here, or the aliens will die”</p>
+
+<p><strong>Add compliments, acknowledgement, and gratitude</strong>: “Thanks, this looks awesome! Just a few things that I think we should change.”</p>
+
+<p><strong>Don’t write in anger.</strong> If you find yourself thinking “how the fuck did this get written?” Take a deep breath, step away from the computer for a few minutes. Calm down, come back, and write “I’m not sure this will run without throwing an error.” Otherwise you risk building resentment in the receiver.</p>
+
+<p><img src="/images/hntbaj2-2.jpg" /></p>
+
+<p>Still worried that your colleagues might be interpreting your comments negatively? Grab them and go over your code review together, whether it’s in person or using Screenhero. Then you can explicitly add your tone in your voice.</p>
+
+<p>With these guidelines, you’ll start to find that John and Steve are friendlier towards you, and their productivity will increase. These techniques will help you across all written communication, not just for code reviews. You will become a more pleasant person to work with, and that alone makes it worth the effort.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Language in Code Reviews: How Not to Be a Jerk, Part 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+        
+           | <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Part 1 | <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Part 2</a></p>
+
+<p><img src="/images/hntbaj1-1.jpg" /></p>
+
+<p>“Jerk”, “Asshole”, “Ugh, what now?”, “Do it yourself!”, “Why are you so damned picky?”</p>
+
+<p>Sound like things you’ve thought to yourself when Seth submits his review for your most recent pull request? Seth is the rockstar, know-it-all, pretentious, two-spaces-not-four and definitely-no-tabs-ever guy. He’s the gate-keeper of all code. He reviews all pull requests, and nothing gets into the code base without his approval. It’s his fault that you can’t meet your deadlines. Why can’t he just approve it so that you can move on to the next task?</p>
+
+<p>Well, he could. But there are some very good reasons he wouldn’t want to.</p>
+
+<p>It turns out that Seth probably isn’t as bad of a guy as you would think. The reason you feel this way could be aggravated by the tone, or more importantly, the lack of tone that was used in his comments while reviewing your code. That his comments made you feel shitty are a combination of multiple factors:</p>
+
+<ul>
+  <li>the tone (or lack of tone) Seth used</li>
+  <li>how well you know Seth</li>
+  <li>your rapport with Seth</li>
+  <li>your mood and energy levels when reading the comments</li>
+  <li>Seth’s mood and energy levels when writing the comments</li>
+</ul>
+
+<p>All of these factors can combine to ruin the relationship you have with Seth. They can also turn your this-should-be-awesome day, into fuck-this-get-me-out-of-here day, where you struggle to crawl out of bed the next day, just to plop yourself in front of the computer, only to re-read the comments and spiral back into that foul and depressive mood again.</p>
+
+<p><img src="/images/hntbaj1-2.jpg" /></p>
+
+<p>But there is a way out: Seth isn’t actually an asshole — it just seems that way due to how you’re interpreting his comments. Seth really just wants to make sure that the code that makes it into production doesn’t introduce any bugs.</p>
+
+<p>Are you Seth? Then I recommend you read <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Part 2</a>. For now, we’ll talk about how it is to be the receiver of Seth’s comments.</p>
+
+<p>Tuesday morning. Opening Gmail, you see a thread containing comments from the pull request you submitted yesterday. It’s from Seth, of course. You grit your teeth, wondering if you should put your mouthguard back in. At this rate, your molars will be ground down by the time you hit forty. Tensing your muscles, you open the thread.</p>
+
+<blockquote>
+  <p>kill this</p>
+</blockquote>
+
+<blockquote>
+  <p>this must be a typo.</p>
+</blockquote>
+
+<blockquote>
+  <p>this does not look good to me. Why was this done?</p>
+</blockquote>
+
+<p>Yup, sounds like Seth is his normal, moody self. But wait, there’s more:</p>
+
+<blockquote>
+  <p>can you not just change it so that it uses attributes?</p>
+</blockquote>
+
+<blockquote>
+  <p>why can’t you just do it this way?</p>
+</blockquote>
+
+<blockquote>
+  <p>can you explain this change?</p>
+</blockquote>
+
+<p>And you’ve got your daily standup in ten minutes! Now you’re thinking that it might just be best to call in sick and play video games all day.</p>
+
+<p>Does this sound like you? Even just a little bit? Read on. Even if it doesn’t sound like you, you may run into this in the future, so you may want to keep these things in mind.</p>
+
+<p>It’s very easy to see Seth blaming you for this. “Can you not just do this?” “You must surround function parenthesis with spaces”. It’s all your fault, and Seth is making sure that you remember that.</p>
+
+<p>Well, not really. There could be an entirely different side of this story: Seth is in a rush, and only has a few minutes to conduct your code review, one of many that he has to get done every day. It shouldn’t come as a surprise that his comments are terse, such as “remove this”. Seth doesn’t really hate you at all, he just wants to get the code review over with so he can go on to fix the issue that brought the database down last week.</p>
+
+<p><img src="/images/hntbaj1-3.jpg" /></p>
+
+<p>How did this conspire to ruin your day in the first place?</p>
+
+<p>Well, Seth’s comments lack tone. When they lack tone, it’s very easy to insert a tone that matches your current mood, or one that reflects how you think Seth feels about you. If you think Seth hates you, you will interpret it in that tone. If you’re feeling down or frustrated, Seth’s comments will seem like he is frustrated too. And after you hear those tones once, you’ll likely interpret his future comments in similar tones.</p>
+
+<p>“That’s great, but what can I do about it?” you ask.</p>
+
+<p>Well, it turns out that you can change how you interpret such messages. In Learned Optimism, Martin Seligman writes about a technique that people can use to help stop interpreting comments as personal, general, and permanent, and interpreting them as impersonal, specific, and temporary. Reginald Braithwaite gives a much better overview here. Go read it.</p>
+
+<p><a href="http://braythwayt.com/homoiconic/2009/05/01/optimism.html">Optimism</a></p>
+
+<p>You can learn to read such comments in a more positive, friendly tone, but it also helps to build a good rapport with your reviewers. If you haven’t met them in person yet, make it a priority to to do, if possible. Once you get to know someone in person, it becomes a lot easier for you to transfer their in-person personality to their tone-less comments.</p>
+
+<p>If it’s not feasible to meet them in person, try to organise things you can do together online. Play some games online together, with microphones on, or have a “happy hour” for the team, where everyone jumps on hangouts and has a virtual drink together.</p>
+
+<p>Also if you’re comfortable with it, the best course of action may be to try to talk to Seth directly. Don’t open with a bold statement like “Why do you hate me?” That implies that Seth actually does hate you, when it’s likely far from the truth. Try something like this: “When you do X, I feel Y, and that makes me Z”. Following that formula focuses on your feelings and the impact it’s having on you, rather than attacking Seth. Try it out: “When you say ‘kill this’, that makes me feel like you’re frustrated with me, and that makes it more difficult for me to come into the office.”</p>
+
+<p>If that sounds really daunting to you, or you don’t feel comfortable enough with Seth to talk to him like that, you may try an indirect approach. Post the second part of this article in your team’s chat, suggesting that everyone read it. When Seth comments on another team member’s pull request, point out to him how negatively his comment can be read, and encourage him to add explicit tone to his posts.</p>
+
+<p>The key take away here is that you don’t want to attack Seth; That will only make things worse. Focus on how it feels to be on the receiving end of those comments, and Seth will be able to show a bit more empathy. Encourage, don’t disparage.</p>
+
+<p>You may also feel shame that Seth is pointing out something that you know you could have done better, but you have to take it into context: You may not consider it to be your best work, but it was the best effort you could give at that time. If you’re under pressure, in a time crunch, working overtime, distracted, sick, or otherwise exhausted, you’re not going to be able to do your best work. In this situation, it’s best to view it as a chance to improve something that you did before, and to know that the next time you do something like that, it will be caught by Seth. It’s also a chance for you to be grateful that such code did not make it into production.</p>
+
+<p><img src="/images/hntbaj1-4.jpg" /></p>
+
+<p>How can you continue to work with Seth? In summary, here is how you can make it more enjoyable:</p>
+
+<ul>
+  <li>Build rapport: spend time in other fun activities; meeting in person; if remote, play games or hangout online</li>
+  <li>Learn how to control how you read tones in messages (helpful even beyond this scope)</li>
+  <li>Empathise with Seth: he wants the code to be bug free</li>
+  <li>Communicate: talk to Seth about the tone in his comments</li>
+</ul>
+
+<p>As a reviewer, Seth has a hand in it as well. He can spend just a little bit of effort to add some tone to his comments. In <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">part two</a>, learn how to not be a jerk when doing a code review.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a></h1>
     
     
@@ -91,7 +379,7 @@
 
 
 
-<time class='entry-date' datetime='2020-07-18T19:07:13+02:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>7:07 pm</span></time>
+
         
            | <a href="/blog/2020/07/18/valued-leadership-qualities/#disqus_thread"
              data-disqus-identifier="http://u2622.ca/blog/2020/07/18/valued-leadership-qualities/">Comments</a>
@@ -113,7 +401,7 @@
 
 <p><strong>Encouragement</strong>: One should encourage, not disparage. Reward the good behaviour that they observe by showing appreciation. Encouragement helps team members go further, and increases motivation.</p>
 
-<p><strong>Vision</strong>: She should know where the team wants to go, and be able to help the team get there (even if they themselves don&rsquo;t know how). This includes both short term and long term goals.</p>
+<p><strong>Vision</strong>: She should know where the team wants to go, and be able to help the team get there (even if they themselves don’t know how). This includes both short term and long term goals.</p>
 
 <p><strong>Focus</strong>: A leader should help the team focus their efforts, steering them in the right direction so that they can strive towards their vision.</p>
 
@@ -121,162 +409,13 @@
 
 <p><strong>Interest</strong>: Take a genuine interest in team members, building rapport with them and supporting them. There should also be a genuine interest in the problem domain, and a leader should seek to grow their expertise with it.</p>
 
-<p><strong>Problem Solving</strong>: A leader should be able to help solve the team&rsquo;s problems, whether those problems are within the team (ie. conflicts) or without (ie. technological or organizational blockers). Solving these problems lets the team focus on achieving their vision, without being distracted by other issues. A leader can help identify these problems, and also propose solutions and drive their resolution. These problems can be anything: technical, organizational, environmental, and personal.</p>
+<p><strong>Problem Solving</strong>: A leader should be able to help solve the team’s problems, whether those problems are within the team (ie. conflicts) or without (ie. technological or organizational blockers). Solving these problems lets the team focus on achieving their vision, without being distracted by other issues. A leader can help identify these problems, and also propose solutions and drive their resolution. These problems can be anything: technical, organizational, environmental, and personal.</p>
 
 <p><strong>Collaboration</strong>: Getting the team working together is more effective than issuing orders to team members. People feel powerless when commanded to do something. Collaboration gives the power to the team, regardless of seniority or title. A leader should do what they can to encourage such an atmosphere. When a problem arises, the focus to solve it is on the problem itself, not to lay blame on those involved.</p>
 
 <p><strong>Tolerance</strong>: A leader should foster an environment of tolerance, allowing team members to be themselves in an environment free of prejudice and oppression. This means immediately tackling issues such as (but not limited to) sexism, homophobia, racism, bullying, or antagonism.</p>
 
 <p><strong>Feedback</strong>: A leader is able to give feedback in a constructive and useful way, helping team members grow, rather than criticizing them and making them feel resentful.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2020/07/05/improving-your-speaking-and-listening-skills/">Improving Your Speaking and Listening Skills</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2020-07-05T18:39:56+02:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>6:39 pm</span></time>
-        
-           | <a href="/blog/2020/07/05/improving-your-speaking-and-listening-skills/#disqus_thread"
-             data-disqus-identifier="http://u2622.ca/blog/2020/07/05/improving-your-speaking-and-listening-skills/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A colleague wrote:</p>
-
-<blockquote><p>Hello! I want to ask you to share your experience or ideas about what is the better way to improve the English level. Of course, the question is not simple how it seems because I have not bad level (according to a test it closer to advance) and I try to use all general advice like use English sources for getting information (for my work and other aspects of my life), watch videos in English etc., but I still feel not comfortable in a speaking part and sometimes with understanding (some accents are easy to understand some harder). How did you manage similar problems?  Thanks!</p></blockquote>
-
-<p>I believe the best way to improve your speaking is to, well, speak. The more you can speak, the faster you will improve. It can help to figure out what specific problems are being encountered. Others having problems understanding what you&rsquo;re saying? Improve your pronunciation. Can&rsquo;t recall the word you want to use in the middle of a sentence? Use Spaced Repetition Software (SRS) to boost your recall rates. Don&rsquo;t know the word to use in the sentence? Increase your vocabulary size.</p>
-
-<p>To speak more, try to incorporate speaking into your life more. If you can speak your target language with your friends or family, try to do so as much as you can. If you&rsquo;re watching TV, you can repeat after hearing something (<a href="https://howtogetfluent.com/shadowing-for-language-learning/">&ldquo;shadowing&rdquo;</a>). You can also talk to yourself, which is maybe strange, but can be very effective. There&rsquo;s an article over at <a href="https://universeofmemory.com/benefits-of-talking-to-yourself/">Universe of Memory</a> that goes into the details of talking to oneself. But speaking without feedback risks ingraining mistakes. To that end, I recommend hiring a native speaker who can give you feedback. They don&rsquo;t need to be a trained teacher (those can be very expensive) - just a native speaker who can tell you when you&rsquo;re saying something wrong.</p>
-
-<p>I&rsquo;ve had very good luck finding native speakers on <a href="https://www.italki.com/">Italki</a> - you can find a native speaker there under &ldquo;community tutors&rdquo;. You can also find a language exchange partner, but I don&rsquo;t recommend them. If you&rsquo;re doing an exchange, you&rsquo;re spending time and effort on your own language, when you could be spending that time and effort learning your target language. It&rsquo;s also a significant amount of effort to find a suitable partner in the first place. Go with a community tutor if you have the financial means.</p>
-
-<p>To improve your pronunciation, I recommend learning the IPA of your target language. Once you identify the words that you have trouble pronouncing, you can use the IPA to identify the specific sounds that are difficult for you, then intentionally practice them. Note that unless you&rsquo;ve intentionally trained your ear to hear these new sounds, it&rsquo;s unlikely that you&rsquo;re hearing (and thus pronouncing) them correctly. As an example, see <a href="https://en.wikipedia.org/wiki/Perception_of_English_/r/_and_/l/_by_Japanese_speakers">Perception of English /r/ and /l/ by Japanese speakers</a>. The <a href="https://speechling.com">Speechling app</a> can also help with this. You record yourself speaking sentences aloud, which are then reviewed by a native speaker who points out what is being said incorrectly.</p>
-
-<p>To increase your vocabulary size, I recommend actively engaging with new words, or with words that you find yourself forgetting. To active engage, you can create sentences (written, typed or spoken) using these words. You can type them into your SRS application to decrease the chance that you will forget them.</p>
-
-<p>To get used to different accents and speakers, listen to media from many different sources. YouTube is a fantastic resource for this. Listen actively, and try to pick out words. Take note of new words you don&rsquo;t know and try to use them. I also recommend the article <a href="https://universeofmemory.com/listening-comprehension-in-a-foreign-language/">Listening comprehension in a foreign language - 12 ways to improve it</a>.</p>
-
-<p>To improve the recall of your vocabulary, I recommend using Spaced Repetition Software, in particular <a href="https://apps.ankiweb.net/">Anki</a>. The vocabulary you learn will be periodically shown to you based on how well you know it. This helps slow down memory decay (see <a href="https://en.wikipedia.org/wiki/Forgetting_curve">Ebbinghaus&rsquo;s Forgetting Curve</a> and the <a href="https://en.wikipedia.org/wiki/Spacing_effect">Spacing Effect</a>). It can also be useful in identifying vocabulary that you need to pay more attention to, for example a word that you keep getting incorrect can be used in more sentences, help to boost the recall rate.</p>
-
-<p>Disclaimer: I am no expert on language learning. I have some background knowledge, have read a bunch about it, but they were mostly secondary sources. I have tried many things and have failed more times than I have succeeded. Take my advice with a grain of salt. I highly recommend <a href="https://universeofmemory.com/">Universe of Memory</a> as Bartosz actually cites his sources, so you can question his recommendations by delving into the source material.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2017-11-26T18:37:38+01:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>6:37 pm</span></time>
-        
-           | <a href="/blog/2017/11/26/my-principles-for-software-development/#disqus_thread"
-             data-disqus-identifier="http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here are some of the principles by which I try to develop software. This isn&rsquo;t
-a hard-and-fast list, but rather a set of guidelines that I use. I don&rsquo;t follow
-all of them every day, but I try to follow them as much as I can. This list is
-under constant review, extending and changing as I grow as a developer.</p>
-
-<ul>
-<li><p><strong>Don&rsquo;t leave work unfinished</strong> - Work that is started but not finished is a
-  liability. At best, it means a feature isn&rsquo;t in production sooner than it
-  could be (representing wasted opportunity). At worst, the feature will
-  suffer from <a href="https://en.wikipedia.org/wiki/Software_rot">software rot</a>, and may require substantial rewriting if left
-  long enough.</p></li>
-<li><p><strong>Work on only one thing at a time</strong> - Mental context switching is expensive.
-  Focus as much as possible until that item is done.</p></li>
-<li><p><strong>Teamwork</strong> - The team as a whole is more important than the individual.
-  This means that you should write maintainable code, ask for help when you
-  get stuck, and help out your colleagues when they need it.</p></li>
-<li><p><strong>Review pull requests</strong> thoroughly and in a timely manner - as part of teamwork and
-  leaving work unfinished, review your colleagues' work quickly. If they write
-  a PR and it sits for a week, that is means it takes one week longer for that
-  feature to make it into production.</p></li>
-<li><p><strong>Fix bugs first</strong> - Bugs should be fixed before anything else. They are easier
-  to fix when fresh, and existing bugs represent potential bad experience for
-  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers' broken window theory</a>.</p></li>
-<li><p><strong>Be aware of errors</strong> - Whenever an error or problem occurs, we must be
-  notified of it. Otherwise, only users will experience it, and not all users
-  report errors. Also if a bug is fixed before a user first notices, the bug
-  doesn&rsquo;t exist from their perspective. An app slowing down to unusable
-  speeds is considered a bug.</p></li>
-<li><p><strong>Don&rsquo;t live with pain</strong> - When something is frustrating, take the time to
-  fix the problem for everyone. Automate common tasks. This makes life easier,
-  and makes the software easier to work with. It&rsquo;s not always possible given
-  time contraints, but it&rsquo;s worth it. This is how big things such as Rails or
-  Meteor get built.</p></li>
-<li><p><strong>Produce high quality code</strong> - Take the time to do things correctly. Quality
-  is worth it.</p></li>
-<li><p><strong>Be pragmatic (but balance ideals)</strong> - Striving for ideals is fantastic, but
-  shipping usable code is the most important.</p></li>
-<li><p><strong>Don&rsquo;t let email/requests go unanswered</strong> - Others have taken the time to
-  ask something of you. Be courteous, and don&rsquo;t make them wait.</p></li>
-<li><p><strong>Provide test coverage</strong> - Do this where possible. The value it provides is
-  tremendous. Try to consider a feature to be complete when it has test
-  coverage.</p></li>
-<li><p><strong>Keep learning</strong> - Always be trying to learn new things. This includes new
-  ways to use existing tools, or new tools altogether. Tools range from
-  programming languages, frameworks, paradigms, editors, to soft skills such
-  as empathy and listening skills.</p></li>
-<li><p><strong>Blame problems not people</strong> - Don&rsquo;t forget that code is written by humans,
-  with real feelings. Focus on the problem itself; blaming the author is
-  counterproductive.</p></li>
-<li><p><strong>Encourage, don&rsquo;t discourage</strong> - Help others improve their code. Don&rsquo;t put
-  them down because they wrote code that you (subjectively) could be better.
-  Yours could also always be better.</p></li>
-<li><p><strong>Be humble</strong> - Realise that you can learn from everyone out there, including
-  those are just learning to write code, and even from those who don&rsquo;t write
-  code at all.</p></li>
-</ul>
-
-
-<p>A good chunk of these have been taken from <a href="https://github.com/okgrow/guides/blob/master/processes/development/README.md">OK GROW!&rsquo;s development process</a>
-guide, which I&rsquo;ve contributed to a bit.</p>
-
-<p>A lot of these may seem like common sense, and I hope that they do. That&rsquo;s a
-sign that you&rsquo;ve got solid guidelines in place. But I&rsquo;ve had some encounters
-with people who haven&rsquo;t given such things any consideration, just like there
-are companies out there that still don&rsquo;t use source code control.</p>
-
-<p>What sort of guidelines do you use in your development process? Email me at
-<a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#x40;&#x75;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#97;">&#x72;&#103;&#111;&#117;&#x6c;&#100;&#x40;&#x75;&#50;&#54;&#50;&#50;&#x2e;&#99;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
 </div>
   
   
@@ -304,6 +443,14 @@ are companies out there that still don&rsquo;t use source code control.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Language in Code Reviews: How Not to Be a Jerk, Part 1</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a>
       </li>
     
@@ -315,14 +462,6 @@ are companies out there that still don&rsquo;t use source code control.</p>
         <a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/">5 Steps to Understanding Meteor Better by Improving Your JavaScript</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Disadvantages of Using Meteor (Over Rails)</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -332,7 +471,7 @@ are companies out there that still don&rsquo;t use source code control.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2020 - Richard Gould -
+  Copyright &copy; 2021 - Richard Gould -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

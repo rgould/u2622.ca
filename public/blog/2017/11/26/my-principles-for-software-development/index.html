@@ -9,8 +9,8 @@
   <meta name="author" content="Richard Gould">
 
   
-  <meta name="description" content="Here are some of the principles by which I try to develop software. This isn&rsquo;t
-a hard-and-fast list, but rather a set of guidelines that I use &hellip;">
+  <meta name="description" content="Here are some of the principles by which I try to develop software. This isn’t
+a hard-and-fast list, but rather a set of guidelines that I use. I don &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,7 +89,7 @@ a hard-and-fast list, but rather a set of guidelines that I use &hellip;">
 
 
 
-<time class='entry-date' datetime='2017-11-26T18:37:38+01:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>6:37 pm</span></time>
+
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://u2622.ca">Comments</a>
@@ -99,82 +99,110 @@ a hard-and-fast list, but rather a set of guidelines that I use &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Here are some of the principles by which I try to develop software. This isn&rsquo;t
-a hard-and-fast list, but rather a set of guidelines that I use. I don&rsquo;t follow
+<div class="entry-content"><p>Here are some of the principles by which I try to develop software. This isn’t
+a hard-and-fast list, but rather a set of guidelines that I use. I don’t follow
 all of them every day, but I try to follow them as much as I can. This list is
 under constant review, extending and changing as I grow as a developer.</p>
 
 <ul>
-<li><p><strong>Don&rsquo;t leave work unfinished</strong> - Work that is started but not finished is a
-  liability. At best, it means a feature isn&rsquo;t in production sooner than it
+  <li>
+    <p><strong>Don’t leave work unfinished</strong> - Work that is started but not finished is a
+  liability. At best, it means a feature isn’t in production sooner than it
   could be (representing wasted opportunity). At worst, the feature will
   suffer from <a href="https://en.wikipedia.org/wiki/Software_rot">software rot</a>, and may require substantial rewriting if left
-  long enough.</p></li>
-<li><p><strong>Work on only one thing at a time</strong> - Mental context switching is expensive.
-  Focus as much as possible until that item is done.</p></li>
-<li><p><strong>Teamwork</strong> - The team as a whole is more important than the individual.
+  long enough.</p>
+  </li>
+  <li>
+    <p><strong>Work on only one thing at a time</strong> - Mental context switching is expensive.
+  Focus as much as possible until that item is done.</p>
+  </li>
+  <li>
+    <p><strong>Teamwork</strong> - The team as a whole is more important than the individual.
   This means that you should write maintainable code, ask for help when you
-  get stuck, and help out your colleagues when they need it.</p></li>
-<li><p><strong>Review pull requests</strong> thoroughly and in a timely manner - as part of teamwork and
-  leaving work unfinished, review your colleagues' work quickly. If they write
+  get stuck, and help out your colleagues when they need it.</p>
+  </li>
+  <li>
+    <p><strong>Review pull requests</strong> thoroughly and in a timely manner - as part of teamwork and
+  leaving work unfinished, review your colleagues’ work quickly. If they write
   a PR and it sits for a week, that is means it takes one week longer for that
-  feature to make it into production.</p></li>
-<li><p><strong>Fix bugs first</strong> - Bugs should be fixed before anything else. They are easier
+  feature to make it into production.</p>
+  </li>
+  <li>
+    <p><strong>Fix bugs first</strong> - Bugs should be fixed before anything else. They are easier
   to fix when fresh, and existing bugs represent potential bad experience for
-  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers' broken window theory</a>.</p></li>
-<li><p><strong>Be aware of errors</strong> - Whenever an error or problem occurs, we must be
+  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers’ broken window theory</a>.</p>
+  </li>
+  <li>
+    <p><strong>Be aware of errors</strong> - Whenever an error or problem occurs, we must be
   notified of it. Otherwise, only users will experience it, and not all users
   report errors. Also if a bug is fixed before a user first notices, the bug
-  doesn&rsquo;t exist from their perspective. An app slowing down to unusable
-  speeds is considered a bug.</p></li>
-<li><p><strong>Don&rsquo;t live with pain</strong> - When something is frustrating, take the time to
+  doesn’t exist from their perspective. An app slowing down to unusable
+  speeds is considered a bug.</p>
+  </li>
+  <li>
+    <p><strong>Don’t live with pain</strong> - When something is frustrating, take the time to
   fix the problem for everyone. Automate common tasks. This makes life easier,
-  and makes the software easier to work with. It&rsquo;s not always possible given
-  time contraints, but it&rsquo;s worth it. This is how big things such as Rails or
-  Meteor get built.</p></li>
-<li><p><strong>Produce high quality code</strong> - Take the time to do things correctly. Quality
-  is worth it.</p></li>
-<li><p><strong>Be pragmatic (but balance ideals)</strong> - Striving for ideals is fantastic, but
-  shipping usable code is the most important.</p></li>
-<li><p><strong>Don&rsquo;t let email/requests go unanswered</strong> - Others have taken the time to
-  ask something of you. Be courteous, and don&rsquo;t make them wait.</p></li>
-<li><p><strong>Provide test coverage</strong> - Do this where possible. The value it provides is
+  and makes the software easier to work with. It’s not always possible given
+  time contraints, but it’s worth it. This is how big things such as Rails or
+  Meteor get built.</p>
+  </li>
+  <li>
+    <p><strong>Produce high quality code</strong> - Take the time to do things correctly. Quality
+  is worth it.</p>
+  </li>
+  <li>
+    <p><strong>Be pragmatic (but balance ideals)</strong> - Striving for ideals is fantastic, but
+  shipping usable code is the most important.</p>
+  </li>
+  <li>
+    <p><strong>Don’t let email/requests go unanswered</strong> - Others have taken the time to
+  ask something of you. Be courteous, and don’t make them wait.</p>
+  </li>
+  <li>
+    <p><strong>Provide test coverage</strong> - Do this where possible. The value it provides is
   tremendous. Try to consider a feature to be complete when it has test
-  coverage.</p></li>
-<li><p><strong>Keep learning</strong> - Always be trying to learn new things. This includes new
+  coverage.</p>
+  </li>
+  <li>
+    <p><strong>Keep learning</strong> - Always be trying to learn new things. This includes new
   ways to use existing tools, or new tools altogether. Tools range from
   programming languages, frameworks, paradigms, editors, to soft skills such
-  as empathy and listening skills.</p></li>
-<li><p><strong>Blame problems not people</strong> - Don&rsquo;t forget that code is written by humans,
+  as empathy and listening skills.</p>
+  </li>
+  <li>
+    <p><strong>Blame problems not people</strong> - Don’t forget that code is written by humans,
   with real feelings. Focus on the problem itself; blaming the author is
-  counterproductive.</p></li>
-<li><p><strong>Encourage, don&rsquo;t discourage</strong> - Help others improve their code. Don&rsquo;t put
+  counterproductive.</p>
+  </li>
+  <li>
+    <p><strong>Encourage, don’t discourage</strong> - Help others improve their code. Don’t put
   them down because they wrote code that you (subjectively) could be better.
-  Yours could also always be better.</p></li>
-<li><p><strong>Be humble</strong> - Realise that you can learn from everyone out there, including
-  those are just learning to write code, and even from those who don&rsquo;t write
-  code at all.</p></li>
+  Yours could also always be better.</p>
+  </li>
+  <li>
+    <p><strong>Be humble</strong> - Realise that you can learn from everyone out there, including
+  those are just learning to write code, and even from those who don’t write
+  code at all.</p>
+  </li>
 </ul>
 
+<p>A good chunk of these have been taken from <a href="https://github.com/okgrow/guides/blob/master/processes/development/README.md">OK GROW!’s development process</a>
+guide, which I’ve contributed to a bit.</p>
 
-<p>A good chunk of these have been taken from <a href="https://github.com/okgrow/guides/blob/master/processes/development/README.md">OK GROW!&rsquo;s development process</a>
-guide, which I&rsquo;ve contributed to a bit.</p>
-
-<p>A lot of these may seem like common sense, and I hope that they do. That&rsquo;s a
-sign that you&rsquo;ve got solid guidelines in place. But I&rsquo;ve had some encounters
-with people who haven&rsquo;t given such things any consideration, just like there
-are companies out there that still don&rsquo;t use source code control.</p>
+<p>A lot of these may seem like common sense, and I hope that they do. That’s a
+sign that you’ve got solid guidelines in place. But I’ve had some encounters
+with people who haven’t given such things any consideration, just like there
+are companies out there that still don’t use source code control.</p>
 
 <p>What sort of guidelines do you use in your development process? Email me at
-<a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#x40;&#x75;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#97;">&#x72;&#103;&#111;&#117;&#x6c;&#100;&#x40;&#x75;&#50;&#54;&#50;&#50;&#x2e;&#99;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
+rgould@u2622.ca or leave a comment below. I’d love to hear them!</p>
+
 </div>
 
 
   <footer>
     <p class="meta">
       
-  
-
 <span class="byline author vcard">Posted by <span class="fn">Richard Gould</span></span>
 
       
@@ -182,15 +210,13 @@ are companies out there that still don&rsquo;t use source code control.</p>
 
 
 
-<time class='entry-date' datetime='2017-11-26T18:37:38+01:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>6:37 pm</span></time>
+
       
 
 
     </p>
     
       <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/" data-via="u2622" data-counturl="http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/" >Tweet</a>
   
   
   
@@ -228,6 +254,14 @@ are companies out there that still don&rsquo;t use source code control.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Language in Code Reviews: How Not to Be a Jerk, Part 1</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a>
       </li>
     
@@ -237,14 +271,6 @@ are companies out there that still don&rsquo;t use source code control.</p>
     
       <li class="post">
         <a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/">5 Steps to Understanding Meteor Better by Improving Your JavaScript</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Disadvantages of Using Meteor (Over Rails)</a>
       </li>
     
   </ul>
@@ -257,7 +283,7 @@ are companies out there that still don&rsquo;t use source code control.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2020 - Richard Gould -
+  Copyright &copy; 2021 - Richard Gould -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

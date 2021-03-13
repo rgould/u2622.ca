@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Language in Code Reviews: How Not to Be a Jerk, Part 1 - u2622.ca</title>
+  <meta name="author" content="Richard Gould">
+
+  
+  <meta name="description" content="Part 1 | Part 2 “Jerk”, “Asshole”, “Ugh, what now?”, “Do it yourself!”, “Why are you so damned picky?” Sound like things you’ve thought to yourself &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="u2622.ca" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29876939-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">u2622.ca</a></h1>
+  
+    <h2>☢ Thoughts on software development, with an odd jaunt into language learning</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Me</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Language in Code Reviews: How Not to Be a Jerk, Part 1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://u2622.ca">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Part 1 | <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Part 2</a></p>
+
+<p><img src="/images/hntbaj1-1.jpg" /></p>
+
+<p>“Jerk”, “Asshole”, “Ugh, what now?”, “Do it yourself!”, “Why are you so damned picky?”</p>
+
+<p>Sound like things you’ve thought to yourself when Seth submits his review for your most recent pull request? Seth is the rockstar, know-it-all, pretentious, two-spaces-not-four and definitely-no-tabs-ever guy. He’s the gate-keeper of all code. He reviews all pull requests, and nothing gets into the code base without his approval. It’s his fault that you can’t meet your deadlines. Why can’t he just approve it so that you can move on to the next task?</p>
+
+<p>Well, he could. But there are some very good reasons he wouldn’t want to.</p>
+
+<p>It turns out that Seth probably isn’t as bad of a guy as you would think. The reason you feel this way could be aggravated by the tone, or more importantly, the lack of tone that was used in his comments while reviewing your code. That his comments made you feel shitty are a combination of multiple factors:</p>
+
+<ul>
+  <li>the tone (or lack of tone) Seth used</li>
+  <li>how well you know Seth</li>
+  <li>your rapport with Seth</li>
+  <li>your mood and energy levels when reading the comments</li>
+  <li>Seth’s mood and energy levels when writing the comments</li>
+</ul>
+
+<p>All of these factors can combine to ruin the relationship you have with Seth. They can also turn your this-should-be-awesome day, into fuck-this-get-me-out-of-here day, where you struggle to crawl out of bed the next day, just to plop yourself in front of the computer, only to re-read the comments and spiral back into that foul and depressive mood again.</p>
+
+<p><img src="/images/hntbaj1-2.jpg" /></p>
+
+<p>But there is a way out: Seth isn’t actually an asshole — it just seems that way due to how you’re interpreting his comments. Seth really just wants to make sure that the code that makes it into production doesn’t introduce any bugs.</p>
+
+<p>Are you Seth? Then I recommend you read <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Part 2</a>. For now, we’ll talk about how it is to be the receiver of Seth’s comments.</p>
+
+<p>Tuesday morning. Opening Gmail, you see a thread containing comments from the pull request you submitted yesterday. It’s from Seth, of course. You grit your teeth, wondering if you should put your mouthguard back in. At this rate, your molars will be ground down by the time you hit forty. Tensing your muscles, you open the thread.</p>
+
+<blockquote>
+  <p>kill this</p>
+</blockquote>
+
+<blockquote>
+  <p>this must be a typo.</p>
+</blockquote>
+
+<blockquote>
+  <p>this does not look good to me. Why was this done?</p>
+</blockquote>
+
+<p>Yup, sounds like Seth is his normal, moody self. But wait, there’s more:</p>
+
+<blockquote>
+  <p>can you not just change it so that it uses attributes?</p>
+</blockquote>
+
+<blockquote>
+  <p>why can’t you just do it this way?</p>
+</blockquote>
+
+<blockquote>
+  <p>can you explain this change?</p>
+</blockquote>
+
+<p>And you’ve got your daily standup in ten minutes! Now you’re thinking that it might just be best to call in sick and play video games all day.</p>
+
+<p>Does this sound like you? Even just a little bit? Read on. Even if it doesn’t sound like you, you may run into this in the future, so you may want to keep these things in mind.</p>
+
+<p>It’s very easy to see Seth blaming you for this. “Can you not just do this?” “You must surround function parenthesis with spaces”. It’s all your fault, and Seth is making sure that you remember that.</p>
+
+<p>Well, not really. There could be an entirely different side of this story: Seth is in a rush, and only has a few minutes to conduct your code review, one of many that he has to get done every day. It shouldn’t come as a surprise that his comments are terse, such as “remove this”. Seth doesn’t really hate you at all, he just wants to get the code review over with so he can go on to fix the issue that brought the database down last week.</p>
+
+<p><img src="/images/hntbaj1-3.jpg" /></p>
+
+<p>How did this conspire to ruin your day in the first place?</p>
+
+<p>Well, Seth’s comments lack tone. When they lack tone, it’s very easy to insert a tone that matches your current mood, or one that reflects how you think Seth feels about you. If you think Seth hates you, you will interpret it in that tone. If you’re feeling down or frustrated, Seth’s comments will seem like he is frustrated too. And after you hear those tones once, you’ll likely interpret his future comments in similar tones.</p>
+
+<p>“That’s great, but what can I do about it?” you ask.</p>
+
+<p>Well, it turns out that you can change how you interpret such messages. In Learned Optimism, Martin Seligman writes about a technique that people can use to help stop interpreting comments as personal, general, and permanent, and interpreting them as impersonal, specific, and temporary. Reginald Braithwaite gives a much better overview here. Go read it.</p>
+
+<p><a href="http://braythwayt.com/homoiconic/2009/05/01/optimism.html">Optimism</a></p>
+
+<p>You can learn to read such comments in a more positive, friendly tone, but it also helps to build a good rapport with your reviewers. If you haven’t met them in person yet, make it a priority to to do, if possible. Once you get to know someone in person, it becomes a lot easier for you to transfer their in-person personality to their tone-less comments.</p>
+
+<p>If it’s not feasible to meet them in person, try to organise things you can do together online. Play some games online together, with microphones on, or have a “happy hour” for the team, where everyone jumps on hangouts and has a virtual drink together.</p>
+
+<p>Also if you’re comfortable with it, the best course of action may be to try to talk to Seth directly. Don’t open with a bold statement like “Why do you hate me?” That implies that Seth actually does hate you, when it’s likely far from the truth. Try something like this: “When you do X, I feel Y, and that makes me Z”. Following that formula focuses on your feelings and the impact it’s having on you, rather than attacking Seth. Try it out: “When you say ‘kill this’, that makes me feel like you’re frustrated with me, and that makes it more difficult for me to come into the office.”</p>
+
+<p>If that sounds really daunting to you, or you don’t feel comfortable enough with Seth to talk to him like that, you may try an indirect approach. Post the second part of this article in your team’s chat, suggesting that everyone read it. When Seth comments on another team member’s pull request, point out to him how negatively his comment can be read, and encourage him to add explicit tone to his posts.</p>
+
+<p>The key take away here is that you don’t want to attack Seth; That will only make things worse. Focus on how it feels to be on the receiving end of those comments, and Seth will be able to show a bit more empathy. Encourage, don’t disparage.</p>
+
+<p>You may also feel shame that Seth is pointing out something that you know you could have done better, but you have to take it into context: You may not consider it to be your best work, but it was the best effort you could give at that time. If you’re under pressure, in a time crunch, working overtime, distracted, sick, or otherwise exhausted, you’re not going to be able to do your best work. In this situation, it’s best to view it as a chance to improve something that you did before, and to know that the next time you do something like that, it will be caught by Seth. It’s also a chance for you to be grateful that such code did not make it into production.</p>
+
+<p><img src="/images/hntbaj1-4.jpg" /></p>
+
+<p>How can you continue to work with Seth? In summary, here is how you can make it more enjoyable:</p>
+
+<ul>
+  <li>Build rapport: spend time in other fun activities; meeting in person; if remote, play games or hangout online</li>
+  <li>Learn how to control how you read tones in messages (helpful even beyond this scope)</li>
+  <li>Empathise with Seth: he wants the code to be bug free</li>
+  <li>Communicate: talk to Seth about the tone in his comments</li>
+</ul>
+
+<p>As a reviewer, Seth has a hand in it as well. He can spend just a little bit of effort to add some tone to his comments. In <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">part two</a>, learn how to not be a jerk when doing a code review.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">Posted by <span class="fn">Richard Gould</span></span>
+
+      
+
+
+
+
+
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2020/07/18/valued-leadership-qualities/" title="Previous Post: Valued Leadership Qualities">&laquo; Valued Leadership Qualities</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/" title="Next Post: Language in Code Reviews: How not to be a Jerk, Part 2">Language in Code Reviews: How not to be a Jerk, Part 2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <img src="/images/lynn_valley_thumb.jpg"/>
+  <p>Welcome! I'm Richard, a software developer and wannabe hyper-polyglot. <a href="/about">Learn more about me here.</a> Want to get in touch? Feel free to email me at rgould@u2622.ca</p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Language in Code Reviews: How Not to Be a Jerk, Part 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2020/07/05/improving-your-speaking-and-listening-skills/">Improving Your Speaking and Listening Skills</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2021 - Richard Gould -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'u2622';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/';
+        var disqus_url = 'http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

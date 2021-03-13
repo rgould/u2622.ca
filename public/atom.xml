@@ -4,7 +4,7 @@
   <title><![CDATA[u2622.ca]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2020-07-19T11:13:08+02:00</updated>
+  <updated>2021-03-13T17:59:27+01:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[Richard Gould]]></name>
@@ -12,6 +12,248 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Language in Code Reviews: How Not to Be a Jerk, Part 2]]></title>
+    <link href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/"/>
+    <updated>2021-03-13T16:52:25+01:00</updated>
+    <id>http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2</id>
+    <content type="html"><![CDATA[<p><a href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Part 1</a> | Part 2</p>
+
+<p>“Man, your code reviews are brutal!” says John to your teammates. He’s talking about you.</p>
+
+<p>“Why do you hate me so much?” writes Steve in an email to you.</p>
+
+<p>Sound familiar? You might just be Seth, one of the people most familiar with the project and gatekeeper of the code base. You’re not out to write “brutal” reviews, or make your colleagues hate you. You just want to ensure that only the highest quality code makes it into production, as bug free as possible.</p>
+
+<p>So why do your coworkers think you hate them? When you write things like:</p>
+
+<blockquote>
+  <p>can’t you just do it this other way?</p>
+</blockquote>
+
+<blockquote>
+  <p>kill this</p>
+</blockquote>
+
+<blockquote>
+  <p>you can’t do that</p>
+</blockquote>
+
+<p>They really hear:</p>
+
+<blockquote>
+  <p>“only an idiot would do it this way”</p>
+</blockquote>
+
+<blockquote>
+  <p>“why would you commit this?”</p>
+</blockquote>
+
+<blockquote>
+  <p>“aren’t you smart enough to realise that that won’t work?”</p>
+</blockquote>
+
+<p>But that’s not really how you intended to come off, or you likely wouldn’t be reading this.</p>
+
+<p>To try to understand more of John and Steves’ perspectives, read <a href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Part 1</a> of this article.</p>
+
+<p>So why should you even care? Can’t John and Steve just grow a thick skin? Why can’t they just stop whining?</p>
+
+<p>Because they’re human, and we all have extremely varying experiences, all of which drive how we interpret the behaviour of others. Some people will assign a benevolent tone, while others will just as easily assign a malevolent one.</p>
+
+<p>When John and Steve interpret your comments negatively, their performance will decline. They will feel like shit, their productivity will drop, and they will resent working with you. They will not be able to thrive in such an environment, and your overall team performance will suffer.</p>
+
+<p>Fortunately, you can fix it. And when you do, your teammates will think more highly of you, enjoy working with you more, and be friendlier to you. Their morale will increase, and their productivity with it.</p>
+
+<p>It all starts with having the right tone. Without proper use of tone, it’s very easy to to lose the meaning behind the message.</p>
+
+<p>When tone isn’t explicit, it’s easy to interpret it negatively. It’s also highly individual: John may read a comment as a friendly suggestion, while Steve reads it as an attack on his intelligence.</p>
+
+<p>Writing comments without paying attention to tone is a default mode for most people. You must consciously insert tone when writing in order to prevent John and Steve from attributing a negative tone.</p>
+
+<p>Fortunately, it’s a lot easier to fix than you would think. With some practice it will become more natural, and eventually you will be inserting explicit tone automatically.</p>
+
+<p><img src="http://u2622.ca/images/hntbaj2-1.jpg" /></p>
+
+<p>The following techniques aren’t just applicable to just code reviews, but to all text-based communication you’ll use in daily life: emails, texting, chat, etc. Follow these suggestions and John and Steve will no longer think of you as a brutal gatekeeper:</p>
+
+<h2 id="1-you-must-focus-on-making-your-tone-friendlier">1. You must focus on making your tone friendlier.</h2>
+
+<p>You can use the passive voice to remove a subject from the sentence, placing emphasis on the outcome of the action. This focuses on the problem, and not the person. Instead of “You must use four spaces for indentation”, use “Four spaces must be used for indentation.” Notice how the “you” has been completely removed from the sentence.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: Kill this.</li>
+  <li>Good: Er, was this accidentally committed?</li>
+</ul>
+
+<p>You can also use the collective “we” in place of “you”. For example, instead of “You must always re-throw exceptions here”, use “We must always re-throw exceptions here.” This de-emphasizes the original submitter as the target of the comment, and re-emphasizes that this is a team effort.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: Can’t you just do it this other way?</li>
+  <li>Good: Unfortunately we need to it this particular way, or else the whizbob will become unstable and raise exceptions.</li>
+</ul>
+
+<p>Use the passive voice, the collective “we”, and focus on the problem, not the person.</p>
+
+<h2 id="2-ask-questions">2. Ask questions.</h2>
+
+<p>Asking questions is also a great way to bring up an issue. They become responsible for the answer, and this gives them a chance to explain themselves. For example: Instead of “this will fail”, try “What happens if the gidget is set to 42?” It could be that they have a legitimate reason for submitting the code as it is.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: You can’t do that.</li>
+  <li>Good: Are you sure that this is going to work? What happens if chunky_bacon is set to null?</li>
+</ul>
+
+<h2 id="3-build-good-rapport-with-your-teammates-and-they-will-integrate-that-into-your-tone">3. Build good rapport with your teammates and they will integrate that into your tone.</h2>
+
+<p>Additionally, build rapport with the submitter. Eat lunch with them, play games with them (in person or online), get to know them. If this is something that is difficult for you, begin with a casual “got any plans for the weekend?” Show some interest in their response. If they answer with “I did some karate”, ask them about it. “Oh cool! How long have you been doing karate for? What do you enjoy about it?” Keep the questions focused on them, and don’t bring the conversation back to you. Bad example: “Oh cool! I’ve always wanted to do karate.” This brings the conversation back to you, and gives them the opportunity to lose interest.</p>
+
+<h2 id="additional-strategies-you-can-use">Additional strategies you can use:</h2>
+
+<p><strong>Avoid imperative forms.</strong> Make suggestions, not commands. Instead of “do it this way”, try “it might work better if we did it this way.” If you issue commands you will come across as demanding.</p>
+
+<p><strong>Prefer an informal tone over a formal tone.</strong> Instead of “This could be null here.”, try “this could be null here”, noting the lack of punctuation. Punctuation is still important, but the use of initial capitals and final periods can be safely discarded.</p>
+
+<p><strong>Don’t end your statements with a period.</strong> Studies have shown that ending your sentences with a period makes them come across as less sincere.</p>
+
+<p><strong>Use liberal use of emoticons and emoji.</strong> They explicitly demonstrate tone :) If you’re worried that the receiver will be annoyed by them, pay attention to how they themselves write, and tailor your level of emoticons to match theirs.</p>
+
+<p><strong>Don’t be terse.</strong> Terseness comes across as impatient and frustrated. Instead of “don’t do this”, prefer “if we do it this way, these bad things could happen”, or even better: “can you foresee any bad things happening if we do it this way?”</p>
+
+<p><strong>Admit that you may not understand everything.</strong> Instead of “don’t do this”, try “I don’t understand this. Would you be able to elaborate?”</p>
+
+<p><strong>Have clear guidelines and coding styles so that they don’t turn into an issue during reviews.</strong> Have an automated tool to check those styles before code is even committed.</p>
+
+<p><strong>Make it explicit when a comment is a suggestion</strong>: “it might work better if this implementation had rockets”.</p>
+
+<p><strong>Make it explicit when a comment is a mandatory change</strong>: “unfortunately we must transmit the the signal here, or the aliens will die”</p>
+
+<p><strong>Add compliments, acknowledgement, and gratitude</strong>: “Thanks, this looks awesome! Just a few things that I think we should change.”</p>
+
+<p><strong>Don’t write in anger.</strong> If you find yourself thinking “how the fuck did this get written?” Take a deep breath, step away from the computer for a few minutes. Calm down, come back, and write “I’m not sure this will run without throwing an error.” Otherwise you risk building resentment in the receiver.</p>
+
+<p><img src="http://u2622.ca/images/hntbaj2-2.jpg" /></p>
+
+<p>Still worried that your colleagues might be interpreting your comments negatively? Grab them and go over your code review together, whether it’s in person or using Screenhero. Then you can explicitly add your tone in your voice.</p>
+
+<p>With these guidelines, you’ll start to find that John and Steve are friendlier towards you, and their productivity will increase. These techniques will help you across all written communication, not just for code reviews. You will become a more pleasant person to work with, and that alone makes it worth the effort.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Language in Code Reviews: How Not to Be a Jerk, Part 1]]></title>
+    <link href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/"/>
+    <updated>2021-03-13T16:51:29+01:00</updated>
+    <id>http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1</id>
+    <content type="html"><![CDATA[<p>Part 1 | <a href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Part 2</a></p>
+
+<p><img src="http://u2622.ca/images/hntbaj1-1.jpg" /></p>
+
+<p>“Jerk”, “Asshole”, “Ugh, what now?”, “Do it yourself!”, “Why are you so damned picky?”</p>
+
+<p>Sound like things you’ve thought to yourself when Seth submits his review for your most recent pull request? Seth is the rockstar, know-it-all, pretentious, two-spaces-not-four and definitely-no-tabs-ever guy. He’s the gate-keeper of all code. He reviews all pull requests, and nothing gets into the code base without his approval. It’s his fault that you can’t meet your deadlines. Why can’t he just approve it so that you can move on to the next task?</p>
+
+<p>Well, he could. But there are some very good reasons he wouldn’t want to.</p>
+
+<p>It turns out that Seth probably isn’t as bad of a guy as you would think. The reason you feel this way could be aggravated by the tone, or more importantly, the lack of tone that was used in his comments while reviewing your code. That his comments made you feel shitty are a combination of multiple factors:</p>
+
+<ul>
+  <li>the tone (or lack of tone) Seth used</li>
+  <li>how well you know Seth</li>
+  <li>your rapport with Seth</li>
+  <li>your mood and energy levels when reading the comments</li>
+  <li>Seth’s mood and energy levels when writing the comments</li>
+</ul>
+
+<p>All of these factors can combine to ruin the relationship you have with Seth. They can also turn your this-should-be-awesome day, into fuck-this-get-me-out-of-here day, where you struggle to crawl out of bed the next day, just to plop yourself in front of the computer, only to re-read the comments and spiral back into that foul and depressive mood again.</p>
+
+<p><img src="http://u2622.ca/images/hntbaj1-2.jpg" /></p>
+
+<p>But there is a way out: Seth isn’t actually an asshole — it just seems that way due to how you’re interpreting his comments. Seth really just wants to make sure that the code that makes it into production doesn’t introduce any bugs.</p>
+
+<p>Are you Seth? Then I recommend you read <a href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Part 2</a>. For now, we’ll talk about how it is to be the receiver of Seth’s comments.</p>
+
+<p>Tuesday morning. Opening Gmail, you see a thread containing comments from the pull request you submitted yesterday. It’s from Seth, of course. You grit your teeth, wondering if you should put your mouthguard back in. At this rate, your molars will be ground down by the time you hit forty. Tensing your muscles, you open the thread.</p>
+
+<blockquote>
+  <p>kill this</p>
+</blockquote>
+
+<blockquote>
+  <p>this must be a typo.</p>
+</blockquote>
+
+<blockquote>
+  <p>this does not look good to me. Why was this done?</p>
+</blockquote>
+
+<p>Yup, sounds like Seth is his normal, moody self. But wait, there’s more:</p>
+
+<blockquote>
+  <p>can you not just change it so that it uses attributes?</p>
+</blockquote>
+
+<blockquote>
+  <p>why can’t you just do it this way?</p>
+</blockquote>
+
+<blockquote>
+  <p>can you explain this change?</p>
+</blockquote>
+
+<p>And you’ve got your daily standup in ten minutes! Now you’re thinking that it might just be best to call in sick and play video games all day.</p>
+
+<p>Does this sound like you? Even just a little bit? Read on. Even if it doesn’t sound like you, you may run into this in the future, so you may want to keep these things in mind.</p>
+
+<p>It’s very easy to see Seth blaming you for this. “Can you not just do this?” “You must surround function parenthesis with spaces”. It’s all your fault, and Seth is making sure that you remember that.</p>
+
+<p>Well, not really. There could be an entirely different side of this story: Seth is in a rush, and only has a few minutes to conduct your code review, one of many that he has to get done every day. It shouldn’t come as a surprise that his comments are terse, such as “remove this”. Seth doesn’t really hate you at all, he just wants to get the code review over with so he can go on to fix the issue that brought the database down last week.</p>
+
+<p><img src="http://u2622.ca/images/hntbaj1-3.jpg" /></p>
+
+<p>How did this conspire to ruin your day in the first place?</p>
+
+<p>Well, Seth’s comments lack tone. When they lack tone, it’s very easy to insert a tone that matches your current mood, or one that reflects how you think Seth feels about you. If you think Seth hates you, you will interpret it in that tone. If you’re feeling down or frustrated, Seth’s comments will seem like he is frustrated too. And after you hear those tones once, you’ll likely interpret his future comments in similar tones.</p>
+
+<p>“That’s great, but what can I do about it?” you ask.</p>
+
+<p>Well, it turns out that you can change how you interpret such messages. In Learned Optimism, Martin Seligman writes about a technique that people can use to help stop interpreting comments as personal, general, and permanent, and interpreting them as impersonal, specific, and temporary. Reginald Braithwaite gives a much better overview here. Go read it.</p>
+
+<p><a href="http://braythwayt.com/homoiconic/2009/05/01/optimism.html">Optimism</a></p>
+
+<p>You can learn to read such comments in a more positive, friendly tone, but it also helps to build a good rapport with your reviewers. If you haven’t met them in person yet, make it a priority to to do, if possible. Once you get to know someone in person, it becomes a lot easier for you to transfer their in-person personality to their tone-less comments.</p>
+
+<p>If it’s not feasible to meet them in person, try to organise things you can do together online. Play some games online together, with microphones on, or have a “happy hour” for the team, where everyone jumps on hangouts and has a virtual drink together.</p>
+
+<p>Also if you’re comfortable with it, the best course of action may be to try to talk to Seth directly. Don’t open with a bold statement like “Why do you hate me?” That implies that Seth actually does hate you, when it’s likely far from the truth. Try something like this: “When you do X, I feel Y, and that makes me Z”. Following that formula focuses on your feelings and the impact it’s having on you, rather than attacking Seth. Try it out: “When you say ‘kill this’, that makes me feel like you’re frustrated with me, and that makes it more difficult for me to come into the office.”</p>
+
+<p>If that sounds really daunting to you, or you don’t feel comfortable enough with Seth to talk to him like that, you may try an indirect approach. Post the second part of this article in your team’s chat, suggesting that everyone read it. When Seth comments on another team member’s pull request, point out to him how negatively his comment can be read, and encourage him to add explicit tone to his posts.</p>
+
+<p>The key take away here is that you don’t want to attack Seth; That will only make things worse. Focus on how it feels to be on the receiving end of those comments, and Seth will be able to show a bit more empathy. Encourage, don’t disparage.</p>
+
+<p>You may also feel shame that Seth is pointing out something that you know you could have done better, but you have to take it into context: You may not consider it to be your best work, but it was the best effort you could give at that time. If you’re under pressure, in a time crunch, working overtime, distracted, sick, or otherwise exhausted, you’re not going to be able to do your best work. In this situation, it’s best to view it as a chance to improve something that you did before, and to know that the next time you do something like that, it will be caught by Seth. It’s also a chance for you to be grateful that such code did not make it into production.</p>
+
+<p><img src="http://u2622.ca/images/hntbaj1-4.jpg" /></p>
+
+<p>How can you continue to work with Seth? In summary, here is how you can make it more enjoyable:</p>
+
+<ul>
+  <li>Build rapport: spend time in other fun activities; meeting in person; if remote, play games or hangout online</li>
+  <li>Learn how to control how you read tones in messages (helpful even beyond this scope)</li>
+  <li>Empathise with Seth: he wants the code to be bug free</li>
+  <li>Communicate: talk to Seth about the tone in his comments</li>
+</ul>
+
+<p>As a reviewer, Seth has a hand in it as well. He can spend just a little bit of effort to add some tone to his comments. In <a href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">part two</a>, learn how to not be a jerk when doing a code review.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Valued Leadership Qualities]]></title>
@@ -30,7 +272,7 @@
 
 <p><strong>Encouragement</strong>: One should encourage, not disparage. Reward the good behaviour that they observe by showing appreciation. Encouragement helps team members go further, and increases motivation.</p>
 
-<p><strong>Vision</strong>: She should know where the team wants to go, and be able to help the team get there (even if they themselves don&rsquo;t know how). This includes both short term and long term goals.</p>
+<p><strong>Vision</strong>: She should know where the team wants to go, and be able to help the team get there (even if they themselves don’t know how). This includes both short term and long term goals.</p>
 
 <p><strong>Focus</strong>: A leader should help the team focus their efforts, steering them in the right direction so that they can strive towards their vision.</p>
 
@@ -38,7 +280,7 @@
 
 <p><strong>Interest</strong>: Take a genuine interest in team members, building rapport with them and supporting them. There should also be a genuine interest in the problem domain, and a leader should seek to grow their expertise with it.</p>
 
-<p><strong>Problem Solving</strong>: A leader should be able to help solve the team&rsquo;s problems, whether those problems are within the team (ie. conflicts) or without (ie. technological or organizational blockers). Solving these problems lets the team focus on achieving their vision, without being distracted by other issues. A leader can help identify these problems, and also propose solutions and drive their resolution. These problems can be anything: technical, organizational, environmental, and personal.</p>
+<p><strong>Problem Solving</strong>: A leader should be able to help solve the team’s problems, whether those problems are within the team (ie. conflicts) or without (ie. technological or organizational blockers). Solving these problems lets the team focus on achieving their vision, without being distracted by other issues. A leader can help identify these problems, and also propose solutions and drive their resolution. These problems can be anything: technical, organizational, environmental, and personal.</p>
 
 <p><strong>Collaboration</strong>: Getting the team working together is more effective than issuing orders to team members. People feel powerless when commanded to do something. Collaboration gives the power to the team, regardless of seniority or title. A leader should do what they can to encourage such an atmosphere. When a problem arises, the focus to solve it is on the problem itself, not to lay blame on those involved.</p>
 
@@ -55,21 +297,23 @@
     <id>http://u2622.ca/blog/2020/07/05/improving-your-speaking-and-listening-skills</id>
     <content type="html"><![CDATA[<p>A colleague wrote:</p>
 
-<blockquote><p>Hello! I want to ask you to share your experience or ideas about what is the better way to improve the English level. Of course, the question is not simple how it seems because I have not bad level (according to a test it closer to advance) and I try to use all general advice like use English sources for getting information (for my work and other aspects of my life), watch videos in English etc., but I still feel not comfortable in a speaking part and sometimes with understanding (some accents are easy to understand some harder). How did you manage similar problems?  Thanks!</p></blockquote>
+<blockquote>
+  <p>Hello! I want to ask you to share your experience or ideas about what is the better way to improve the English level. Of course, the question is not simple how it seems because I have not bad level (according to a test it closer to advance) and I try to use all general advice like use English sources for getting information (for my work and other aspects of my life), watch videos in English etc., but I still feel not comfortable in a speaking part and sometimes with understanding (some accents are easy to understand some harder). How did you manage similar problems?  Thanks!</p>
+</blockquote>
 
-<p>I believe the best way to improve your speaking is to, well, speak. The more you can speak, the faster you will improve. It can help to figure out what specific problems are being encountered. Others having problems understanding what you&rsquo;re saying? Improve your pronunciation. Can&rsquo;t recall the word you want to use in the middle of a sentence? Use Spaced Repetition Software (SRS) to boost your recall rates. Don&rsquo;t know the word to use in the sentence? Increase your vocabulary size.</p>
+<p>I believe the best way to improve your speaking is to, well, speak. The more you can speak, the faster you will improve. It can help to figure out what specific problems are being encountered. Others having problems understanding what you’re saying? Improve your pronunciation. Can’t recall the word you want to use in the middle of a sentence? Use Spaced Repetition Software (SRS) to boost your recall rates. Don’t know the word to use in the sentence? Increase your vocabulary size.</p>
 
-<p>To speak more, try to incorporate speaking into your life more. If you can speak your target language with your friends or family, try to do so as much as you can. If you&rsquo;re watching TV, you can repeat after hearing something (<a href="https://howtogetfluent.com/shadowing-for-language-learning/">&ldquo;shadowing&rdquo;</a>). You can also talk to yourself, which is maybe strange, but can be very effective. There&rsquo;s an article over at <a href="https://universeofmemory.com/benefits-of-talking-to-yourself/">Universe of Memory</a> that goes into the details of talking to oneself. But speaking without feedback risks ingraining mistakes. To that end, I recommend hiring a native speaker who can give you feedback. They don&rsquo;t need to be a trained teacher (those can be very expensive) - just a native speaker who can tell you when you&rsquo;re saying something wrong.</p>
+<p>To speak more, try to incorporate speaking into your life more. If you can speak your target language with your friends or family, try to do so as much as you can. If you’re watching TV, you can repeat after hearing something (<a href="https://howtogetfluent.com/shadowing-for-language-learning/">“shadowing”</a>). You can also talk to yourself, which is maybe strange, but can be very effective. There’s an article over at <a href="https://universeofmemory.com/benefits-of-talking-to-yourself/">Universe of Memory</a> that goes into the details of talking to oneself. But speaking without feedback risks ingraining mistakes. To that end, I recommend hiring a native speaker who can give you feedback. They don’t need to be a trained teacher (those can be very expensive) - just a native speaker who can tell you when you’re saying something wrong.</p>
 
-<p>I&rsquo;ve had very good luck finding native speakers on <a href="https://www.italki.com/">Italki</a> - you can find a native speaker there under &ldquo;community tutors&rdquo;. You can also find a language exchange partner, but I don&rsquo;t recommend them. If you&rsquo;re doing an exchange, you&rsquo;re spending time and effort on your own language, when you could be spending that time and effort learning your target language. It&rsquo;s also a significant amount of effort to find a suitable partner in the first place. Go with a community tutor if you have the financial means.</p>
+<p>I’ve had very good luck finding native speakers on <a href="https://www.italki.com/">Italki</a> - you can find a native speaker there under “community tutors”. You can also find a language exchange partner, but I don’t recommend them. If you’re doing an exchange, you’re spending time and effort on your own language, when you could be spending that time and effort learning your target language. It’s also a significant amount of effort to find a suitable partner in the first place. Go with a community tutor if you have the financial means.</p>
 
-<p>To improve your pronunciation, I recommend learning the IPA of your target language. Once you identify the words that you have trouble pronouncing, you can use the IPA to identify the specific sounds that are difficult for you, then intentionally practice them. Note that unless you&rsquo;ve intentionally trained your ear to hear these new sounds, it&rsquo;s unlikely that you&rsquo;re hearing (and thus pronouncing) them correctly. As an example, see <a href="https://en.wikipedia.org/wiki/Perception_of_English_/r/_and_/l/_by_Japanese_speakers">Perception of English /r/ and /l/ by Japanese speakers</a>. The <a href="https://speechling.com">Speechling app</a> can also help with this. You record yourself speaking sentences aloud, which are then reviewed by a native speaker who points out what is being said incorrectly.</p>
+<p>To improve your pronunciation, I recommend learning the IPA of your target language. Once you identify the words that you have trouble pronouncing, you can use the IPA to identify the specific sounds that are difficult for you, then intentionally practice them. Note that unless you’ve intentionally trained your ear to hear these new sounds, it’s unlikely that you’re hearing (and thus pronouncing) them correctly. As an example, see <a href="https://en.wikipedia.org/wiki/Perception_of_English_/r/_and_/l/_by_Japanese_speakers">Perception of English /r/ and /l/ by Japanese speakers</a>. The <a href="https://speechling.com">Speechling app</a> can also help with this. You record yourself speaking sentences aloud, which are then reviewed by a native speaker who points out what is being said incorrectly.</p>
 
 <p>To increase your vocabulary size, I recommend actively engaging with new words, or with words that you find yourself forgetting. To active engage, you can create sentences (written, typed or spoken) using these words. You can type them into your SRS application to decrease the chance that you will forget them.</p>
 
-<p>To get used to different accents and speakers, listen to media from many different sources. YouTube is a fantastic resource for this. Listen actively, and try to pick out words. Take note of new words you don&rsquo;t know and try to use them. I also recommend the article <a href="https://universeofmemory.com/listening-comprehension-in-a-foreign-language/">Listening comprehension in a foreign language - 12 ways to improve it</a>.</p>
+<p>To get used to different accents and speakers, listen to media from many different sources. YouTube is a fantastic resource for this. Listen actively, and try to pick out words. Take note of new words you don’t know and try to use them. I also recommend the article <a href="https://universeofmemory.com/listening-comprehension-in-a-foreign-language/">Listening comprehension in a foreign language - 12 ways to improve it</a>.</p>
 
-<p>To improve the recall of your vocabulary, I recommend using Spaced Repetition Software, in particular <a href="https://apps.ankiweb.net/">Anki</a>. The vocabulary you learn will be periodically shown to you based on how well you know it. This helps slow down memory decay (see <a href="https://en.wikipedia.org/wiki/Forgetting_curve">Ebbinghaus&rsquo;s Forgetting Curve</a> and the <a href="https://en.wikipedia.org/wiki/Spacing_effect">Spacing Effect</a>). It can also be useful in identifying vocabulary that you need to pay more attention to, for example a word that you keep getting incorrect can be used in more sentences, help to boost the recall rate.</p>
+<p>To improve the recall of your vocabulary, I recommend using Spaced Repetition Software, in particular <a href="https://apps.ankiweb.net/">Anki</a>. The vocabulary you learn will be periodically shown to you based on how well you know it. This helps slow down memory decay (see <a href="https://en.wikipedia.org/wiki/Forgetting_curve">Ebbinghaus’s Forgetting Curve</a> and the <a href="https://en.wikipedia.org/wiki/Spacing_effect">Spacing Effect</a>). It can also be useful in identifying vocabulary that you need to pay more attention to, for example a word that you keep getting incorrect can be used in more sentences, help to boost the recall rate.</p>
 
 <p>Disclaimer: I am no expert on language learning. I have some background knowledge, have read a bunch about it, but they were mostly secondary sources. I have tried many things and have failed more times than I have succeeded. Take my advice with a grain of salt. I highly recommend <a href="https://universeofmemory.com/">Universe of Memory</a> as Bartosz actually cites his sources, so you can question his recommendations by delving into the source material.</p>
 ]]></content>
@@ -80,174 +324,199 @@
     <link href="http://u2622.ca/blog/2017/11/26/my-principles-for-software-development/"/>
     <updated>2017-11-26T18:37:38+01:00</updated>
     <id>http://u2622.ca/blog/2017/11/26/my-principles-for-software-development</id>
-    <content type="html"><![CDATA[<p>Here are some of the principles by which I try to develop software. This isn&rsquo;t
-a hard-and-fast list, but rather a set of guidelines that I use. I don&rsquo;t follow
+    <content type="html"><![CDATA[<p>Here are some of the principles by which I try to develop software. This isn’t
+a hard-and-fast list, but rather a set of guidelines that I use. I don’t follow
 all of them every day, but I try to follow them as much as I can. This list is
 under constant review, extending and changing as I grow as a developer.</p>
 
 <ul>
-<li><p><strong>Don&rsquo;t leave work unfinished</strong> - Work that is started but not finished is a
-  liability. At best, it means a feature isn&rsquo;t in production sooner than it
+  <li>
+    <p><strong>Don’t leave work unfinished</strong> - Work that is started but not finished is a
+  liability. At best, it means a feature isn’t in production sooner than it
   could be (representing wasted opportunity). At worst, the feature will
   suffer from <a href="https://en.wikipedia.org/wiki/Software_rot">software rot</a>, and may require substantial rewriting if left
-  long enough.</p></li>
-<li><p><strong>Work on only one thing at a time</strong> - Mental context switching is expensive.
-  Focus as much as possible until that item is done.</p></li>
-<li><p><strong>Teamwork</strong> - The team as a whole is more important than the individual.
+  long enough.</p>
+  </li>
+  <li>
+    <p><strong>Work on only one thing at a time</strong> - Mental context switching is expensive.
+  Focus as much as possible until that item is done.</p>
+  </li>
+  <li>
+    <p><strong>Teamwork</strong> - The team as a whole is more important than the individual.
   This means that you should write maintainable code, ask for help when you
-  get stuck, and help out your colleagues when they need it.</p></li>
-<li><p><strong>Review pull requests</strong> thoroughly and in a timely manner - as part of teamwork and
-  leaving work unfinished, review your colleagues' work quickly. If they write
+  get stuck, and help out your colleagues when they need it.</p>
+  </li>
+  <li>
+    <p><strong>Review pull requests</strong> thoroughly and in a timely manner - as part of teamwork and
+  leaving work unfinished, review your colleagues’ work quickly. If they write
   a PR and it sits for a week, that is means it takes one week longer for that
-  feature to make it into production.</p></li>
-<li><p><strong>Fix bugs first</strong> - Bugs should be fixed before anything else. They are easier
+  feature to make it into production.</p>
+  </li>
+  <li>
+    <p><strong>Fix bugs first</strong> - Bugs should be fixed before anything else. They are easier
   to fix when fresh, and existing bugs represent potential bad experience for
-  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers' broken window theory</a>.</p></li>
-<li><p><strong>Be aware of errors</strong> - Whenever an error or problem occurs, we must be
+  enduser. See the <a href="https://blog.codinghorror.com/the-broken-window-theory/">Pragmatic Programmers’ broken window theory</a>.</p>
+  </li>
+  <li>
+    <p><strong>Be aware of errors</strong> - Whenever an error or problem occurs, we must be
   notified of it. Otherwise, only users will experience it, and not all users
   report errors. Also if a bug is fixed before a user first notices, the bug
-  doesn&rsquo;t exist from their perspective. An app slowing down to unusable
-  speeds is considered a bug.</p></li>
-<li><p><strong>Don&rsquo;t live with pain</strong> - When something is frustrating, take the time to
+  doesn’t exist from their perspective. An app slowing down to unusable
+  speeds is considered a bug.</p>
+  </li>
+  <li>
+    <p><strong>Don’t live with pain</strong> - When something is frustrating, take the time to
   fix the problem for everyone. Automate common tasks. This makes life easier,
-  and makes the software easier to work with. It&rsquo;s not always possible given
-  time contraints, but it&rsquo;s worth it. This is how big things such as Rails or
-  Meteor get built.</p></li>
-<li><p><strong>Produce high quality code</strong> - Take the time to do things correctly. Quality
-  is worth it.</p></li>
-<li><p><strong>Be pragmatic (but balance ideals)</strong> - Striving for ideals is fantastic, but
-  shipping usable code is the most important.</p></li>
-<li><p><strong>Don&rsquo;t let email/requests go unanswered</strong> - Others have taken the time to
-  ask something of you. Be courteous, and don&rsquo;t make them wait.</p></li>
-<li><p><strong>Provide test coverage</strong> - Do this where possible. The value it provides is
+  and makes the software easier to work with. It’s not always possible given
+  time contraints, but it’s worth it. This is how big things such as Rails or
+  Meteor get built.</p>
+  </li>
+  <li>
+    <p><strong>Produce high quality code</strong> - Take the time to do things correctly. Quality
+  is worth it.</p>
+  </li>
+  <li>
+    <p><strong>Be pragmatic (but balance ideals)</strong> - Striving for ideals is fantastic, but
+  shipping usable code is the most important.</p>
+  </li>
+  <li>
+    <p><strong>Don’t let email/requests go unanswered</strong> - Others have taken the time to
+  ask something of you. Be courteous, and don’t make them wait.</p>
+  </li>
+  <li>
+    <p><strong>Provide test coverage</strong> - Do this where possible. The value it provides is
   tremendous. Try to consider a feature to be complete when it has test
-  coverage.</p></li>
-<li><p><strong>Keep learning</strong> - Always be trying to learn new things. This includes new
+  coverage.</p>
+  </li>
+  <li>
+    <p><strong>Keep learning</strong> - Always be trying to learn new things. This includes new
   ways to use existing tools, or new tools altogether. Tools range from
   programming languages, frameworks, paradigms, editors, to soft skills such
-  as empathy and listening skills.</p></li>
-<li><p><strong>Blame problems not people</strong> - Don&rsquo;t forget that code is written by humans,
+  as empathy and listening skills.</p>
+  </li>
+  <li>
+    <p><strong>Blame problems not people</strong> - Don’t forget that code is written by humans,
   with real feelings. Focus on the problem itself; blaming the author is
-  counterproductive.</p></li>
-<li><p><strong>Encourage, don&rsquo;t discourage</strong> - Help others improve their code. Don&rsquo;t put
+  counterproductive.</p>
+  </li>
+  <li>
+    <p><strong>Encourage, don’t discourage</strong> - Help others improve their code. Don’t put
   them down because they wrote code that you (subjectively) could be better.
-  Yours could also always be better.</p></li>
-<li><p><strong>Be humble</strong> - Realise that you can learn from everyone out there, including
-  those are just learning to write code, and even from those who don&rsquo;t write
-  code at all.</p></li>
+  Yours could also always be better.</p>
+  </li>
+  <li>
+    <p><strong>Be humble</strong> - Realise that you can learn from everyone out there, including
+  those are just learning to write code, and even from those who don’t write
+  code at all.</p>
+  </li>
 </ul>
 
+<p>A good chunk of these have been taken from <a href="https://github.com/okgrow/guides/blob/master/processes/development/README.md">OK GROW!’s development process</a>
+guide, which I’ve contributed to a bit.</p>
 
-<p>A good chunk of these have been taken from <a href="https://github.com/okgrow/guides/blob/master/processes/development/README.md">OK GROW!&rsquo;s development process</a>
-guide, which I&rsquo;ve contributed to a bit.</p>
-
-<p>A lot of these may seem like common sense, and I hope that they do. That&rsquo;s a
-sign that you&rsquo;ve got solid guidelines in place. But I&rsquo;ve had some encounters
-with people who haven&rsquo;t given such things any consideration, just like there
-are companies out there that still don&rsquo;t use source code control.</p>
+<p>A lot of these may seem like common sense, and I hope that they do. That’s a
+sign that you’ve got solid guidelines in place. But I’ve had some encounters
+with people who haven’t given such things any consideration, just like there
+are companies out there that still don’t use source code control.</p>
 
 <p>What sort of guidelines do you use in your development process? Email me at
-<a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x72;&#x67;&#111;&#x75;&#x6c;&#x64;&#x40;&#x75;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#97;">&#x72;&#103;&#111;&#117;&#x6c;&#100;&#x40;&#x75;&#50;&#54;&#50;&#50;&#x2e;&#99;&#97;</a> or leave a comment below. I&rsquo;d love to hear them!</p>
+rgould@u2622.ca or leave a comment below. I’d love to hear them!</p>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[5 Steps to Understanding Meteor Better by Improving Your JavaScript]]></title>
     <link href="http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/"/>
-    <updated>2014-09-20T13:31:10-07:00</updated>
+    <updated>2014-09-20T22:31:10+02:00</updated>
     <id>http://u2622.ca/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript</id>
-    <content type="html"><![CDATA[<p>I don&rsquo;t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don&rsquo;t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
+    <content type="html"><![CDATA[<p>I don’t believe you need to be a JavaScript expert before diving into Meteor, but I highly recommend taking the time to learn advanced topics first. By levelling up your JavaScript, you will understand the concepts faster, and will feel less frustrated and confused. Even if you don’t stick with Meteor or do Meteor full time, the skills these books will teach you will help you in all aspects of development.</p>
 
-<p>I recommend starting by watching a series of Douglas Crockford&rsquo;s lectures on JavaScript, and then following it with Reginald Braithwaite&rsquo;s Javascript Allongé.</p>
+<p>I recommend starting by watching a series of Douglas Crockford’s lectures on JavaScript, and then following it with Reginald Braithwaite’s Javascript Allongé.</p>
 
 <ol>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">The JavaScript Programming Language</a></em>. Watch it even if you already have built some applications with JS already. It goes into the fundamentals in-depth, and will help cement the basics in your mind, which is essential when learning advanced topics.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=Y2Y0U-2qJMs">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=DwYPG6vreJg">Advanced JavaScript</a></em>. It covers some advanced topics sometimes unique to JavaScript, and common advanced patterns. If you&rsquo;ve ever tried reading a JavaScript library and couldn&rsquo;t even begin to comphrehend it, this lecture will help clear things up.</li>
-<li>Watch Crockford&rsquo;s <em><a href="https://www.youtube.com/watch?v=hQVTIJBZook">JavaScript: The Good Parts</a></em>. It will help you pick out the best parts of the language to use, and the parts that you need to actively avoid.</li>
-<li>Read Reginald Braithwaite&rsquo;s <em><a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a></em>. Reginald (aka ragnwald) covers advanced functional topics, and this will permanently change how you write your JavaScript, enabling you to write resuable code faster and with much higher confidence.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">The JavaScript Programming Language</a></em>. Watch it even if you already have built some applications with JS already. It goes into the fundamentals in-depth, and will help cement the basics in your mind, which is essential when learning advanced topics.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=Y2Y0U-2qJMs">Theory of the DOM</a></em>. Watch it even if you think you know the DOM well. Again, establishing fundamentals makes learning advanced topics easier.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=DwYPG6vreJg">Advanced JavaScript</a></em>. It covers some advanced topics sometimes unique to JavaScript, and common advanced patterns. If you’ve ever tried reading a JavaScript library and couldn’t even begin to comphrehend it, this lecture will help clear things up.</li>
+  <li>Watch Crockford’s <em><a href="https://www.youtube.com/watch?v=hQVTIJBZook">JavaScript: The Good Parts</a></em>. It will help you pick out the best parts of the language to use, and the parts that you need to actively avoid.</li>
+  <li>Read Reginald Braithwaite’s <em><a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a></em>. Reginald (aka ragnwald) covers advanced functional topics, and this will permanently change how you write your JavaScript, enabling you to write resuable code faster and with much higher confidence.</li>
 </ol>
 
+<p>I recommend doing the above in that order. <em>Allongé</em> is more advanced and builds off of topics covered by Crockford. Each step will help bring your JavaScript game to the next level, with Crockford’s lessons establishing solid fundamentals, and <em>Allongé</em> teaching (in a very effective manner) the more advanced usages of functional programming with JS.</p>
 
-<p>I recommend doing the above in that order. <em>Allongé</em> is more advanced and builds off of topics covered by Crockford. Each step will help bring your JavaScript game to the next level, with Crockford&rsquo;s lessons establishing solid fundamentals, and <em>Allongé</em> teaching (in a very effective manner) the more advanced usages of functional programming with JS.</p>
+<p>Note that I did all of the above (and worked through the exercises in <em>Allongé</em>) before I even touched Meteor, and for the most part, the only Meteor help I’ve needed has been the official Meteor docs. Having such a solid foundation of knowledge let me pick up Meteor with lightning speed, and all of those skills will stay with me when it comes time to learn another framework.</p>
 
-<p>Note that I did all of the above (and worked through the exercises in <em>Allongé</em>) before I even touched Meteor, and for the most part, the only Meteor help I&rsquo;ve needed has been the official Meteor docs. Having such a solid foundation of knowledge let me pick up Meteor with lightning speed, and all of those skills will stay with me when it comes time to learn another framework.</p>
+<p>If you have trouble following Crockford’s lectures, then I recommend reading his print edition of JavaScript: The Good Parts instead. While you’re reading it, really work through the examples to make sure you’re understanding it as you go along.</p>
 
-<p>If you have trouble following Crockford&rsquo;s lectures, then I recommend reading his print edition of JavaScript: The Good Parts instead. While you&rsquo;re reading it, really work through the examples to make sure you&rsquo;re understanding it as you go along.</p>
-
-<p>Have you ever felt that your JavaScript skills were inadequate? Have you ever looked inside one of the libraries you use (jQuery perhaps?) and felt as though you didn&rsquo;t understand JavaScript at all? I want to hear about it. <a href="mailto:rgould@u2622.ca">Email me</a> with your story (write as much or as little as you&rsquo;d like).</p>
+<p>Have you ever felt that your JavaScript skills were inadequate? Have you ever looked inside one of the libraries you use (jQuery perhaps?) and felt as though you didn’t understand JavaScript at all? I want to hear about it. <a href="mailto:rgould@u2622.ca">Email me</a> with your story (write as much or as little as you’d like).</p>
 
 <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" />
 
-
-<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
-
-
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 
 <div id="mc_embed_signup">
-<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
   <label for="mce-EMAIL">Don't miss out on my next post!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
 </form>
 </div>
 
-
-
-
 <!--End mc_embed_signup-->
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Disadvantages of Using Meteor (Over Rails)]]></title>
-    <link href="http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/"/>
-    <updated>2014-08-24T20:22:26-07:00</updated>
-    <id>http://u2622.ca/blog/2014/08/24/disadvantages-of-using-meteor-over-rails</id>
-    <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn&rsquo;t come without drawbacks. Here are some of the ones that I&rsquo;ve encountered:
+    <link href="http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails/"/>
+    <updated>2014-08-25T05:22:26+02:00</updated>
+    <id>http://u2622.ca/blog/2014/08/25/disadvantages-of-using-meteor-over-rails</id>
+    <content type="html"><![CDATA[<p>You can save significant amounts of time by developing some web applications by using Meteor instead of Ruby on Rails, but it doesn’t come without drawbacks. Here are some of the ones that I’ve encountered:
 What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
-<p><strong>Immature Environment</strong>: The biggest problem right now is that Meteor is new. Pretty much brand new, in the scope of web development. It&rsquo;s not even version 1.0 yet, though it&rsquo;s getting close. This means that it doesn&rsquo;t have as many users, as many tutorials, as many books, as many screencasts. It can be hard if you run into a problem that no one else has run into yet, so you&rsquo;ll need to be willing to dig into it a bit yourself. I&rsquo;ve been there, and fortunately Meteor&rsquo;s codebase is fairly cleanly written (especially compared to Rails and AngularJS, two other frameworks whose code I&rsquo;ve read).</p>
+<p><strong>Immature Environment</strong>: The biggest problem right now is that Meteor is new. Pretty much brand new, in the scope of web development. It’s not even version 1.0 yet, though it’s getting close. This means that it doesn’t have as many users, as many tutorials, as many books, as many screencasts. It can be hard if you run into a problem that no one else has run into yet, so you’ll need to be willing to dig into it a bit yourself. I’ve been there, and fortunately Meteor’s codebase is fairly cleanly written (especially compared to Rails and AngularJS, two other frameworks whose code I’ve read).</p>
 
-<p><strong>Not Widely Supported</strong>: Another consequence of being so new is that there aren&rsquo;t as many hosting services available for Meteor apps yet. It is possible to deploy Meteor on Heroku, and in my experience it works well, though it feels very raw.</p>
+<p><strong>Not Widely Supported</strong>: Another consequence of being so new is that there aren’t as many hosting services available for Meteor apps yet. It is possible to deploy Meteor on Heroku, and in my experience it works well, though it feels very raw.</p>
 
-<p><strong>Nothing but JavaScript</strong>: You must run JavaScript (or Coffeescript) on the server side. This isn&rsquo;t a big deal for me, but JS is definitely far from the first language I would choose to work with. The upside is that you can run the same code on the server and the browser, without worrying about having to cross-compile from another language.</p>
+<p><strong>Nothing but JavaScript</strong>: You must run JavaScript (or Coffeescript) on the server side. This isn’t a big deal for me, but JS is definitely far from the first language I would choose to work with. The upside is that you can run the same code on the server and the browser, without worrying about having to cross-compile from another language.</p>
 
 <p><strong>Only MongoDB</strong>: As of now, the only supported database is MongoDB. They have plans to expand this in the future.</p>
 
 <p><strong>Rapidly Changing</strong>: The Meteor API is rapidly changing, so each new minor version may bring breaking changes. This is expected to lessen as it reaches 1.0.</p>
 
-<p><strong>Testing Frameworks</strong>: Testing frameworks haven&rsquo;t been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community&rsquo;s.</p>
+<p><strong>Testing Frameworks</strong>: Testing frameworks haven’t been a high priority since the beginning, and the ones available so far have tended to be cumbersome and brittle. The community is working on solutions, but nothing stable has yet emerged, and the testing culture is nothing like the Ruby on Rails community’s.</p>
 
 <p>While there are many disadvantages, I feel like the advantages heavily outweigh them (usually). But the list of advantages is for another post entirely!</p>
 
 <p>What are some other disadvantages you can think of? Email me or leave a comment!</p>
 
 <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" />
 
-
-<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
-
-
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 
 <div id="mc_embed_signup">
-<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
   <label for="mce-EMAIL">Don't miss out on my next post!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
 </form>
 </div>
 
-
-
-
 <!--End mc_embed_signup-->
-
 ]]></content>
   </entry>
   
@@ -256,94 +525,66 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
     <link href="http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor/"/>
     <updated>2014-08-17T19:21:00+02:00</updated>
     <id>http://u2622.ca/blog/2014/08/17/implementing-web-hooks-with-meteor</id>
-    <content type="html"><![CDATA[<p>It&rsquo;s possible to add web hooks to your Meteor application by using iron-router.</p>
+    <content type="html"><![CDATA[<p>It’s possible to add web hooks to your Meteor application by using iron-router.</p>
 
 <p>Declare a server-side route in your Routes.map declaration:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Router</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="p">...</span> <span class="c1">// Your other routes go here</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;hook&#39;</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/hook&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">where</span><span class="o">:</span> <span class="s1">&#39;server&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">action</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="c1">// Watch the Meteor log to see this output</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hook called.&quot;</span><span class="p">);</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Headers: &quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">);</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Data: &quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;You wrote: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="c1">// `this.response.end` *must* be called, or else the connection is left open.</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Success!\n&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code class="language-javascript">    Router.map(function() {
+      ... // Your other routes go here
 
+      this.route('hook', {
+        path: '/hook',
+        where: 'server',
+        action: function() {
+
+          // Watch the Meteor log to see this output
+          console.log("Hook called.");
+          console.log("Headers: ", this.request.headers);
+          console.log("Data: ", this.request.body);
+
+          this.response.writeHead(200, {'Content-Type': 'text/html'});
+          this.response.write("You wrote: " + this.request.body.message);
+          this.response.write("\n");
+
+          // `this.response.end` *must* be called, or else the connection is left open.
+          this.response.end('Success!\n');
+        }
+      });
+
+    });
+</code></pre>
 
 <p>To test it out, issue this curl command from the command line:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl -H <span class="s2">&quot;Content-Type: application/json&quot;</span> -d <span class="s1">&#39;{&quot;message&quot;:&quot;foo&quot;}&#39;</span> http://localhost:3000/hook
-</span></code></pre></td></tr></table></div></figure>
+<pre><code class="language-bash">    curl -H "Content-Type: application/json" -d '{"message":"foo"}' http://localhost:3000/hook
+</code></pre>
 
+<p>The documentation for <code>this.response</code> and <code>this.request</code> are available on the node.js website: http://nodejs.org/api/http.html</p>
 
-<p>The documentation for <code>this.response</code> and <code>this.request</code> are available on the node.js website: <a href="http://nodejs.org/api/http.html">http://nodejs.org/api/http.html</a></p>
+<p>I’ve created a sample Meteor application demonstrating this, which you can view at https://github.com/rgould/meteor-posthooks</p>
 
-<p>I&rsquo;ve created a sample Meteor application demonstrating this, which you can view at <a href="https://github.com/rgould/meteor-posthooks">https://github.com/rgould/meteor-posthooks</a></p>
-
-<p>Not clear enough? Send me an email at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#114;&#x67;&#111;&#x75;&#x6c;&#100;&#64;&#117;&#x32;&#54;&#x32;&#50;&#46;&#x63;&#97;">&#114;&#x67;&#111;&#x75;&#108;&#100;&#x40;&#117;&#50;&#x36;&#50;&#50;&#46;&#x63;&#97;</a> for some more help!</p>
+<p>Not clear enough? Send me an email at rgould@u2622.ca for some more help!</p>
 
 <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" />
 
-
-<p><link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></p>
-
-
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 
 <div id="mc_embed_signup">
-<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//wordpress.us8.list-manage.com/subscribe/post?u=ff25df46443f09aa393c2ae1d&amp;id=46f2ebecac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
   <label for="mce-EMAIL">Don't miss out on my next post!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff25df46443f09aa393c2ae1d_46f2ebecac" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
 </form>
 </div>
 
-
-
-
 <!--End mc_embed_signup-->
-
 ]]></content>
   </entry>
   
@@ -355,37 +596,38 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
     <content type="html"><![CDATA[<p>While focusing heavily on learning Icelandic, I dug deeply looking for Icelandic-language music. There are surprisingly high amounts of Icelandic bands that sing exclusively in English. Here are my favourite songs with Icelandic lyrics:</p>
 
 <p><strong>Mammút</strong> - They play energetic rock music, bordering on post-punk sometimes. The first Icelandic language band I liked, and my favourite still.
- Here&rsquo;s Svefnsýkt: <iframe width="420" height="315" src="http://www.youtube.com/embed/aeGZriDklEo" frameborder="0" allowfullscreen></iframe>
+ Here’s Svefnsýkt: &lt;iframe width="420" height="315" src="http://www.youtube.com/embed/aeGZriDklEo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
  Bónus: <a href="https://www.youtube.com/watch?v=8EV-pE4xaHI">Rauðilækur</a></p>
 
-<p><strong>Q4U</strong> - Postpunk from the 80s, mostly in Icelandic. They&rsquo;re still around.
- Here&rsquo;s Sigurinn: <iframe width="420" height="315" src="http://www.youtube.com/embed/iiWcZKhWlQA" frameborder="0" allowfullscreen></iframe>
+<p><strong>Q4U</strong> - Postpunk from the 80s, mostly in Icelandic. They’re still around.
+ Here’s Sigurinn: &lt;iframe width="420" height="315" src="http://www.youtube.com/embed/iiWcZKhWlQA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
  Bónus: <a href="https://www.youtube.com/watch?v=6qM2yrG1wpY">Snjóhvít</a></p>
 
 <p><strong>Samaris</strong> - Atmospheric minimal electro/triphop with clarinet. Very haunting.
- Here&rsquo;s Góða Tungl: <iframe width="560" height="315" src="http://www.youtube.com/embed/_pKuzdMFE8k" frameborder="0" allowfullscreen></iframe>
+ Here’s Góða Tungl: &lt;iframe width="560" height="315" src="http://www.youtube.com/embed/_pKuzdMFE8k" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
  Bónus: <a href="http://www.youtube.com/watch?v=J9hKHJkGMwE">Stofnar Falla</a></p>
 
 <p><strong>Nóra</strong>: Indie rock, ranging from upbeat and energetic to atmospheric and introspective. The more I listen, the more I like it. They sing entirely in Icelandic.
- Here&rsquo;s Himinbrim: <iframe width="420" height="315" src="http://www.youtube.com/embed/w66kIAWBFs8" frameborder="0" allowfullscreen></iframe>
+ Here’s Himinbrim: &lt;iframe width="420" height="315" src="http://www.youtube.com/embed/w66kIAWBFs8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
  Bónus: <a href="https://www.youtube.com/watch?v=it2MTpGisJQ">Sjónskekkja</a></p>
 
 <p><strong>Lockerbie</strong> - Post-rock, but with a bit more pop/rock than usually characterised by Icelandic post-rock.
- Here&rsquo;s Snjóljón: <iframe width="420" height="315" src="http://www.youtube.com/embed/cUWzNsPHcEQ" frameborder="0" allowfullscreen></iframe></p>
+ Here’s Snjóljón: &lt;iframe width="420" height="315" src="http://www.youtube.com/embed/cUWzNsPHcEQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</p>
 
 <p><strong>Úlfur Úlfur</strong> - Hiphop with awesome backing percussion. They sing entirely in Icelandic.
- Here&rsquo;s Út: <iframe width="560" height="315" src="http://www.youtube.com/embed/jCgbt73gD74" frameborder="0" allowfullscreen></iframe>
+ Here’s Út: &lt;iframe width="560" height="315" src="http://www.youtube.com/embed/jCgbt73gD74" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
  Bónus: <a href="http://www.youtube.com/watch?v=R0LWMJatU4s">Ég er farinn</a></p>
 
 <p><strong>Pascal Pinon</strong> - D.I.Y., lo-fi, indie pop electronic. Many songs in Icelandic.
- Here&rsquo;s Ekki Vanmeta: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71960187"></iframe>
+ Here’s Ekki Vanmeta: &lt;iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71960187"&gt;&lt;/iframe&gt;
  Bónus: <a href="https://soundcloud.com/iceland-music-export/pascal-pinon-sandur">Sandur</a></p>
 
 <p><strong>Sólstafir</strong> - Post-black metal, with elements of country and rock. They are amazing live. Their album Svartir Sandar is entirely in Icelandic and highly recommended.
- Here&rsquo;s Fjara: <iframe width="420" height="315" src="http://www.youtube.com/embed/A6j7mUxGz20" frameborder="0" allowfullscreen></iframe>
+ Here’s Fjara: &lt;iframe width="420" height="315" src="http://www.youtube.com/embed/A6j7mUxGz20" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
  Bónus: <a href="http://www.youtube.com/watch?v=SkA6JX8iuHo">Svartir Sandar</a></p>
 
-<p>There&rsquo;s lots of music that I&rsquo;ve discovered that I didn&rsquo;t cover here, but I only wanted to showcase the music I liked the most. Feel free to leave other suggestions in the comments.</p>
+<p>There’s lots of music that I’ve discovered that I didn’t cover here, but I only wanted to showcase the music I liked the most. Feel free to leave other suggestions in the comments.</p>
+
 ]]></content>
   </entry>
   
@@ -397,85 +639,54 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
     <content type="html"><![CDATA[<p>Contents:</p>
 
 <ol>
-<li>Introduction to aliases @ 0:00</li>
-<li>Analysing shell history to create relevant aliases @ 4:43</li>
+  <li>Introduction to aliases @ 0:00</li>
+  <li>Analysing shell history to create relevant aliases @ 4:43</li>
 </ol>
-
 
 <p>Download: <a href="http://rgould.ca/downloads/aliases.mov">mov</a> 24MB, 8:26 (Recommended)</p>
 
 <p>Watch (recommended in full screen and in HD):</p>
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/e4bQ4FstNvs" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="420" height="315" src="http://www.youtube.com/embed/e4bQ4FstNvs" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Notes:</p>
 
 <p>Make an alias:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s2">&quot;ls -al&quot;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">glog</span><span class="o">=</span><span class="s2">&quot;git log&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="language-bash">    alias l="ls -al"
+    alias glog="git log"
+</code></pre>
 
 <p>Add those to your <code>~/.aliasrc</code>.</p>
 
 <p>Modify <code>~/.zshrc</code> or <code>~/.bashrc</code> (works for both):</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[[</span> -r ~/.aliasrc <span class="o">]]</span>; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> ~/.aliasrc
-</span><span class='line'><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="language-bash">    if [[ -r ~/.aliasrc ]]; then
+      source ~/.aliasrc
+    fi
+</code></pre>
 
 <p>View shell history: <code>history</code></p>
 
 <p>View count of common commands:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">history</span> | awk <span class="s1">&#39;{ print $2 }&#39;</span> | sort | uniq -c | sort -n
-</span><span class='line'><span class="nb">history</span> | awk <span class="s1">&#39;{ print $2,$3 }&#39;</span> | sort | uniq -c | sort -n
-</span></code></pre></td></tr></table></div></figure>
-
-
+<pre><code class="language-bash">    history | awk '{ print $2 }' | sort | uniq -c | sort -n
+    history | awk '{ print $2,$3 }' | sort | uniq -c | sort -n
+</code></pre>
 <p>Use that output to create better aliases!</p>
 
-<p>Here&rsquo;s some of my favourite aliases:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
-</span><span class='line'><span class="nb">alias</span> ...<span class="o">=</span><span class="s1">&#39;cd ../..&#39;</span>
-</span><span class='line'><span class="nb">alias</span> ....<span class="o">=</span><span class="s1">&#39;cd ../../../&#39;</span>
-</span><span class='line'><span class="nb">alias</span> .....<span class="o">=</span><span class="s1">&#39;cd ../../../../&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">be</span><span class="o">=</span><span class="s1">&#39;bundle exec&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">g</span><span class="o">=</span>git
-</span><span class='line'><span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s1">&#39;git add&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit -v&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">gca</span><span class="o">=</span><span class="s1">&#39;git commit -v -a&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">gch</span><span class="o">=</span><span class="s1">&#39;git checkout&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git pull&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">gst</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -al&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>Here’s some of my favourite aliases:</p>
+<pre><code class="language-bash">    alias ..='cd ..'
+    alias ...='cd ../..'
+    alias ....='cd ../../../'
+    alias .....='cd ../../../../'
+    alias be='bundle exec'
+    alias g=git
+    alias ga='git add'
+    alias gc='git commit -v'
+    alias gca='git commit -v -a'
+    alias gch='git checkout'
+    alias gl='git pull'
+    alias gst='git status'
+    alias l='ls -al'
+</code></pre>
 ]]></content>
   </entry>
   
@@ -490,79 +701,53 @@ What are the disadvantages of using Meteor compared to Ruby on Rails?</p>
 
 <p>If you have a given class:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">validates_presence_of</span> <span class="ss">:hometown_id</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code class="language-ruby">class Viking &lt; ActiveRecord::Base
+  belongs_to :hometown
 
+  validates_presence_of :hometown_id
+end
+</code></pre>
 
 <p>and blueprints:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">hometown</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="language-ruby">Viking.blueprint do
+  name { "Heiðrek" }
+  hometown
+end
+</code></pre>
 
 <p>Then calling <code>Viking.make</code> will properly return an unsaved Viking object (with a Hometown object <code>viking.hometown</code>), but <code>valid?</code> will return false.</p>
 
 <p>Calling <code>Viking.make!</code> will throw an exception: <code>ActiveRecord::RecordInvalid: Validation failed: Hometown can't be blank</code></p>
 
 <p>If you really want to keep using <code>validates_presence_of :hometown_id</code>, you can modify the blueprint like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">hometown</span> <span class="p">{</span> <span class="no">Hometown</span><span class="o">.</span><span class="n">make!</span> <span class="p">}</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="language-ruby">Viking.blueprint do
+  name { "Heiðrek" }
+  hometown { Hometown.make! }
+end
+</code></pre>
 
 <p>Then Viking.make! will succeed. Viking.make will also work, and will return an unsaved Viking object, but it will actually create and save the associated Hometown object, which negates part of the point of calling <code>.make</code> instead of <code>.make!</code> (<code>make</code> creates objects but does not save them to the database, giving quite a performance boost for test suites).</p>
 
 <p>The proper solution is to adjust the validation in your model:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">validates</span> <span class="ss">:hometown</span><span class="p">,</span> <span class="n">presence</span><span class="p">:</span> <span class="kp">true</span>
-</span><span class='line'>  <span class="n">validates_associated</span> <span class="ss">:hometown</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code class="language-ruby">class Viking &lt; ActiveRecord::Base
+  belongs_to :hometown
 
+  validates :hometown, presence: true
+  validates_associated :hometown
+end
+</code></pre>
 
-<p>The key is that we&rsquo;ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
+<p>The key is that we’ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
 
-<p>We&rsquo;ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
+<p>We’ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
 
 <p>See API docs about validations here:</p>
 
 <ul>
-<li><a href="http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates">validates</a></li>
-<li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_associated">validates_associated</a></li>
+  <li><a href="http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates">validates</a></li>
+  <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_associated">validates_associated</a></li>
 </ul>
-
 ]]></content>
   </entry>
   

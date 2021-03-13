@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Language in Code Reviews: How Not to Be a Jerk, Part 2 - u2622.ca</title>
+  <meta name="author" content="Richard Gould">
+
+  
+  <meta name="description" content="Part 1 | Part 2 “Man, your code reviews are brutal!” says John to your teammates. He’s talking about you. “Why do you hate me so much?” writes Steve &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="u2622.ca" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29876939-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">u2622.ca</a></h1>
+  
+    <h2>☢ Thoughts on software development, with an odd jaunt into language learning</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Me</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Language in Code Reviews: How Not to Be a Jerk, Part 2</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://u2622.ca">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Part 1</a> | Part 2</p>
+
+<p>“Man, your code reviews are brutal!” says John to your teammates. He’s talking about you.</p>
+
+<p>“Why do you hate me so much?” writes Steve in an email to you.</p>
+
+<p>Sound familiar? You might just be Seth, one of the people most familiar with the project and gatekeeper of the code base. You’re not out to write “brutal” reviews, or make your colleagues hate you. You just want to ensure that only the highest quality code makes it into production, as bug free as possible.</p>
+
+<p>So why do your coworkers think you hate them? When you write things like:</p>
+
+<blockquote>
+  <p>can’t you just do it this other way?</p>
+</blockquote>
+
+<blockquote>
+  <p>kill this</p>
+</blockquote>
+
+<blockquote>
+  <p>you can’t do that</p>
+</blockquote>
+
+<p>They really hear:</p>
+
+<blockquote>
+  <p>“only an idiot would do it this way”</p>
+</blockquote>
+
+<blockquote>
+  <p>“why would you commit this?”</p>
+</blockquote>
+
+<blockquote>
+  <p>“aren’t you smart enough to realise that that won’t work?”</p>
+</blockquote>
+
+<p>But that’s not really how you intended to come off, or you likely wouldn’t be reading this.</p>
+
+<p>To try to understand more of John and Steves’ perspectives, read <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Part 1</a> of this article.</p>
+
+<p>So why should you even care? Can’t John and Steve just grow a thick skin? Why can’t they just stop whining?</p>
+
+<p>Because they’re human, and we all have extremely varying experiences, all of which drive how we interpret the behaviour of others. Some people will assign a benevolent tone, while others will just as easily assign a malevolent one.</p>
+
+<p>When John and Steve interpret your comments negatively, their performance will decline. They will feel like shit, their productivity will drop, and they will resent working with you. They will not be able to thrive in such an environment, and your overall team performance will suffer.</p>
+
+<p>Fortunately, you can fix it. And when you do, your teammates will think more highly of you, enjoy working with you more, and be friendlier to you. Their morale will increase, and their productivity with it.</p>
+
+<p>It all starts with having the right tone. Without proper use of tone, it’s very easy to to lose the meaning behind the message.</p>
+
+<p>When tone isn’t explicit, it’s easy to interpret it negatively. It’s also highly individual: John may read a comment as a friendly suggestion, while Steve reads it as an attack on his intelligence.</p>
+
+<p>Writing comments without paying attention to tone is a default mode for most people. You must consciously insert tone when writing in order to prevent John and Steve from attributing a negative tone.</p>
+
+<p>Fortunately, it’s a lot easier to fix than you would think. With some practice it will become more natural, and eventually you will be inserting explicit tone automatically.</p>
+
+<p><img src="/images/hntbaj2-1.jpg" /></p>
+
+<p>The following techniques aren’t just applicable to just code reviews, but to all text-based communication you’ll use in daily life: emails, texting, chat, etc. Follow these suggestions and John and Steve will no longer think of you as a brutal gatekeeper:</p>
+
+<h2 id="1-you-must-focus-on-making-your-tone-friendlier">1. You must focus on making your tone friendlier.</h2>
+
+<p>You can use the passive voice to remove a subject from the sentence, placing emphasis on the outcome of the action. This focuses on the problem, and not the person. Instead of “You must use four spaces for indentation”, use “Four spaces must be used for indentation.” Notice how the “you” has been completely removed from the sentence.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: Kill this.</li>
+  <li>Good: Er, was this accidentally committed?</li>
+</ul>
+
+<p>You can also use the collective “we” in place of “you”. For example, instead of “You must always re-throw exceptions here”, use “We must always re-throw exceptions here.” This de-emphasizes the original submitter as the target of the comment, and re-emphasizes that this is a team effort.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: Can’t you just do it this other way?</li>
+  <li>Good: Unfortunately we need to it this particular way, or else the whizbob will become unstable and raise exceptions.</li>
+</ul>
+
+<p>Use the passive voice, the collective “we”, and focus on the problem, not the person.</p>
+
+<h2 id="2-ask-questions">2. Ask questions.</h2>
+
+<p>Asking questions is also a great way to bring up an issue. They become responsible for the answer, and this gives them a chance to explain themselves. For example: Instead of “this will fail”, try “What happens if the gidget is set to 42?” It could be that they have a legitimate reason for submitting the code as it is.</p>
+
+<p>Example</p>
+
+<ul>
+  <li>Bad: You can’t do that.</li>
+  <li>Good: Are you sure that this is going to work? What happens if chunky_bacon is set to null?</li>
+</ul>
+
+<h2 id="3-build-good-rapport-with-your-teammates-and-they-will-integrate-that-into-your-tone">3. Build good rapport with your teammates and they will integrate that into your tone.</h2>
+
+<p>Additionally, build rapport with the submitter. Eat lunch with them, play games with them (in person or online), get to know them. If this is something that is difficult for you, begin with a casual “got any plans for the weekend?” Show some interest in their response. If they answer with “I did some karate”, ask them about it. “Oh cool! How long have you been doing karate for? What do you enjoy about it?” Keep the questions focused on them, and don’t bring the conversation back to you. Bad example: “Oh cool! I’ve always wanted to do karate.” This brings the conversation back to you, and gives them the opportunity to lose interest.</p>
+
+<h2 id="additional-strategies-you-can-use">Additional strategies you can use:</h2>
+
+<p><strong>Avoid imperative forms.</strong> Make suggestions, not commands. Instead of “do it this way”, try “it might work better if we did it this way.” If you issue commands you will come across as demanding.</p>
+
+<p><strong>Prefer an informal tone over a formal tone.</strong> Instead of “This could be null here.”, try “this could be null here”, noting the lack of punctuation. Punctuation is still important, but the use of initial capitals and final periods can be safely discarded.</p>
+
+<p><strong>Don’t end your statements with a period.</strong> Studies have shown that ending your sentences with a period makes them come across as less sincere.</p>
+
+<p><strong>Use liberal use of emoticons and emoji.</strong> They explicitly demonstrate tone :) If you’re worried that the receiver will be annoyed by them, pay attention to how they themselves write, and tailor your level of emoticons to match theirs.</p>
+
+<p><strong>Don’t be terse.</strong> Terseness comes across as impatient and frustrated. Instead of “don’t do this”, prefer “if we do it this way, these bad things could happen”, or even better: “can you foresee any bad things happening if we do it this way?”</p>
+
+<p><strong>Admit that you may not understand everything.</strong> Instead of “don’t do this”, try “I don’t understand this. Would you be able to elaborate?”</p>
+
+<p><strong>Have clear guidelines and coding styles so that they don’t turn into an issue during reviews.</strong> Have an automated tool to check those styles before code is even committed.</p>
+
+<p><strong>Make it explicit when a comment is a suggestion</strong>: “it might work better if this implementation had rockets”.</p>
+
+<p><strong>Make it explicit when a comment is a mandatory change</strong>: “unfortunately we must transmit the the signal here, or the aliens will die”</p>
+
+<p><strong>Add compliments, acknowledgement, and gratitude</strong>: “Thanks, this looks awesome! Just a few things that I think we should change.”</p>
+
+<p><strong>Don’t write in anger.</strong> If you find yourself thinking “how the fuck did this get written?” Take a deep breath, step away from the computer for a few minutes. Calm down, come back, and write “I’m not sure this will run without throwing an error.” Otherwise you risk building resentment in the receiver.</p>
+
+<p><img src="/images/hntbaj2-2.jpg" /></p>
+
+<p>Still worried that your colleagues might be interpreting your comments negatively? Grab them and go over your code review together, whether it’s in person or using Screenhero. Then you can explicitly add your tone in your voice.</p>
+
+<p>With these guidelines, you’ll start to find that John and Steve are friendlier towards you, and their productivity will increase. These techniques will help you across all written communication, not just for code reviews. You will become a more pleasant person to work with, and that alone makes it worth the effort.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">Posted by <span class="fn">Richard Gould</span></span>
+
+      
+
+
+
+
+
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/" title="Previous Post: Language in Code Reviews: How not to be a Jerk, Part 1">&laquo; Language in Code Reviews: How not to be a Jerk, Part 1</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <img src="/images/lynn_valley_thumb.jpg"/>
+  <p>Welcome! I'm Richard, a software developer and wannabe hyper-polyglot. <a href="/about">Learn more about me here.</a> Want to get in touch? Feel free to email me at rgould@u2622.ca</p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Language in Code Reviews: How Not to Be a Jerk, Part 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2020/07/05/improving-your-speaking-and-listening-skills/">Improving Your Speaking and Listening Skills</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2021 - Richard Gould -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'u2622';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/';
+        var disqus_url = 'http://u2622.ca/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

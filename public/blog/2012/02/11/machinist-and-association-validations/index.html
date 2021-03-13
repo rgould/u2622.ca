@@ -88,7 +88,7 @@
 
 
 
-<time class='entry-date' datetime='2012-02-11T11:32:00+01:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>11:32 am</span></time>
+
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://u2622.ca">Comments</a>
@@ -104,87 +104,59 @@
 
 <p>If you have a given class:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">validates_presence_of</span> <span class="ss">:hometown_id</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code class="language-ruby">class Viking &lt; ActiveRecord::Base
+  belongs_to :hometown
 
+  validates_presence_of :hometown_id
+end
+</code></pre>
 
 <p>and blueprints:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">hometown</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="language-ruby">Viking.blueprint do
+  name { "Heiðrek" }
+  hometown
+end
+</code></pre>
 
 <p>Then calling <code>Viking.make</code> will properly return an unsaved Viking object (with a Hometown object <code>viking.hometown</code>), but <code>valid?</code> will return false.</p>
 
 <p>Calling <code>Viking.make!</code> will throw an exception: <code>ActiveRecord::RecordInvalid: Validation failed: Hometown can't be blank</code></p>
 
 <p>If you really want to keep using <code>validates_presence_of :hometown_id</code>, you can modify the blueprint like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Viking</span><span class="o">.</span><span class="n">blueprint</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">name</span> <span class="p">{</span> <span class="s2">&quot;Heiðrek&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">hometown</span> <span class="p">{</span> <span class="no">Hometown</span><span class="o">.</span><span class="n">make!</span> <span class="p">}</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="language-ruby">Viking.blueprint do
+  name { "Heiðrek" }
+  hometown { Hometown.make! }
+end
+</code></pre>
 
 <p>Then Viking.make! will succeed. Viking.make will also work, and will return an unsaved Viking object, but it will actually create and save the associated Hometown object, which negates part of the point of calling <code>.make</code> instead of <code>.make!</code> (<code>make</code> creates objects but does not save them to the database, giving quite a performance boost for test suites).</p>
 
 <p>The proper solution is to adjust the validation in your model:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Viking</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:hometown</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">validates</span> <span class="ss">:hometown</span><span class="p">,</span> <span class="n">presence</span><span class="p">:</span> <span class="kp">true</span>
-</span><span class='line'>  <span class="n">validates_associated</span> <span class="ss">:hometown</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code class="language-ruby">class Viking &lt; ActiveRecord::Base
+  belongs_to :hometown
 
+  validates :hometown, presence: true
+  validates_associated :hometown
+end
+</code></pre>
 
-<p>The key is that we&rsquo;ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
+<p>The key is that we’ve changed <code>validates_presence_of :hometown_id</code> to <code>validates :hometown, presence: true</code>. The validation actually checks the association itself, not the presence of an id field (which is only ever set once the hometown is saved).</p>
 
-<p>We&rsquo;ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
+<p>We’ve also added a <code>validates_associated :hometown</code> call, which will check <code>hometown.valid?</code> before saving, and if the hometown fails validation, then the viking object will as well.</p>
 
 <p>See API docs about validations here:</p>
 
 <ul>
-<li><a href="http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates">validates</a></li>
-<li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_associated">validates_associated</a></li>
+  <li><a href="http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates">validates</a></li>
+  <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_associated">validates_associated</a></li>
 </ul>
-
 </div>
 
 
   <footer>
     <p class="meta">
       
-  
-
 <span class="byline author vcard">Posted by <span class="fn">Richard Gould</span></span>
 
       
@@ -192,15 +164,13 @@
 
 
 
-<time class='entry-date' datetime='2012-02-11T11:32:00+01:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>11:32 am</span></time>
+
       
 
 
     </p>
     
       <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/" data-via="u2622" data-counturl="http://u2622.ca/blog/2012/02/11/machinist-and-association-validations/" >Tweet</a>
   
   
   
@@ -238,6 +208,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-1/">Language in Code Reviews: How Not to Be a Jerk, Part 1</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a>
       </li>
     
@@ -247,14 +225,6 @@
     
       <li class="post">
         <a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/20/5_steps_to_understanding_meteor_better_by_improving_your_javascript/">5 Steps to Understanding Meteor Better by Improving Your JavaScript</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/24/disadvantages-of-using-meteor-over-rails/">Disadvantages of Using Meteor (Over Rails)</a>
       </li>
     
   </ul>
@@ -267,7 +237,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2020 - Richard Gould -
+  Copyright &copy; 2021 - Richard Gould -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
