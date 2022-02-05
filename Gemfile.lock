@@ -54,7 +54,7 @@ GEM
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kgio (2.11.3)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -83,7 +83,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdiscount (2.2.0.2)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rouge (3.26.0)
     rubypants (0.2.0)
     safe_yaml (1.0.5)
