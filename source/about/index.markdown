@@ -6,15 +6,17 @@ sharing: false
 footer: true
 ---
 
-<img src="images/lynn_valley.jpg" align="left" style="margin-right: 20px"/>
+<img src="images/richard_dalia.jpg" align="left" style="margin-right: 20px"/>
 
-Welcome! I'm Richard, a senior software developer from Canada, now living in Berlin. I'm passionate about building software, learning languages, and continual improvement. I have been building software since I was 14 years old, and it's still something I enjoy doing in my free time.
+Welcome! I'm Richard, a leader and a software developer from Canada, now living in Berlin, currently CTO at [mTOMADY](https://www.mtomady.com/). I'm passionate about building software, learning languages, and continual improvement. I have been building software since I was 14 years old, and it's still something I enjoy doing in my free time.
 
-I am serious about creating the highest quality software I can, and I like to have fun while I do it. That's why Ruby is currently my favourite programming language.
+I am serious about creating the highest quality software I can, and I like to have fun while I do it. That's why Ruby is currently my favourite programming language. You can also read about [the principles that guide my software development](/blog/2017/11/26/my-principles-for-software-development/).
 
 > For me, the purpose of life is, at least partly, to have joy. Programmers often feel joy when they can concentrate on the creative side of programming, so Ruby is designed to make programmers happy. - Yukihiro "Matz" Matsumoto
 
-I also love learning natural languages. I can speak German at a B2 level and Icelandic at a B1 level. Icelandic was a big success for me, as I had to learn it independently. Feel free to write to me in German or Icelandic if you want to.
+I've spent a lot of time thinking about leadership and what it means to me. I've written about the [leadership qualities](/blog/2020/07/18/valued-leadership-qualities/) that I both appreciate, and strive to emulate.
+
+I also love learning natural languages. I can speak German at a B2 level and Icelandic and French at a B1 level. Icelandic was a big success for me, as I had to learn it independently. Feel free to write to me in German or Icelandic if you want to.
 
 Continual improvement is also important to me. I'm always looking for new skills to learn, and new techniques to improve what I already know. Frustrated by how many things I've forgotten from university, I am particularly interested in how our memory works. As an introduction I recommend the course [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn), followed by reading [Universe of Memory](https://universeofmemory.com/) if you want to go deeper.
 
@@ -41,4 +43,4 @@ Roughly in chronological order, newest first:
  * [i18nify](https://github.com/rgould/i18nify): A cleaner way of doing i18n in Ruby
  * 2006-2009: Incubation committee member for OSGEO
  * 2006-2008: Project Management Committee and Module Maintainer for GeoTools project
- * 2004-2007: I made significant contributes to [GeoTools](https://geotools.org/), [uDig](http://udig.refractions.net/), [GeoServer](http://geoserver.org/) while working at Refractions Research
+ * 2004-2007: I made significant contributes to [GeoTools](https://geotools.org/), [uDig](http://udig.refractions.net/), [GeoServer](http://geoserver.org/) while at Refractions Research
