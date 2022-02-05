@@ -24,7 +24,7 @@ I also love Open Source software. Here's an incomplete list of contributions I'v
 
 Roughly in chronological order, newest first:
 
- * Usability improvement in Mongoid: [Unmask Enumerable#find](https://github.com/mongodb/mongoid/pull/4802)
+ * mongoid: Usability improvement: [Unmask Enumerable#find](https://github.com/mongodb/mongoid/pull/4802)
  * onesignal-ruby: [Added a previously unsupported API call](https://github.com/mikamai/onesignal-ruby/pull/7)
  * [retry\_it](https://github.com/DaliaResearch/retry_it), a Ruby gem to conditionally retry a block of code (such as an HTTP call)
  * ruby\_odata: [Regular expression bug fix](https://github.com/visoft/ruby_odata/pull/67)
@@ -43,4 +43,4 @@ Roughly in chronological order, newest first:
  * [i18nify](https://github.com/rgould/i18nify): A cleaner way of doing i18n in Ruby
  * 2006-2009: Incubation committee member for OSGEO
  * 2006-2008: Project Management Committee and Module Maintainer for GeoTools project
- * 2004-2007: I made significant contributes to [GeoTools](https://geotools.org/), [uDig](http://udig.refractions.net/), [GeoServer](http://geoserver.org/) while at Refractions Research
+ * 2004-2007: I made significant contributions to [GeoTools](https://geotools.org/), [uDig](http://udig.refractions.net/), [GeoServer](http://geoserver.org/) while at Refractions Research
