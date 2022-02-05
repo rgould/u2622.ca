@@ -16,11 +16,11 @@ I am serious about creating the highest quality software I can, and I like to ha
 
 I've spent a lot of time thinking about leadership and what it means to me. I've written about the [leadership qualities](/blog/2020/07/18/valued-leadership-qualities/) that I both appreciate, and strive to emulate.
 
-I also love learning natural languages. I can speak German at a B2 level and Icelandic and French at a B1 level. Icelandic was a big success for me, as I had to learn it independently. Feel free to write to me in German or Icelandic if you want to.
+I also love learning natural languages. I can speak German at a B2 level and Icelandic and French at a B1 level. Icelandic was a big success for me, as I had to learn it independently. Feel free to write to me in German, Icelandic or French if you want to.
 
 Continual improvement is also important to me. I'm always looking for new skills to learn, and new techniques to improve what I already know. Frustrated by how many things I've forgotten from university, I am particularly interested in how our memory works. As an introduction I recommend the course [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn), followed by reading [Universe of Memory](https://universeofmemory.com/) if you want to go deeper.
 
-I also love Open Source software. Here's an incomplete list of contributions I've made over the years. It's here as a reminder to myself for the next time I think "Oh, I haven't made any contributions in a long time" that this is not necessarily true :)
+I also love Open Source software. Here's an incomplete list of contributions I've made over the years. It's here as a reminder to myself for the next time I think, "Oh, I haven't made any contributions in a long time," that this is not necessarily true :)
 
 Roughly in chronological order, newest first:
 
