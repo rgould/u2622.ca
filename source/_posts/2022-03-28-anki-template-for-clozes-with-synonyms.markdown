@@ -29,7 +29,7 @@ Text: Wo \{\{c1::wohnst::live}}<sup>lebst</sup> du?
 
 This is a bit more natural to type (start with "Wo wohnst du?" then add the cloze, then add the synonym). Anki has shortcuts for adding a cloze (⌘-C / ALT-C) and for adding superscript (⌘-SHIFT-= / ALT-SHIFT-=), making this a bit easier to type.
 
-But this doesn't solve the second problem. If we feed this to AwesomeTTS, it will generate audio for "Wo wohnstlbest du?" which is still nonsense.
+But this doesn't solve the second problem. If we feed this to AwesomeTTS, it will generate audio for "Wo wohnstlebst du?" which is still nonsense.
 
 My solution: **Put synonyms in another field**.
 
