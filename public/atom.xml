@@ -4,7 +4,7 @@
   <title><![CDATA[Richard Gould]]></title>
   <link href="http://u2622.ca/atom.xml" rel="self"/>
   <link href="http://u2622.ca/"/>
-  <updated>2022-03-29T08:50:52+02:00</updated>
+  <updated>2022-03-29T10:34:58+02:00</updated>
   <id>http://u2622.ca/</id>
   <author>
     <name><![CDATA[Richard Gould]]></name>
@@ -41,7 +41,7 @@ Back: wohnst</p>
 
 <p>This is a bit more natural to type (start with “Wo wohnst du?” then add the cloze, then add the synonym). Anki has shortcuts for adding a cloze (⌘-C / ALT-C) and for adding superscript (⌘-SHIFT-= / ALT-SHIFT-=), making this a bit easier to type.</p>
 
-<p>But this doesn’t solve the second problem. If we feed this to AwesomeTTS, it will generate audio for “Wo wohnstlbest du?” which is still nonsense.</p>
+<p>But this doesn’t solve the second problem. If we feed this to AwesomeTTS, it will generate audio for “Wo wohnstlebst du?” which is still nonsense.</p>
 
 <p>My solution: <strong>Put synonyms in another field</strong>.</p>
 
