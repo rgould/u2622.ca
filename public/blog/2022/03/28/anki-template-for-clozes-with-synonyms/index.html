@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Leadership - Richard Gould</title>
+  <title>Anki Template for Clozes With Synonyms - Richard Gould</title>
   <meta name="author" content="Richard Gould">
 
   
-  <meta name="description" content="Category: leadership">
+  <meta name="description" content="If you use a cloze-style (aka. fill in the blank) question when learning vocabulary, you eventually come across a synonym. For example in German, you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://u2622.ca/blog/categories/leadership/">
+  <link rel="canonical" href="http://u2622.ca/blog/2022/03/28/anki-template-for-clozes-with-synonyms/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -75,36 +75,139 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Leadership</h1>
+    
+      <h1 class="entry-title">Anki Template for Clozes With Synonyms</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://u2622.ca">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>If you use a cloze-style (aka. fill in the blank) question when learning vocabulary, you eventually come across a synonym. For example in German, you have <em>wohnen</em> and <em>leben</em>, and they mostly mean the <em>to live</em>. You can put it in the card as superscript:</p>
 
-  
-  <h2>2020</h2>
+<p>Front: Wo [[live]]<sup>lebst</sup> du?<br />
+Back: wohnst</p>
 
-<article>
-  
-<h1><a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a></h1>
-<time datetime="2020-07-18T19:07:13+02:00" pubdate><span class='month'>Jul</span> <span class='day'>18</span> <span class='year'>2020</span></time>
+<p><img src="/images/anki_synonym_example1.png" width="50%" alight="right" /></p>
 
-<footer>
-  <span class="categories">posted in leadership</span>
-</footer>
+<p>There are a couple problems with this approach.</p>
 
+<p>First, it’s a bit unnatural to type. Would you rather type “Wo wohnst du?”, or “Wo live du?”.</p>
 
-</article>
+<p>Second, it doesn’t work well if you want to generate text-to-speech (TTS) audio samples en masse with <a href="https://ankiweb.net/shared/info/1436550454">AwesomeTTS</a>. If you pass this card to AwesomeTTS, it will generate audio with input “Wo [[ live ]]lebst du?”, which generates nonsense. What you want to feed it is: “Wo wohnst du?”</p>
 
+<p><img src="/images/anki_synonym_awesome_tts1.png" /></p>
+
+<p>What if we use the built-in cloze template? Then the card would look like this:</p>
+
+<p>Text: Wo {{c1::wohnst::live}}<sup>lebst</sup> du?</p>
+
+<p><img src="/images/anki_synonym_example2.png" width="75%" /></p>
+
+<p>This is a bit more natural to type (start with “Wo wohnst du?” then add the cloze, then add the synonym). Anki has shortcuts for adding a cloze (⌘-C / ALT-C) and for adding superscript (⌘-SHIFT-= / ALT-SHIFT-=), making this a bit easier to type.</p>
+
+<p>But this doesn’t solve the second problem. If we feed this to AwesomeTTS, it will generate audio for “Wo wohnstlbest du?” which is still nonsense.</p>
+
+<p>My solution: <strong>Put synonyms in another field</strong>.</p>
+
+<p>Text: Wo {{c1::wohnst::live}} du?<br />
+Synonyms: lebst</p>
+
+<p><img src="/images/anki_synonym_example3.png" width="75%" /></p>
+
+<p>This is the easiest to work with, IMO. Once you add the cloze hint, you can hit TAB and then type out the synonyms. Also the Text field can be fed directly to AwesomeTTS and it will work as expected.</p>
+
+<p>We can modify the template to show the synonyms following the cloze entry, so it looks exactly like it did before.</p>
+
+<p>Here’s the front:</p>
+
+<pre><code class="language-html">{{cloze:Text}}
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;span id="synonyms"&gt;&lt;sup&gt;{{Synonyms}}&lt;/sup&gt;&lt;/span&gt;
+
+&lt;script&gt;
+  var synonyms = $("#synonyms")
+  synonyms.insertAfter($(".cloze"))
+&lt;/script&gt;
+</code></pre>
+
+<p>And the back is almost identical, just include the extra note:</p>
+
+<pre><code class="language-html">{{cloze:Text}}
+&lt;br&gt;&lt;br&gt;
+&lt;span id="synonyms"&gt;&lt;sup&gt;{{Synonyms}}&lt;/sup&gt;&lt;/span&gt;
+
+&lt;script&gt;
+  var synonyms = $("#synonyms")
+  synonyms.insertAfter($(".cloze"))
+&lt;/script&gt;
+&lt;hr&gt;
+{{Back Extra}}
+</code></pre>
+
+<p>Voilà!</p>
+
+<p><img src="/images/anki_synonym_example4.png" /></p>
+
+<p>I’ve created a <a href="/assets/cloze-synonym-example.apkg">sample deck</a> that contains the above template and note.</p>
+
+<p>The original idea for this was provided by <a href="https://vocabularylabs.com/">Vocabulary Labs</a> course, which I highly recommend!</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">Posted by <span class="fn">Richard Gould</span></span>
+
+      
+
+
+
+
+
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/" title="Previous Post: Language in Code Reviews: How not to be a Jerk, Part 2">&laquo; Language in Code Reviews: How not to be a Jerk, Part 2</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -160,7 +263,10 @@
       var disqus_shortname = 'u2622';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://u2622.ca/blog/2022/03/28/anki-template-for-clozes-with-synonyms/';
+        var disqus_url = 'http://u2622.ca/blog/2022/03/28/anki-template-for-clozes-with-synonyms/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

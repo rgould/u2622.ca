@@ -9,7 +9,7 @@
   <meta name="author" content="Richard Gould">
 
   
-  <meta name="description" content="Part 1 | Part 2 “Man, your code reviews are brutal!” says John to your teammates. He’s talking about you. “Why do you hate me so much?” writes Steve &hellip;">
+  <meta name="description" content="If you use a cloze-style (aka. fill in the blank) question when learning vocabulary, you eventually come across a synonym. For example in German, you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,107 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2022/03/28/anki-template-for-clozes-with-synonyms/">Anki Template for Clozes With Synonyms</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+        
+           | <a href="/blog/2022/03/28/anki-template-for-clozes-with-synonyms/#disqus_thread"
+             data-disqus-identifier="http://u2622.ca/blog/2022/03/28/anki-template-for-clozes-with-synonyms/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you use a cloze-style (aka. fill in the blank) question when learning vocabulary, you eventually come across a synonym. For example in German, you have <em>wohnen</em> and <em>leben</em>, and they mostly mean the <em>to live</em>. You can put it in the card as superscript:</p>
+
+<p>Front: Wo [[live]]<sup>lebst</sup> du?<br />
+Back: wohnst</p>
+
+<p><img src="/images/anki_synonym_example1.png" width="50%" alight="right" /></p>
+
+<p>There are a couple problems with this approach.</p>
+
+<p>First, it’s a bit unnatural to type. Would you rather type “Wo wohnst du?”, or “Wo live du?”.</p>
+
+<p>Second, it doesn’t work well if you want to generate text-to-speech (TTS) audio samples en masse with <a href="https://ankiweb.net/shared/info/1436550454">AwesomeTTS</a>. If you pass this card to AwesomeTTS, it will generate audio with input “Wo [[ live ]]lebst du?”, which generates nonsense. What you want to feed it is: “Wo wohnst du?”</p>
+
+<p><img src="/images/anki_synonym_awesome_tts1.png" /></p>
+
+<p>What if we use the built-in cloze template? Then the card would look like this:</p>
+
+<p>Text: Wo {{c1::wohnst::live}}<sup>lebst</sup> du?</p>
+
+<p><img src="/images/anki_synonym_example2.png" width="75%" /></p>
+
+<p>This is a bit more natural to type (start with “Wo wohnst du?” then add the cloze, then add the synonym). Anki has shortcuts for adding a cloze (⌘-C / ALT-C) and for adding superscript (⌘-SHIFT-= / ALT-SHIFT-=), making this a bit easier to type.</p>
+
+<p>But this doesn’t solve the second problem. If we feed this to AwesomeTTS, it will generate audio for “Wo wohnstlbest du?” which is still nonsense.</p>
+
+<p>My solution: <strong>Put synonyms in another field</strong>.</p>
+
+<p>Text: Wo {{c1::wohnst::live}} du?<br />
+Synonyms: lebst</p>
+
+<p><img src="/images/anki_synonym_example3.png" width="75%" /></p>
+
+<p>This is the easiest to work with, IMO. Once you add the cloze hint, you can hit TAB and then type out the synonyms. Also the Text field can be fed directly to AwesomeTTS and it will work as expected.</p>
+
+<p>We can modify the template to show the synonyms following the cloze entry, so it looks exactly like it did before.</p>
+
+<p>Here’s the front:</p>
+
+<pre><code class="language-html">{{cloze:Text}}
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;span id="synonyms"&gt;&lt;sup&gt;{{Synonyms}}&lt;/sup&gt;&lt;/span&gt;
+
+&lt;script&gt;
+  var synonyms = $("#synonyms")
+  synonyms.insertAfter($(".cloze"))
+&lt;/script&gt;
+</code></pre>
+
+<p>And the back is almost identical, just include the extra note:</p>
+
+<pre><code class="language-html">{{cloze:Text}}
+&lt;br&gt;&lt;br&gt;
+&lt;span id="synonyms"&gt;&lt;sup&gt;{{Synonyms}}&lt;/sup&gt;&lt;/span&gt;
+
+&lt;script&gt;
+  var synonyms = $("#synonyms")
+  synonyms.insertAfter($(".cloze"))
+&lt;/script&gt;
+&lt;hr&gt;
+{{Back Extra}}
+</code></pre>
+
+<p>Voilà!</p>
+
+<p><img src="/images/anki_synonym_example4.png" /></p>
+
+<p>I’ve created a <a href="/assets/cloze-synonym-example.apkg">sample deck</a> that contains the above template and note.</p>
+
+<p>The original idea for this was provided by <a href="https://vocabularylabs.com/">Vocabulary Labs</a> course, which I highly recommend!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -365,70 +466,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2020/07/18/valued-leadership-qualities/">Valued Leadership Qualities</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-        
-           | <a href="/blog/2020/07/18/valued-leadership-qualities/#disqus_thread"
-             data-disqus-identifier="http://u2622.ca/blog/2020/07/18/valued-leadership-qualities/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here are the qualities and characteristics that try to demonstrate as a leader. I consider this a work in progress, and will expand/edit it as I grow. These are in no particular order.</p>
-
-<p><strong>Communication</strong>: A leader should foster communication amongst the team, as well as between other teams. It’s better to over-communicate rather than under-communicate. Communication should ideally be clear and direct.</p>
-
-<p><strong>Patience</strong>: Impatience adds stress and anxiety to team members, who otherwise do their best work when relaxed and comfortable. Team members should feel confident in admitting mistakes (after all, everyone makes them), and should not be punished for them.</p>
-
-<p><strong>Listening</strong>: One of the most important skills, in my opinion. A team member should feel comfortable bringing any problem to a leader. If one does not listen, that level of comfort is difficult to establish. A leader should not interrupt others when they speak, and should seek to understand what the team member is trying to communicate, rather than waiting for their turn to speak.</p>
-
-<p><strong>Humility</strong>: I believe everyone can learn something from anyone else, regardless of their age, experience, or background. Keep an open mind, and be open to new surprises. Leaders are not better than others.</p>
-
-<p><strong>Appreciation</strong>: A leader should show appreciation to all around them, but especially their team members. A lack of appreciation makes others feel unimportant, decreasing their morale and motivation.</p>
-
-<p><strong>Encouragement</strong>: One should encourage, not disparage. Reward the good behaviour that they observe by showing appreciation. Encouragement helps team members go further, and increases motivation.</p>
-
-<p><strong>Vision</strong>: She should know where the team wants to go, and be able to help the team get there (even if they themselves don’t know how). This includes both short term and long term goals. They should also show how each team member’s work contributes to the team’s goals.</p>
-
-<p><strong>Focus</strong>: A leader should help the team focus their efforts, steering them in the right direction so that they can strive towards their vision. They should set goals and help the team focus on achieving them.</p>
-
-<p><strong>Mentorship</strong>: They should help those around him grow, challenging them to expand and strengthen their skills, both professionally and personally. Identify weaknesses and encourage team members to address them.</p>
-
-<p><strong>Interest</strong>: Take a genuine interest in team members, building rapport with them and supporting them. There should also be a genuine interest in the problem domain, and a leader should seek to grow their expertise with it.</p>
-
-<p><strong>Problem Solving</strong>: A leader should be able to help solve the team’s problems, whether those problems are within the team (ie. conflicts) or without (ie. technological or organizational blockers). Solving these problems lets the team focus on achieving their vision, without being distracted by other issues. A leader can help identify these problems, and also propose solutions and drive their resolution. These problems can be anything: technical, organizational, environmental, and personal.</p>
-
-<p><strong>Collaboration</strong>: Getting the team working together is more effective than issuing orders to team members. People feel powerless when commanded to do something. Collaboration gives the power to the team, regardless of seniority or title. A leader should do what they can to encourage such an atmosphere. When a problem arises, the focus to solve it is on the problem itself, not to lay blame on those involved.</p>
-
-<p><strong>Tolerance</strong>: A leader should foster an environment of tolerance, allowing team members to be themselves in an environment free of prejudice and oppression. This means immediately tackling issues such as (but not limited to) sexism, homophobia, racism, bullying, or antagonism.</p>
-
-<p><strong>Feedback</strong>: A leader is able to give feedback in a constructive and useful way, helping team members grow, rather than criticizing them and making them feel resentful.</p>
-
-<p>See also <a href="/blog/2017/11/26/my-principles-for-software-development/">my principles for software development</a>.</p>
-
-<p>Last updated 2021-02-09</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -449,6 +486,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2022/03/28/anki-template-for-clozes-with-synonyms/">Anki Template for Clozes With Synonyms</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2021/03/13/language-in-code-reviews-how-not-to-be-a-jerk-part-2/">Language in Code Reviews: How Not to Be a Jerk, Part 2</a>
       </li>
     
@@ -462,10 +503,6 @@
     
       <li class="post">
         <a href="/blog/2020/07/05/improving-your-speaking-and-listening-skills/">Improving Your Speaking and Listening Skills</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/11/26/my-principles-for-software-development/">My Principles for Software Development</a>
       </li>
     
   </ul>
