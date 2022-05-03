@@ -87,5 +87,5 @@ What sort of guidelines do you use in your development process? Email me at
 rgould@u2622.ca or leave a comment below. I'd love to hear them!
 
 [broken window]: https://blog.codinghorror.com/the-broken-window-theory/
-[dev process]: https://github.com/okgrow/guides/blob/master/processes/development/README.md
+[dev process]: https://github.com/okgrow/guides/blob/master/docs/Development-Principles.md
 [software rot]: https://en.wikipedia.org/wiki/Software_rot
