@@ -12,7 +12,7 @@ group :development do
   gem 'rake', '~> 12.3'
   gem 'rb-fsevent', '~> 0.9'
   gem 'rdiscount', '~> 2.0'
-  gem 'RedCloth', '~> 4.2.9'
+  gem 'RedCloth', '~> 4.3.3'
   gem 'haml', '~> 4.0'
   gem 'compass', '~> 1.0.1'
   gem 'sass-globbing', '~> 1.0.0'
