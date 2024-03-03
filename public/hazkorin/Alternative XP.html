@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>Alternative XP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Alternative XP"><h1 id="Alternative XP" class="header"><a href="#Alternative XP">Alternative XP</a></h1></div>
+
+<p>
+We're using a different XP system than in the DCC RPG rulebook. The original system rewards putting yourself into danger. This alternative system rewards exploration and cleverness, and disincentivizes pointless combat.
+</p>
+
+<p>
+Characters gain XP from recovered treasure. XP is rewarded at a rate of one XP per gold piece value of the item. Most XP will come from treasure.
+</p>
+
+<p>
+A token amount of XP is granted for overcoming enemies. Overcoming means killing them, avoiding them, scaring them off, or otherwise rendering them non-threatening. The XP granted is based on the strength of the enemies encountered.
+</p>
+
+<p>
+At the end of the adventure, all XP is summed and then divided amongst the surviving characters.
+</p>
+
+<p>
+The Judge may also grant XP for completing quests and goals. This XP is not divided amongst the characters.
+</p>
+
+<p>
+This system may mean that for several sessions very little XP is rewarded. But once a large amount of treasure is found, a large of mount of XP can be granted.
+</p>
+
+<div id="Alternative XP-Levelling Rate"><h2 id="Levelling Rate" class="header"><a href="#Alternative XP-Levelling Rate">Levelling Rate</a></h2></div>
+
+<table>
+<tr>
+<th>
+Level
+</th>
+<th>
+Orig Xp
+</th>
+<th>
+New Xp
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+10
+</td>
+<td>
+250
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+50
+</td>
+<td>
+2000
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+110
+</td>
+<td>
+4000
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+190
+</td>
+<td>
+8000
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+290
+</td>
+<td>
+16000
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+410
+</td>
+<td>
+32000
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+550
+</td>
+<td>
+64000
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+710
+</td>
+<td>
+128000
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+890
+</td>
+<td>
+384000
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+1090
+</td>
+<td>
+640000
+</td>
+</tr>
+</table>
+
+<div id="Alternative XP-How to Convert from DCC RPG"><h2 id="How to Convert from DCC RPG" class="header"><a href="#Alternative XP-How to Convert from DCC RPG">How to Convert from DCC RPG</a></h2></div>
+
+<p>
+Formula:
+</p>
+
+<p>
+<code>newXP = newCurrLimit + ((newNextLimit - newCurrLimit) * oldCurrXP/oldNextLimit)</code>
+</p>
+
+<p>
+Where:
+</p>
+
+<ul>
+<li>
+<code>newCurrLimit</code> is the amount of XP needed to reach the current level with the new system
+
+<li>
+<code>newNextLimit</code> is the amount of XP needed to reach the *<span id="Alternative XP-How to Convert from DCC RPG-next"></span><strong id="next">next</strong>* level with the new system
+
+<li>
+<code>oldCurrXP</code> is the amount of XP the character has in the original DCC RPG system
+
+<li>
+<code>oldNextLimit</code> is the amount of XP needed to reac the <span id="Alternative XP-How to Convert from DCC RPG-next"></span><strong id="next">next</strong> level with the original DCC RPG system
+
+</ul>
+
+<p>
+Example:
+</p>
+
+<p>
+Fristu has 242 XP. That means he's level 4 in the old system. He needs 290 to reach level 5. With the new system, to reach level 4, one needs 8000 XP. To reach level 5, one needs 16000 XP.
+</p>
+
+<ul>
+<li>
+<code>newCurrLimit</code> = 8000
+
+<li>
+<code>newNextLimit</code> = 16000
+
+<li>
+<code>oldCurrXP</code> = 242
+
+<li>
+<code>oldNextLimit</code> = 290
+
+</ul>
+
+<p>
+Therefore the calculation is <code>8000 + ((16000-8000) * 242/290)</code> or <code>8000 + (8000 * 0.83)</code>
+</p>
+
+</body>
+</html>
